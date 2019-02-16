@@ -1,26 +1,10 @@
 doctype html
 html(lang='fr')
-  head
-    meta(http-equiv='Content-Type', content='text/html', charset='UTF-8')
-    meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1.0')
-    title Baptiste Perraud - Ingénieur Fullstack web
-
-    link(href='stylesheets/materialize.css', rel='stylesheet', media='screen,projection')
-    link(href='stylesheets/font-awesome.css', rel='stylesheet')
-    link(href='stylesheets/pro-bars.css', rel='stylesheet', media='all')
-    link(href='stylesheets/owl.carousel.css', rel='stylesheet')
-    link(href='stylesheets/dark-red-theme.css', type='text/css', rel='stylesheet', id='switcher', media='screen,projection')
-    link(href='stylesheets/style.css', type='text/css', rel='stylesheet', media='screen,projection')
-    link(href='http://fonts.googleapis.com/icon?family=Material+Icons', rel='stylesheet')
-    link(rel='icon', type='image/png', href='favicon.png')
+  include _pug-includes/head
 
   body
 
-    // BEGIN PRELOADER
-    div(id='preloader')
-      div(class='progress')
-        div(class='indeterminate')
-    // END PRELOADER
+    include _pug-includes/preloader
 
     header(id='header', role='banner')
       div(class='navbar-fixed')
@@ -31,7 +15,7 @@ html(lang='fr')
               // LOGO
 
               // TEXT BASED LOGO
-              a(href='index.html', class='brand-logo') MU Material
+              //a(href='index.html', class='brand-logo') MU Material
 
               // Image Based Logo
               //a(href='index.html', class='brand-logo')
@@ -106,11 +90,12 @@ html(lang='fr')
                     div(class='col s12 m8 l9')
                       div(class='about-inner-right')
                         h3 Qui suis-je ?
-                        p I'm a USA based UX/UI Designer creating awesome and effective visual identities for companies
-                          | of all sizes around the globe.It is a long established fact that a reader will be distracted
-                          | by the readable content of a page when looking at its layout. The point of using Lorem Ipsum
-                          | is that it has a more-or-less normal distribution of letters, as opposed to using 'Content
-                          | here, content here
+                        p.
+                          I'm a USA based UX/UI strong Designer creating awesome and effective visual identities for companies
+                          of all sizes around the globe. It is a long established fact that a reader will be distracted
+                          by the readable content of a page when looking at its layout. The point of using Lorem Ipsum
+                          is that it has a more-or-less normal distribution of letters, as opposed to using 'Content
+                          here, content here
                         div(class='personal-information col s12 m12 l6')
                           h3 Personal Information
                           ul
