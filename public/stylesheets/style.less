@@ -55,8 +55,6 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 14px;
   padding: 25px 20px;
   text-transform: uppercase;
-  -webkit-transition: all 0.3s ease-out 0s;
-  -o-transition: all 0.3s ease-out 0s;
   transition: all 0.3s ease-out 0s;
 }
 
@@ -71,23 +69,40 @@ nav .brand-logo {
   }
 }
 
-.side-nav a {
-  text-transform: uppercase;
-}
+.side-nav {
+  > li {
+    &:hover {
+      color: @almost-white;
+    }
 
+    &.active {
+      > a {
+        color: @almost-white;
+      }
+    }
 
-.side-nav li:hover {
-  color: @almost-white;
-}
+    > a {
+      text-transform: uppercase;
 
-.side-nav li a:hover {
-  color: @almost-white;
+      &:hover {
+        color: @almost-white;
+      }
+    }
+  }
 }
 
 .main-wrapper {
   display: inline;
   width: 100%;
   float: left;
+}
+
+.it {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
 }
 
 /* Preloader */
@@ -186,9 +201,9 @@ nav .brand-logo {
 .profile-img {
   border: 5px solid @almost-white;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
-  height: 130px;
-  margin: 0 auto;
   width: 140px;
+  height: 140px;
+  margin: 0 auto;
 }
 
 .about-inner-right {
@@ -286,18 +301,21 @@ nav .brand-logo {
   text-transform: uppercase;
 }
 
+.subtitle {
+  margin-bottom: 20px;
+}
+
 .skill-progress-bar {
   display: inline;
   float: left;
   width: 100%;
 
-  span {
+  > span {
     color: #727272;
     display: inline-block;
     font-size: 16px;
-    font-weight: bold;
+    font-weight: normal;
     margin-bottom: 5px;
-    text-transform: uppercase;
   }
 }
 
@@ -502,8 +520,6 @@ nav .brand-logo {
   margin-bottom: 1.33%;
   margin-left: 1%;
   width: 32.33%;
-  -webkit-transition: all 0.2s ease 0s;
-  -o-transition: all 0.2s ease 0s;
   transition: all 0.2s ease 0s;
 }
 
@@ -531,9 +547,6 @@ nav .brand-logo {
 
 #portfolio-list .mix:hover > a::before {
   opacity: 0.8;
-  -webkit-transition: background-color 0.5s ease-in-out;
-  -moz-transition: background-color 0.5s ease-in-out;
-  -o-transition: background-color 0.5s ease-in-out;
   transition: background-color 0.5s ease-in-out;
 }
 
@@ -552,8 +565,6 @@ nav .brand-logo {
   left: -1%;
   position: absolute;
   text-align: center;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -863,8 +874,6 @@ nav .brand-logo {
   float: right;
   padding: 4px 0 4px 10px;
   text-transform: uppercase;
-  -webkit-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 
 }
@@ -969,12 +978,14 @@ textarea.materialize-textarea {
   min-height: 116px;
 }
 
+.submit-btn {
+  transition: all 0.3s;
+}
 
 .submit-btn:hover,
 .submit-btn:focus {
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
   color: @almost-white;
-  padding-left: 10px;
 }
 
 
@@ -1038,21 +1049,23 @@ textarea.materialize-textarea {
 .up-btn {
   background-color: @almost-white;
   color: @almost-black;
-  left: 47.7%;
-  position: absolute;
-  top: -28px;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+
+  &.hidden {
+    opacity: 0;
+    cursor: default;
+  }
+
+  &:hover, &:focus {
+    background-color: @almost-white;
+  }
+
+  i {
+    color: @almost-black;
+  }
 }
-
-
-.up-btn i {
-  color: @almost-black;
-}
-
-
-.up-btn:hover, .up-btn:focus {
-  background-color: @almost-white;
-}
-
 
 #banner {
   display: inline;
@@ -1307,8 +1320,6 @@ textarea.materialize-textarea {
   font-size: 18px;
   margin-right: 15px;
   margin-top: 5px;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -1431,9 +1442,6 @@ textarea.materialize-textarea {
   right: 10px;
   text-transform: uppercase;
   top: 10px;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -1510,9 +1518,6 @@ textarea.materialize-textarea {
   padding: 5px;
   text-align: center;
   width: 30px;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -1574,9 +1579,6 @@ textarea.materialize-textarea {
   width: 65%;
   border: none;
   outline: none;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -1599,9 +1601,6 @@ textarea.materialize-textarea {
   font-size: 16px;
   margin-top: 5px;
   padding: 8px 12px;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -1730,8 +1729,6 @@ textarea.materialize-textarea {
   line-height: 3.7;
   margin: 0 3px 7px 0;
   padding: 8px 13px;
-  -webkit-transition: all 0.5s ease 0s;
-  -o-transition: all 0.5s ease 0s;
   transition: all 0.5s ease 0s;
 }
 
@@ -1769,8 +1766,6 @@ textarea.materialize-textarea {
   color: #222;
   display: inline-block;
   padding: 10px 15px;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -1780,8 +1775,6 @@ textarea.materialize-textarea {
   color: #222;
   display: inline-block;
   padding: 10px 15px;
-  -webkit-transition: all 0.5s;
-  -o-transition: all 0.5s;
   transition: all 0.5s;
 }
 
@@ -1899,10 +1892,6 @@ textarea.materialize-textarea {
   }
 
   .call-to-about {
-    left: 45.5%;
-  }
-
-  .up-btn {
     left: 45.5%;
   }
 
@@ -2190,10 +2179,6 @@ textarea.materialize-textarea {
     bottom: -165px;
   }
 
-  .up-btn {
-    left: 43%;
-  }
-
   .header-title {
     font-size: 20px;
   }
@@ -2336,10 +2321,6 @@ textarea.materialize-textarea {
     bottom: -145px;
   }
 
-  .up-btn {
-    left: 40.7%;
-  }
-
   .personal-information > h3 {
     font-size: 18px;
   }
@@ -2411,10 +2392,6 @@ textarea.materialize-textarea {
 
   .call-to-about {
     bottom: -120px;
-    left: 39%;
-  }
-
-  .up-btn {
     left: 39%;
   }
 
