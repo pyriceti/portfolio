@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{@types/express, @types/jquery, @types/node, jquery-3.3.1, jquery.mixitup, jquery.waypoints}" />
+    <file url="PROJECT" libraries="{@types/express, @types/i18n, @types/jquery, @types/materialize-css, @types/node, jquery-3.3.1, jquery.mixitup, jquery.waypoints, materialize}" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>

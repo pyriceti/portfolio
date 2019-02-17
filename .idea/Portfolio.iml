@@ -16,5 +16,12 @@
     <orderEntry type="library" name="@types/jquery" level="application" />
     <orderEntry type="library" name="jquery-3.3.1" level="application" />
     <orderEntry type="library" name="jquery.waypoints" level="application" />
+    <orderEntry type="library" name="@types/jquery" level="application" />
+    <orderEntry type="library" name="@types/i18n" level="application" />
+    <orderEntry type="library" name="@types/node" level="application" />
+    <orderEntry type="library" name="jquery-3.3.1" level="application" />
+    <orderEntry type="library" name="jquery.waypoints" level="application" />
+    <orderEntry type="library" name="materialize" level="application" />
+    <orderEntry type="library" name="@types/materialize-css" level="application" />
   </component>
 </module>

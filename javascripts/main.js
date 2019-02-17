@@ -22,12 +22,13 @@
  **/
 
 jQuery(function ($) {
+  M.AutoInit();
 
   /* ----------------------------------------------------------- */
   /*  1. Mobile MENU
   /* ----------------------------------------------------------- */
 
-  jQuery(".button-collapse").sideNav();
+  $(".sidenav").sidenav();
 
   /* ----------------------------------------------------------- */
   /*  2. Experience SLider(Owl Carousel)
@@ -121,7 +122,7 @@ jQuery(function ($) {
   let topMenu       = $(".menu-scroll");
   let topMenuHeight = topMenu.outerHeight() + 13;
   // All list items
-  let menuItems     = topMenu.find("a");
+  let menuItems     = topMenu.find("a[href^=\\#]").filter(":not([href=\\#])");
   // Anchors corresponding to menu items
   let scrollItems   = menuItems.map(function() {
     const item = $($(this).attr("href"));
@@ -155,12 +156,12 @@ jQuery(function ($) {
     const fromTop = $(this).scrollTop() + topMenuHeight;
 
     // Get id of current scroll item
-    let cur = scrollItems.map(function () {
+    let cur  = scrollItems.map(function () {
       if ($(this).offset().top < fromTop)
         return this;
     });
     // Get the id of the current element
-    cur     = cur[cur.length - 1];
+    cur      = cur[cur.length - 1];
     const id = cur && cur.length ? cur[0].id : "";
 
     if (lastId !== id) {

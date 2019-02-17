@@ -40,20 +40,27 @@ header#header(role='banner')
             li
               a(href='/?clang=en') en
 
-          // For Mobile View
-          ul#slide-out.side-nav.menu-scroll
-            li
-              a(href='#about') Qui suis-je
-            li
-              a(href='#resume') CV
-            li
-              a(href='#portfolio') Portfolio
-            // li
-              a(href='#testimonial') Recommandations
-            // li
-              a(href='#blog') Blog
-            li
-              a(href='#footer') Contact
+          a.sidenav-trigger(href='#', data-target='slide-out')
+            i.material-icons menu
 
-          a(href='#', data-activates='slide-out', class='button-collapse')
-            i.mdi-navigation-menu
+  // For Mobile View
+  ul#slide-out.sidenav.menu-scroll
+    li.first-level
+      a(href='#about') Qui suis-je
+    li
+      .nolink CV
+      ul
+        li.second-level
+          a.sub-section(href='#skill') Compétences
+        li.second-level
+          a.sub-section(href='#experience') Expérience
+        li.second-level
+          a.sub-section(href='#education') Études
+    li.first-level
+      a(href='#portfolio') Portfolio
+    // li
+      a(href='#testimonial') Recommandations
+    // li
+      a(href='#blog') Blog
+    li.first-level
+      a(href='#footer') Contact

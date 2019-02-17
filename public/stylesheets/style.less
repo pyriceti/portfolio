@@ -69,25 +69,35 @@ nav .brand-logo {
   }
 }
 
-.side-nav {
-  > li {
-    &:hover {
+.sidenav {
+  li {
+    &.first-level:hover,
+    &.second-level:hover {
       color: @almost-white;
     }
 
-    &.active {
+    &.first-level.active,
+    &.second-level.active {
       > a {
         color: @almost-white;
       }
     }
 
-    > a {
+    a {
       text-transform: uppercase;
 
       &:hover {
         color: @almost-white;
       }
+
+      &.sub-section {
+        padding-left: 48px;
+      }
     }
+  }
+
+  .nolink {
+    padding-left: 32px;
   }
 }
 
@@ -211,20 +221,26 @@ nav .brand-logo {
   display: inline;
   float: left;
   width: 100%;
-}
 
-.about-inner-right > p {
-  color: #727272;
-  font-size: 15px;
-  line-height: 28px;
-  margin-bottom: 35px;
-}
+  > h3 {
+    margin-top: 0;
+    font-size: 24px;
+    font-weight: 600;
+    text-transform: uppercase;
+  }
 
-.about-inner-right > h3 {
-  margin-top: 0;
-  font-size: 24px;
-  font-weight: 600;
-  text-transform: uppercase;
+  > p {
+    color: #727272;
+    font-size: 15px;
+    line-height: 28px;
+  }
+
+  blockquote {
+    color: #727272;
+    font-size: 15px;
+    line-height: 28px;
+    margin-bottom: 35px;
+  }
 }
 
 .personal-information {
@@ -329,6 +345,10 @@ nav .brand-logo {
   height: 30px;
 }
 
+.card .card-content .card-title {
+  margin-top: 4px;
+}
+
 #experience {
   display: inline;
   padding: 60px 0;
@@ -430,6 +450,12 @@ nav .brand-logo {
   display: inline;
   float: left;
   width: 100%;
+
+  > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+  }
 }
 
 /*--------------------*/

@@ -14,7 +14,8 @@ a {
   background-color: @main-color;
 }
 
-.side-nav li:hover{
+.sidenav li.first-level:hover,
+.sidenav li.second-level:hover{
   background-color: @main-color;
 }
 .btn ,.btn-large{
@@ -23,13 +24,23 @@ a {
 .btn:hover, .btn-large:hover {
   background-color: @accent-color;
 }
+
+.btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus{
+  background-color: @main-color;
+}
+
 .home-title span{
   color: @accent-color;
 }
-.about-inner-right>h3{
+.about-inner-right > h3 {
   color: @main-color;
 }
-.personal-information>h3{
+
+.about-inner-right > blockquote {
+  border-color: @main-color;
+}
+
+.personal-information > h3 {
   color: @main-color;
 }
 .title{
@@ -171,8 +182,10 @@ textarea.materialize-textarea:focus:not([readonly]) {
 .submit-btn{
   color: @main-color;
 }
-.side-nav li:hover,
-.side-nav li.active {
+.sidenav li.first-level:hover,
+.sidenav li.second-level:hover,
+.sidenav li.first-level.active,
+.sidenav li.second-level.active {
   background-color: @main-color;
 }
 .progress .indeterminate {
