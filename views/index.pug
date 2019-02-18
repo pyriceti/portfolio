@@ -11,7 +11,7 @@ html(lang='fr')
     include _pug-includes/header
 
     // MAIN WRAPPER
-    div(class='main-wrapper')
+    .main-wrapper
       main(role='main')
 
         // HOME SECTION
@@ -21,7 +21,7 @@ html(lang='fr')
         include _pug-includes/about-section
 
         // START RESUME
-        section(id='resume')
+        section#resume
           // SKILL SECTION
           include _pug-includes/resume/skill
 

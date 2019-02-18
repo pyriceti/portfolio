@@ -1,7 +1,7 @@
-section(id='education')
-  div(class='container')
-    div(class='education-inner')
-      h2(class='title') Études
+section#education
+  .container
+    .education-inner
+      h2.title Études
       p.
         Après un Baccalauréat S, j'ai intégré l'UTC (Université de Technologie de Compiègne) en 2013 afin de réaliser un
         parcours en ingénierie informatique à partir d'un cursus innovant : Humanités et Technologie. J'ai par ailleurs
@@ -10,7 +10,7 @@ section(id='education')
         Aujourd'hui, j'étudie à GOBELINS, l'école de l'image, au sein du mastère spécialisé IDE (Interactive Digital Experiences)
         afin de travailler plus tard dans le domaine de l'#[span.it edugame], #[span.it serious game] ou plus généralement
         dans le cadre d'expériences ludiques et interactives à la croisée du jeu et de la pédagogie.
-      div(id='owl-carousel1', class='experience-slider row')
+      div#owl-carousel1.experience-slider.row
         // Baccalauréat
         .col.s12
           .card
@@ -20,96 +20,64 @@ section(id='education')
             .card-image.waves-effect.waves-block.waves-light
               h2.experience-title 2010 - 2013
               img.activator(src='images/education/board.jpg')
-            div(class='card-content')
-              span(class='card-title activator reveal-title') #{title}
-                i(class='material-icons right') more_vert
+            .card-content
+              span.card-title.activator.reveal-title #{title}
+                i.material-icons.right more_vert
               p
                 a(href=href, target='_blank') #{place}
-            div(class='card-reveal')
-              span(class='card-title reveal-title') #{title}
-                i(class='material-icons right') close
+            .card-reveal
+              span.card-title.reveal-title #{title}
+                i.material-icons.right close
               a.card-subtitle(href=href target='_blank') #{place}
               p.
-                Here is some more information about this product that is only revealed once clicked on.
-                The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                as opposed to using 'Content here, content here', making it look like readable English
-        // Start Single Experience
-        div(class='col s12')
-          div(class='card')
-            div(class='card-image waves-effect waves-block waves-light')
-              h2(class='experience-title') 2012 - 2013
-              img(class='activator', src='images/graduate-cap.jpg')
-            div(class='card-content')
-              span(class='card-title activator reveal-title') Master Of Science
-                i(class='material-icons right') more_vert
+                J'ai effectué un Baccalauréat S SVT au lycée Samuel Beckett,
+                optant pour une spécialité math en raison de mon affinité
+                dans le domaine. J'ai également choisi l'option arts plastiques,
+                me permettant d'intégrer l'une de mes passions dans mes études.
+        // Bachelor
+        .col.s12
+          .card
+            - var title = 'Bachelor Humanités et Technologie'
+            - var href = 'https://www.utc.fr/formations/diplome-dingenieur/cursus-humanites-et-technologie-hutech.html'
+            - var place = 'Université de Technologie de Compiègne'
+            .card-image.waves-effect.waves-block.waves-light
+              h2.experience-title 2013 - 2016
+              img.activator(src='images/education/leonardo.jpg')
+            .card-content
+              span.card-title.activator.reveal-title #{title}
+                i.material-icons.right more_vert
               p
-                a(href='#') California University
-            div(class='card-reveal')
-              span(class='card-title reveal-title') Master Of Science
-                i(class='material-icons right') close
-              a(href='#', class='card-subtitle') California University
-              p Here is some more information about this product that is only revealed once clicked on.
-                | The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                | as opposed to using 'Content here, content here', making it look like readable English
-        // Start Single Experience
-        div(class='col s12')
-          div(class='card')
-            div(class='card-image waves-effect waves-block waves-light')
-              h2(class='experience-title') 2012 - 2013
-              img(class='activator', src='images/graduate-cap.jpg')
-            div(class='card-content')
-              span(class='card-title activator reveal-title') Master Of Science
-                i(class='material-icons right') more_vert
+                a(href=href, target='_blank') #{place}
+            .card-reveal
+              span.card-title.reveal-title #{title}
+                i.material-icons.right close
+              a.card-subtitle(href=href target='_blank') #{place}
+              p.
+                [TODO]
+        // Microprogramme de 2e cycle en sciences
+        .col.s12
+          .card
+            - var title = 'Microprogramme de 2e cycle en sciences'
+            - var href = 'https://www.usherbrooke.ca/admission/programme/4EM/microprogramme-de-2e-cycle-en-sciences/'
+            - var place = 'Université de Sherbrooke'
+            .card-image.waves-effect.waves-block.waves-light
+              h2.experience-title 2013 - 2016
+              img.activator(src='images/education/leonardo.jpg')
+            .card-content
+              span.card-title.activator.reveal-title #{title}
+                i.material-icons.right more_vert
               p
-                a(href='#') California University
-            div(class='card-reveal')
-              span(class='card-title reveal-title') Master Of Science
-                i(class='material-icons right') close
-              a(href='#', class='card-subtitle') California University
-              p Here is some more information about this product that is only revealed once clicked on.
-                | The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                | as opposed to using 'Content here, content here', making it look like readable English
-        // Start Single Experience
-        div(class='col s12')
-          div(class='card')
-            div(class='card-image waves-effect waves-block waves-light')
-              h2(class='experience-title') 2012 - 2013
-              img(class='activator', src='images/graduate-cap.jpg')
-            div(class='card-content')
-              span(class='card-title activator reveal-title') Master Of Science
-                i(class='material-icons right') more_vert
-              p
-                a(href='#') California University
-            div(class='card-reveal')
-              span(class='card-title reveal-title') Master Of Science
-                i(class='material-icons right') close
-              a(href='#', class='card-subtitle') California University
-              p Here is some more information about this product that is only revealed once clicked on.
-                | The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                | as opposed to using 'Content here, content here', making it look like readable English
-        // Start Single Experience
-        div(class='col s12')
-          div(class='card')
-            div(class='card-image waves-effect waves-block waves-light')
-              h2(class='experience-title') 2012 - 2013
-              img(class='activator', src='images/graduate-cap.jpg')
-            div(class='card-content')
-              span(class='card-title activator reveal-title') Master Of Science
-                i(class='material-icons right') more_vert
-              p
-                a(href='#') California University
-            div(class='card-reveal')
-              span(class='card-title reveal-title') Master Of Science
-                i(class='material-icons right') close
-              a(href='#', class='card-subtitle') California University
-              p Here is some more information about this product that is only revealed once clicked on.
-                | The point of using Lorem Ipsum is that it has a more-or-less normal distribution of letters,
-                | as opposed to using 'Content here, content here', making it look like readable English
-
+                a(href=href, target='_blank') #{place}
+            .card-reveal
+              span.card-title.reveal-title #{title}
+                i.material-icons.right close
+              a.card-subtitle(href=href target='_blank') #{place}
+              p.
+                [TODO]
 
       // owl navigation
-      div(class='customNavigation')
-        a(class='btn prev1 btn-floating waves-effect waves-light btn-large white')
+      .customNavigation
+        a.btn.prev1.btn-floating.waves-effect.waves-light.btn-large.white
           i.material-icons keyboard_arrow_left
-        a(class='btn next1 btn-floating waves-effect waves-light btn-large white')
+        a.btn.next1.btn-floating.waves-effect.waves-light.btn-large.white
           i.material-icons keyboard_arrow_right
