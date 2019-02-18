@@ -337,8 +337,39 @@ nav .brand-logo {
 }
 
 .pro-bar-container {
+  position: relative;
   border-radius: 0;
-  height: 30px;
+  height: unset;
+
+  .label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    margin-left: 6px;
+    color: #f0f0f0;
+    font-size: 16px;
+    font-weight: normal;
+
+    .light {
+      opacity: .8;
+      font-size: 12px;
+    }
+  }
+
+  @media (max-width: 767px ) {
+    .pro-bar {
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+
+    .label {
+      font-size: 12px;
+
+      .light {
+        display: block;
+      }
+    }
+  }
 }
 
 .pro-bar {
