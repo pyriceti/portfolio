@@ -2,22 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af9137f-7241-4526-a01a-c41e9e96a09f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/images/background-blurred.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/experiences/chatbot.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/experiences/gambling.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/experiences/law.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/images/experiences/webdesign.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/javascripts/toastr.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/stylesheets/toastr.min.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/Portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Portfolio.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/www" beforeDir="false" afterPath="$PROJECT_DIR$/bin/www" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/javascripts/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/javascripts/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/basic-typography.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/_imports/basic-typography.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/footer.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/_imports/footer.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/portfolio.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/_imports/portfolio.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/_includes/_colors.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/_includes/_colors.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/resume.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/_imports/resume.less" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/_includes/_mixins.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/_includes/_mixins.less" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/theme.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/theme.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/theme.css.map" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/stylesheets/theme.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/theme.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/routes/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/_pug-includes/footer.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/_pug-includes/footer.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/_pug-includes/head.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/_pug-includes/head.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/_pug-includes/resume/experience.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/_pug-includes/resume/experience.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/_pug-includes/scripts.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/_pug-includes/scripts.pug" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -30,38 +38,38 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/javascripts/main.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="41">
-              <caret line="272" column="7" selection-start-line="272" selection-start-column="7" selection-end-line="272" selection-end-column="7" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/bin/www">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+            <state relative-caret-position="380">
+              <caret line="289" column="3" lean-forward="true" selection-start-line="289" selection-start-column="3" selection-end-line="289" selection-end-column="3" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/routes/index.js">
+        <entry file="file://$PROJECT_DIR$/views/_pug-includes/header.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="16" column="12" selection-start-line="16" selection-start-column="12" selection-end-line="17" selection-end-column="29" />
+            <state relative-caret-position="514">
+              <caret line="44" selection-start-line="44" selection-end-line="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.env">
+        <entry file="file://$PROJECT_DIR$/views/_pug-includes/head.pug">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="3" lean-forward="true" selection-start-line="3" selection-end-line="3" />
+              <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/_pug-includes/resume/experience.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="24">
+              <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -69,8 +77,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/theme.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="3840">
-              <caret line="160" column="2" selection-start-line="160" selection-start-column="2" selection-end-line="161" selection-end-column="36" />
+            <state relative-caret-position="467">
+              <caret line="134" column="20" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -78,26 +86,17 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/stylesheets/style.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8280">
-              <caret line="345" column="24" selection-start-line="345" selection-start-column="24" selection-end-line="345" selection-end-column="24" />
+            <state relative-caret-position="23499">
+              <caret line="1014" column="17" selection-start-line="1014" selection-start-column="12" selection-end-line="1014" selection-end-column="17" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/footer.less">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/basic-typography.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="18" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/portfolio.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="336">
-              <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+            <state relative-caret-position="288">
+              <caret line="12" column="52" lean-forward="true" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
             </state>
           </provider>
         </entry>
@@ -105,17 +104,26 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/_pug-includes/footer.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="720">
-              <caret line="30" column="74" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
+            <state relative-caret-position="1032">
+              <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/home.less">
+        <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/footer.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1056">
-              <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
+            <state relative-caret-position="336">
+              <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/_pug-includes/scripts.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="216">
+              <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
             </state>
           </provider>
         </entry>
@@ -132,11 +140,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>portfo</find>
-      <find>port</find>
-      <find>i(class='material-icons view-icon') pageview</find>
-      <find>div(class='mix html')</find>
-      <find>mix</find>
       <find>overlay</find>
       <find>float</find>
       <find>custom-nav</find>
@@ -146,7 +149,6 @@
       <find>filter</find>
       <find>nex</find>
       <find>carousel.container</find>
-      <find>exper</find>
       <find>preloader</find>
       <find>experience-sli</find>
       <find>&amp;nbsp!</find>
@@ -162,6 +164,12 @@
       <find>for</find>
       <find>Me cont</find>
       <find>load</find>
+      <find>exper</find>
+      <find>imag</find>
+      <find>btn</find>
+      <find>focus</find>
+      <find>port</find>
+      <find>.bg-image;</find>
     </findStrings>
     <replaceStrings>
       <replace>'</replace>
@@ -201,7 +209,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/_pug-includes/footer.pug" />
         <option value="$PROJECT_DIR$/public/_pug-includes/portfolio.pug" />
         <option value="$PROJECT_DIR$/public/_pug-includes/preloader.pug" />
         <option value="$PROJECT_DIR$/public/_pug-includes/testimonial.pug" />
@@ -219,7 +226,6 @@
         <option value="$PROJECT_DIR$/locales/en.json" />
         <option value="$PROJECT_DIR$/public/javascripts/waypoints.min.js" />
         <option value="$PROJECT_DIR$/locales/fr.json" />
-        <option value="$PROJECT_DIR$/views/_pug-includes/head.pug" />
         <option value="$PROJECT_DIR$/views/_pug-includes/testimonial.pug" />
         <option value="$PROJECT_DIR$/public/blog-single.html" />
         <option value="$PROJECT_DIR$/public/blog-archive.html" />
@@ -228,30 +234,32 @@
         <option value="$PROJECT_DIR$/views/_pug-includes/about-section.pug" />
         <option value="$PROJECT_DIR$/views/_pug-includes/resume/skill.pug" />
         <option value="$PROJECT_DIR$/views/_pug-includes/portfolio.pug" />
-        <option value="$PROJECT_DIR$/views/_pug-includes/scripts.pug" />
         <option value="$PROJECT_DIR$/public/stylesheets/_imports/preloader.less" />
         <option value="$PROJECT_DIR$/public/stylesheets/_imports/about.less" />
         <option value="$PROJECT_DIR$/views/_pug-includes/resume/education.pug" />
-        <option value="$PROJECT_DIR$/views/_pug-includes/resume/experience.pug" />
-        <option value="$PROJECT_DIR$/public/stylesheets/_imports/resume.less" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.less" />
-        <option value="$PROJECT_DIR$/public/stylesheets/_imports/basic-typography.less" />
         <option value="$PROJECT_DIR$/views/index.pug" />
         <option value="$PROJECT_DIR$/javascripts/_helpers.js" />
         <option value="$PROJECT_DIR$/bin/index.js" />
         <option value="$PROJECT_DIR$/credentials.json" />
         <option value="$PROJECT_DIR$/token.json" />
-        <option value="$PROJECT_DIR$/public/stylesheets/theme.less" />
-        <option value="$PROJECT_DIR$/views/_pug-includes/footer.pug" />
-        <option value="$PROJECT_DIR$/javascripts/main.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/_includes/_colors.less" />
         <option value="$PROJECT_DIR$/public/stylesheets/_imports/home.less" />
         <option value="$PROJECT_DIR$/views/_pug-includes/home-section.pug" />
         <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/.env" />
-        <option value="$PROJECT_DIR$/public/stylesheets/_imports/footer.less" />
+        <option value="$PROJECT_DIR$/views/_pug-includes/footer.pug" />
+        <option value="$PROJECT_DIR$/public/stylesheets/_includes/_mixins.less" />
+        <option value="$PROJECT_DIR$/views/_pug-includes/resume/experience.pug" />
+        <option value="$PROJECT_DIR$/public/stylesheets/_imports/resume.less" />
         <option value="$PROJECT_DIR$/public/stylesheets/_imports/portfolio.less" />
+        <option value="$PROJECT_DIR$/public/stylesheets/theme.less" />
+        <option value="$PROJECT_DIR$/public/stylesheets/_imports/footer.less" />
+        <option value="$PROJECT_DIR$/views/_pug-includes/scripts.pug" />
+        <option value="$PROJECT_DIR$/views/_pug-includes/head.pug" />
+        <option value="$PROJECT_DIR$/public/stylesheets/_imports/basic-typography.less" />
+        <option value="$PROJECT_DIR$/javascripts/main.js" />
       </list>
     </option>
   </component>
@@ -303,7 +311,50 @@
             <path>
               <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
               <item name="portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="public" type="462c0819:PsiDirectoryNode" />
+              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
+              <item name="_imports" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
               <item name="routes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="_pug-includes" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
+              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
+              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="_pug-includes" type="462c0819:PsiDirectoryNode" />
+              <item name="resume" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -330,19 +381,19 @@
     <property name="ts.external.directory.path" value="C:\Users\Pyriceti\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\183.5429.34\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio" />
-      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\javascripts" />
-      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\views" />
-      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\javascripts" />
-      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\includes" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\images" />
+      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\images\experiences" />
       <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\javascripts" />
       <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\images\education" />
       <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public" />
-      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\fonts\Circular Std" />
-      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\images" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\stylesheets" />
+      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\javascripts" />
+      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\images\experiences" />
+      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio" />
+      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\views" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -386,7 +437,7 @@
       <workItem from="1550513853039" duration="9761000" />
       <workItem from="1550685097606" duration="5012000" />
       <workItem from="1550738897454" duration="17747000" />
-      <workItem from="1550758056602" duration="531000" />
+      <workItem from="1550758056602" duration="10264000" />
     </task>
     <task id="LOCAL-00001" summary="Add Node based .gitignore&#10;&#10;Add vcs.xml idea meta file too">
       <created>1549014552399</created>
@@ -399,10 +450,11 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="94678000" />
+    <option name="totallyTimeSpent" value="104411000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="953" y="0" width="974" height="1047" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.43982494" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -410,7 +462,7 @@
       <window_info id="npm" order="3" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.32713348" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.35886213" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.35776806" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -455,9 +507,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Add Node based .gitignore&#10;&#10;Add vcs.xml idea meta file too" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/images/profile-img1.jpg">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_code.jquery.com_jquery-2.1.1.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-62">
@@ -572,13 +621,6 @@
     <entry file="file://$PROJECT_DIR$/public/stylesheets/pro-bars.css">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/_pug-includes/head.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="5" column="95" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="140" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/pro-bars.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -588,20 +630,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/mixitup.min.js">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/_pug-includes/header.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1056">
-          <caret line="44" selection-start-line="44" selection-end-line="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/_pug-includes/scripts.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="13" lean-forward="true" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/preloader.less">
       <provider selected="true" editor-type-id="text-editor">
@@ -831,47 +859,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/_pug-includes/resume/education.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="376">
-          <caret line="142" column="69" selection-start-line="142" selection-start-column="69" selection-end-line="142" selection-end-column="69" />
-          <caret line="144" column="69" selection-start-line="144" selection-start-column="69" selection-end-line="144" selection-end-column="69" />
-          <folding>
-            <element signature="n#div#2;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" />
-            <element signature="n#div#3;n#div#0;n#div#0;n#div#0;n#section#0;n#!!top" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/_pug-includes/resume/experience.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="142" column="68" selection-start-line="142" selection-start-column="68" selection-end-line="142" selection-end-column="68" />
-          <caret line="144" column="68" selection-start-line="144" selection-start-column="68" selection-end-line="144" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/_pug-includes/resume/skill.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
           <caret line="60" column="53" selection-start-line="60" selection-start-column="53" selection-end-line="60" selection-end-column="53" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/resume.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="141" column="5" selection-start-line="141" selection-start-column="4" selection-end-line="141" selection-end-column="5" />
-          <folding>
-            <element signature="e#122#237#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/basic-typography.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="336">
-          <caret line="14" selection-start-line="14" selection-end-line="14" />
         </state>
       </provider>
     </entry>
@@ -900,13 +891,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/_includes/_colors.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="216">
-          <caret line="9" selection-start-line="9" selection-end-line="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="408">
@@ -914,38 +898,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/theme.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="3840">
-          <caret line="160" column="2" selection-start-line="160" selection-start-column="2" selection-end-line="161" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="8280">
-          <caret line="345" column="24" selection-start-line="345" selection-start-column="24" selection-end-line="345" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/_pug-includes/footer.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="720">
-          <caret line="30" column="74" selection-start-line="30" selection-start-column="74" selection-end-line="30" selection-end-column="74" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/home.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1056">
           <caret line="44" column="22" selection-start-line="44" selection-start-column="22" selection-end-line="44" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="272" column="7" selection-start-line="272" selection-start-column="7" selection-end-line="272" selection-end-column="7" />
         </state>
       </provider>
     </entry>
@@ -970,24 +926,115 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/footer.less">
+    <entry file="file://$PROJECT_DIR$/bin/www">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" column="2" selection-start-line="10" selection-start-column="2" selection-end-line="10" selection-end-column="18" />
+        <state relative-caret-position="96">
+          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/_pug-includes/resume/education.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="120" column="14" selection-start-line="120" selection-start-column="14" selection-end-line="122" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/_includes/_mixins.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="11" column="60" selection-start-line="11" selection-start-column="60" selection-end-line="11" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/resume.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="120" column="39" selection-start-line="120" selection-start-column="39" selection-end-line="120" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/_includes/_colors.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" selection-start-line="9" selection-end-line="9" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/portfolio.less">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
-          <caret line="14" column="18" lean-forward="true" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
+          <caret line="104" column="53" selection-start-line="104" selection-start-column="53" selection-end-line="104" selection-end-column="53" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/bin/www">
+    <entry file="file://$PROJECT_DIR$/views/_pug-includes/resume/experience.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" column="1" lean-forward="true" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
+        <state relative-caret-position="24">
+          <caret line="1" column="2" selection-start-line="1" selection-start-column="2" selection-end-line="1" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/_pug-includes/footer.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1032">
+          <caret line="43" column="58" selection-start-line="43" selection-start-column="58" selection-end-line="43" selection-end-column="58" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/theme.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="134" column="20" selection-start-line="134" selection-start-column="20" selection-end-line="134" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/footer.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="336">
+          <caret line="14" column="3" selection-start-line="14" selection-start-column="3" selection-end-line="14" selection-end-column="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/_pug-includes/scripts.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/_pug-includes/header.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="514">
+          <caret line="44" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/_pug-includes/head.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="49" selection-start-line="3" selection-start-column="49" selection-end-line="3" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23499">
+          <caret line="1014" column="17" selection-start-line="1014" selection-start-column="12" selection-end-line="1014" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/basic-typography.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="52" lean-forward="true" selection-start-line="12" selection-start-column="52" selection-end-line="12" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/javascripts/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="289" column="3" lean-forward="true" selection-start-line="289" selection-start-column="3" selection-end-line="289" selection-end-column="3" />
         </state>
       </provider>
     </entry>

@@ -24,5 +24,6 @@
     <orderEntry type="library" name="materialize" level="application" />
     <orderEntry type="library" name="@types/materialize-css" level="application" />
     <orderEntry type="library" name="@types/nodemailer" level="application" />
+    <orderEntry type="library" name="@types/toastr" level="application" />
   </component>
 </module>

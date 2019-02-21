@@ -249,7 +249,8 @@ jQuery(function ($) {
   /* 13. CONTACT FORM
   /* ----------------------------------------------------------- */
 
-const contactFields =['name', 'email', 'subject', 'message'];
+  const contactFields = ['name', 'email', 'subject', 'message'];
+
   /**
    *
    * @param string {string}
@@ -265,7 +266,7 @@ const contactFields =['name', 'email', 'subject', 'message'];
     });
   });
 
-  $(".submit-btn").click(function(e) {
+  $(".submit-btn").click(function (e) {
     contactFields.forEach(f => {
       $(`#contact${capFirst(f)}`).each(function () {
         $(this).addClass('touched');
@@ -281,9 +282,8 @@ const contactFields =['name', 'email', 'subject', 'message'];
       return message;
     }, {}));
 
-    /* Alerts the results */
-    posting.done(function (data) {
-      alert('success');
+    posting.done(function () {
+      toastr.success('Votre message a bien été envoyé ! :)');
     });
   });
 

@@ -10,7 +10,7 @@
 
   .overlay-section {
     padding: 60px 0;
-    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
+    background-color: rgba(0, 0, 0, 0.5);
     width: 100%;
   }
 }
@@ -46,7 +46,6 @@
 
 
 .contact-form .input-label {
-  /* color: #bbbbbb;*/
   font-size: 15px;
   left: 0;
 }
@@ -158,6 +157,7 @@ textarea.materialize-textarea.touched:focus:invalid {
   position: fixed;
   right: 32px;
   bottom: 32px;
+  transition: all 0.3s ease;
 
   &.hidden {
     opacity: 0;
@@ -168,7 +168,7 @@ textarea.materialize-textarea.touched:focus:invalid {
     color: @almost-black;
   }
 
-  &:hover, &:focus {
+  &:hover {
     color: @almost-white;
 
     i {

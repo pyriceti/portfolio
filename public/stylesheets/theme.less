@@ -37,7 +37,8 @@ a {
 }
 
 .btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus {
-  background-color: @main-color;
+  color: inherit;
+  background-color: #f6f6f6;
 }
 
 .home-title span {
@@ -74,7 +75,7 @@ a {
 
   &:hover, &:focus {
     color: @almost-white;
-    background-color: @main-color;
+    background-color: @accent-color;
   }
 }
 
@@ -111,7 +112,7 @@ a {
 }
 
 #experience {
-  .bg-image;
+  .bg-image-blurred;
 }
 
 .card-title i {
@@ -131,7 +132,7 @@ a {
 }
 
 .footer-top {
-  .bg-image;
+  .bg-image-blurred;
 }
 
 input[type="text"]:not(.browser-default):focus:not([readonly]) + label,
