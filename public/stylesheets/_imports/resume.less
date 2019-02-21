@@ -1,0 +1,260 @@
+@import "../_includes/_colors";
+@import "../_includes/_mixins";
+
+#resume {
+  width: 100%;
+}
+
+#skill {
+  background-color: @almost-white;
+  padding: 60px 0;
+  width: 100%;
+}
+
+.skill-inner {
+  width: 100%;
+
+  p {
+    color: #727272;
+    font-size: 16px;
+    line-height: 30px;
+    font-weight: 400;
+  }
+}
+
+.title {
+  font-size: 48px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin-bottom: 35px;
+  text-transform: uppercase;
+}
+
+.subtitle {
+  margin-bottom: 20px;
+}
+
+.skill-progress-bar {
+  width: 100%;
+  overflow-x: auto;
+
+  > span {
+    color: #727272;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: normal;
+    margin-bottom: 5px;
+  }
+}
+
+.pro-bar-container {
+  position: relative;
+  border-radius: 0;
+  height: unset;
+  min-width: 280px;
+  box-sizing: border-box;
+
+  .label {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 6px;
+    color: #f0f0f0;
+    font-size: 15px;
+    font-weight: normal;
+
+    &[data-percent='100'] {
+      max-width: 100%;
+    }
+
+    &[data-percent='90'] {
+      max-width: 90%;
+    }
+
+    &[data-percent='80'] {
+      max-width: 80%;
+    }
+
+    &[data-percent='70'] {
+      max-width: 70%;
+    }
+
+    &[data-percent='60'] {
+      max-width: 60%;
+    }
+
+    .light {
+      opacity: .8;
+    }
+  }
+
+  @media (max-width: 767px ) {
+    .pro-bar {
+      padding-top: 4px;
+      padding-bottom: 4px;
+    }
+
+    .label {
+      font-size: 12px;
+
+      .light {
+        display: block;
+      }
+    }
+  }
+}
+
+.pro-bar {
+  border-radius: 0;
+  height: 30px;
+}
+
+.card .card-content .card-title {
+  margin-top: 4px;
+}
+
+#experience {
+  padding: 60px 0;
+  width: 100%;
+}
+
+.experience-inner {
+  width: 100%;
+
+  .title {
+    color: @almost-white;
+  }
+
+  > p {
+    color: @almost-white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  .carousel-container {
+    position: relative;
+
+    .prev, .next {
+      position: absolute;
+      top: 50%;
+      background-color: white;
+    }
+
+    .prev {
+      left: 0;
+      transform: translateX(-100%) translateY(-50%);
+    }
+
+    .next {
+      right: 0;
+      transform: translateX(100%) translateY(-50%);
+    }
+
+    @media (max-width: 767px ) {
+      .prev {
+        top: unset;
+        bottom: 0;
+        transform: translateX(-115%) translateY(100%);
+        left: 50%;
+      }
+
+      .next {
+        top: unset;
+        bottom: 0;
+        transform: translateX(115%) translateY(100%);
+        right: 50%;
+      }
+    }
+  }
+}
+
+.experience-slider {
+  margin-top: 55px;
+  width: 100%;
+
+  .card .card-content {
+    padding: 0 20px 20px;
+  }
+
+  .card-reveal p {
+    color: #727272;
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+
+.experience-title {
+  border-bottom: 1px solid #eee;
+  color: #727272;
+  font-size: 17px;
+  font-weight: 400;
+  line-height: 1.7;
+  margin-bottom: 0;
+  margin-top: 0;
+  padding: 15px 20px;
+  text-align: center;
+}
+
+.card-subtitle {
+  border-bottom: 1px solid #eee;
+  display: block;
+  padding-bottom: 10px;
+}
+
+.reveal-title {
+  color: #727272 !important;
+  font-size: 20px !important;
+}
+
+#education {
+  background-color: #fafafa;
+  padding: 60px 0;
+  width: 100%;
+}
+
+.education-inner {
+  width: 100%;
+
+  > p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+
+  .carousel-container {
+    position: relative;
+
+    .prev1, .next1 {
+      position: absolute;
+      top: 50%;
+      background-color: white;
+    }
+
+    .prev1 {
+      left: 0;
+      transform: translateX(-100%) translateY(-50%);
+    }
+
+    .next1 {
+      right: 0;
+      transform: translateX(100%) translateY(-50%);
+    }
+
+    @media (max-width: 767px ) {
+      .prev1 {
+        top: unset;
+        bottom: 0;
+        transform: translateX(-115%) translateY(100%);
+        left: 50%;
+      }
+
+      .next1 {
+        top: unset;
+        bottom: 0;
+        transform: translateX(115%) translateY(100%);
+        right: 50%;
+      }
+    }
+  }
+}

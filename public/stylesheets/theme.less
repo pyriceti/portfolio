@@ -15,23 +15,35 @@ a {
 }
 
 .sidenav li.first-level:hover,
-.sidenav li.second-level:hover{
+.sidenav li.second-level:hover {
   background-color: @main-color;
 }
-.btn ,.btn-large{
+
+.btn, .btn-large {
   background-color: @main-color;
 }
-.btn:hover, .btn-large:hover {
+
+.btn:hover, .btn-large:hover, .btn-floating:hover,
+.carousel-container .btn-floating.prev:hover,
+.carousel-container .btn-floating.next:hover,
+.carousel-container .btn-floating.prev1:hover,
+.carousel-container .btn-floating.next1:hover {
+  color: @almost-white;
   background-color: @accent-color;
+
+  i {
+    color: inherit;
+  }
 }
 
-.btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus{
+.btn:focus, .btn-large:focus, .btn-small:focus, .btn-floating:focus {
   background-color: @main-color;
 }
 
-.home-title span{
+.home-title span {
   color: @accent-color;
 }
+
 .about-inner-right > h3 {
   color: @main-color;
 }
@@ -43,26 +55,34 @@ a {
 .personal-information > h3 {
   color: @main-color;
 }
-.title{
+
+.title {
   color: @main-color;
 }
 
 .card-subtitle {
   color: @main-color;
 }
-.portfolio-top{
+
+.portfolio-top {
   .bg-image;
 }
+
 .filter {
   color: @main-color;
+  background-color: @almost-white;
+
+  &:hover, &:focus {
+    color: @almost-white;
+    background-color: @main-color;
+  }
 }
-.filter:focus{
-  background-color: @main-color;
-}
+
 #portfolio-list .mix:hover > a::before {
   background-color: @main-color;
 }
-.counter{
+
+.counter {
   color: @main-color;
 }
 
@@ -73,40 +93,47 @@ a {
 .pro-bar.color-amethyst {
   background-color: @main-color;
 }
-.call-to-about i{
+
+.call-to-about i {
   color: @main-color;
 }
 
-.blog-post .card-action a{
+.blog-post .card-action a {
   color: @main-color;
 }
 
-.post-comment:hover{
+.post-comment:hover {
   color: @main-color !important;
 }
 
-.readmore-btn:hover{
+.readmore-btn:hover {
   background-color: @main-color;
 }
-#experience{
-.bg-image;
+
+#experience {
+  .bg-image;
 }
 
 .card-title i {
   color: @main-color;
 }
-.customNavigation i{
+
+.custom-navigation i {
   color: @main-color;
 }
-#testimonial{
+
+#testimonial {
   .bg-image;
 }
+
 .testimonial-content h3 {
   color: @main-color;
 }
-.footer-top{
+
+.footer-top {
   .bg-image;
 }
+
 input[type="text"]:focus:not([readonly]) + label,
 input[type="password"]:focus:not([readonly]) + label,
 input[type="email"]:focus:not([readonly]) + label,
@@ -120,6 +147,7 @@ input[type="search"]:focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
   color: @main-color;
 }
+
 input[type="text"]:focus:not([readonly]),
 input[type="password"]:focus:not([readonly]),
 input[type="email"]:focus:not([readonly]),
@@ -134,60 +162,75 @@ textarea.materialize-textarea:focus:not([readonly]) {
   border-bottom: 1px solid @main-color;
   box-shadow: 0 1px 0 0 @main-color;
 }
-.submit-btn{
+
+.submit-btn {
   color: @main-color;
 }
+
 .submit-btn:hover,
-.submit-btn:focus{
+.submit-btn:focus {
   background-color: @main-color;
 }
-.overlay-header{
+
+.overlay-header {
   background-color: @main-color;
 }
+
 .blog-content blockquote {
   border-left: 5px solid @main-color;
 }
+
 .share-area h4 i,
 .tag-area h4 i {
   color: @main-color;
 }
+
 .share-area a:hover,
-.share-area a:focus{
+.share-area a:focus {
   color: @main-color;
 }
+
 .author-comments {
   background-color: @main-color !important;
 }
-.reply-btn:hover{
+
+.reply-btn:hover {
   background-color: @main-color;
 }
-.pagination li.active{
+
+.pagination li.active {
   background-color: @main-color;
 }
+
 .card .card-action a {
   color: @main-color;
 }
+
 .tagcloud a:hover,
-.tagcloud a:focus{
+.tagcloud a:focus {
   color: #fff;
   background-color: @main-color;
   border-color: @main-color;
 }
+
 .prev-post:hover,
 .prev-post:focus,
 .next-post:hover,
-.next-post:focus{
+.next-post:focus {
   background-color: @main-color;
 }
-.submit-btn{
+
+.submit-btn {
   color: @main-color;
 }
+
 .sidenav li.first-level:hover,
 .sidenav li.second-level:hover,
 .sidenav li.first-level.active,
 .sidenav li.second-level.active {
   background-color: @main-color;
 }
+
 .progress .indeterminate {
   background-color: @accent-color;
 }

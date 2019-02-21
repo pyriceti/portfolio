@@ -1,12 +1,4 @@
 /**
- * Template Name: MU Material
- * Version: 1.0
- * Template Scripts
- * Author: MarkUps
- * Author URI: http://www.markups.io/
-
- Custom JS
-
  1. MOBILE MENU
  2. EXPERIENCE SLIDER (Owl Carousel)
  3. EDUCATION SLIDER (Owl Carousel)
@@ -77,7 +69,17 @@ jQuery(function ($) {
   /*  4. PORTFOLIO SLIDER
   /* ----------------------------------------------------------- */
 
-  jQuery('#portfolio-list').mixItUp();
+  const $portfolioList = $('#portfolio-list');
+  if ($portfolioList.length) {
+    mixitup($portfolioList[0], {
+      animation: {
+        duration:   500,
+        nudge:      true,
+        reverseOut: false,
+        effects:    "fade scale(0.5) translateZ(-100px)",
+      },
+    });
+  }
 
   /* ----------------------------------------------------------- */
   /*  5. COUNTER
@@ -124,7 +126,7 @@ jQuery(function ($) {
   // All list items
   let menuItems     = topMenu.find("a[href^=\\#]").filter(":not([href=\\#])");
   // Anchors corresponding to menu items
-  let scrollItems   = menuItems.map(function() {
+  let scrollItems   = menuItems.map(function () {
     const item = $($(this).attr("href"));
     if (item.length) {
       return item;

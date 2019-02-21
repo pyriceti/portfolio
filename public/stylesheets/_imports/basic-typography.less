@@ -1,0 +1,79 @@
+@import "../_includes/_colors";
+
+@font-face {
+  font-family: 'Circular Std';
+  src: url('../../fonts/Circular Std/CircularStd-Book.otf') format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*,
+h1, h2, h3, h4, h5, h6,
+button {
+  font-family: "Circular Std", "Roboto", sans-serif;
+}
+
+.custom-nav li a {
+  font-family: "Circular Std", "Roboto", sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 14px;
+  padding: 25px 20px;
+  text-transform: uppercase;
+  transition: all 0.3s ease-out 0s;
+}
+
+
+nav .brand-logo {
+  font-weight: bold;
+  text-transform: uppercase;
+
+  img {
+    height: 45px;
+    margin-top: 10px;
+  }
+}
+
+.sidenav {
+  li {
+    &.first-level:hover,
+    &.second-level:hover {
+      color: @almost-white;
+    }
+
+    &.first-level.active,
+    &.second-level.active {
+      > a {
+        color: @almost-white;
+      }
+    }
+
+    a {
+      text-transform: uppercase;
+
+      &:hover {
+        color: @almost-white;
+      }
+
+      &.sub-section {
+        padding-left: 48px;
+      }
+    }
+  }
+
+  .nolink {
+    padding-left: 32px;
+  }
+}
+
+.main-wrapper {
+  width: 100%;
+}
+
+.it {
+  font-style: italic;
+}
+
+.bold {
+  font-weight: bold;
+}

@@ -1,0 +1,164 @@
+@import "../_includes/_colors";
+@import "../_includes/_mixins";
+
+#footer {
+  width: 100%;
+}
+
+.footer-top {
+  width: 100%;
+
+  .overlay-section {
+    padding: 60px 0;
+    background: rgba(0, 0, 0, 0.33) none repeat scroll 0 0;
+    width: 100%;
+  }
+}
+
+.footer-top-inner {
+  width: 100%;
+
+  & > h2 {
+    color: @almost-white;
+  }
+
+  & > p {
+    color: @almost-white;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 30px;
+  }
+}
+
+.contact {
+  margin-top: 50px;
+  width: 100%;
+}
+
+
+.contact-form {
+  background: @almost-white none repeat scroll 0 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  padding: 20px;
+  width: 100%;
+}
+
+
+.contact-form .input-label {
+  /* color: #bbbbbb;*/
+  font-size: 15px;
+  left: 0;
+}
+
+
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="url"],
+input[type="time"],
+input[type="date"],
+input[type="datetime-local"],
+input[type="tel"], input[type="number"],
+input[type="search"],
+textarea.materialize-textarea {
+  border-color: #ccc;
+}
+
+
+.textarea-input textarea {
+  min-height: 116px;
+}
+
+.submit-btn {
+  transition: all 0.3s;
+}
+
+.submit-btn:hover,
+.submit-btn:focus {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: @almost-white;
+}
+
+
+.contact-map {
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  border-radius: 4px;
+  height: 500px;
+  display: inline;
+  float: left;
+  width: 100%;
+}
+
+
+.contact-map iframe {
+  border-radius: 4px;
+  margin-bottom: -5px;
+}
+
+
+.footer-bottom {
+  background-color: @almost-white;
+  display: inline;
+  float: left;
+  width: 100%;
+}
+
+
+.footer-inner {
+  display: inline;
+  float: left;
+  padding-top: 20px;
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+
+
+.design-info {
+  color: #555;
+  display: inline-block;
+  font-size: 14px;
+  line-height: 25px;
+  margin-top: 20px;
+}
+
+
+.design-info a {
+  color: #555;
+}
+
+
+.copyright-info {
+  color: #555;
+  display: inline-block;
+  float: right;
+  font-size: 14px;
+  line-height: 25px;
+}
+
+
+.up-btn {
+  background-color: @almost-white;
+  color: @almost-black;
+  position: fixed;
+  right: 32px;
+  bottom: 32px;
+
+  &.hidden {
+    opacity: 0;
+    cursor: default;
+  }
+
+  i {
+    color: @almost-black;
+  }
+
+  &:hover, &:focus {
+    color: @almost-white;
+
+    i {
+      color: inherit;
+    }
+  }
+}
