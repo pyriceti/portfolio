@@ -10,7 +10,7 @@
 
   .overlay-section {
     padding: 60px 0;
-    background: rgba(0, 0, 0, 0.33) none repeat scroll 0 0;
+    background: rgba(0, 0, 0, 0.5) none repeat scroll 0 0;
     width: 100%;
   }
 }
@@ -59,10 +59,24 @@ input[type="url"],
 input[type="time"],
 input[type="date"],
 input[type="datetime-local"],
-input[type="tel"], input[type="number"],
+input[type="tel"],
+input[type="number"],
 input[type="search"],
 textarea.materialize-textarea {
+  color: @almost-black;
   border-color: #ccc;
+}
+
+input.touched:required:invalid,
+input.touched:focus:invalid,
+textarea.materialize-textarea.touched:required:invalid,
+textarea.materialize-textarea.touched:focus:invalid {
+  border-bottom: 1px solid @error;
+  box-shadow: 0 1px 0 0 @error;
+
+  + label {
+    color: @error;
+  }
 }
 
 

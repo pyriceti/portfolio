@@ -1,16 +1,17 @@
 /**
- 1. MOBILE MENU
- 2. EXPERIENCE SLIDER (Owl Carousel)
- 3. EDUCATION SLIDER (Owl Carousel)
- 4. PORTFOLIO SLIDER
- 5. COUNTER
- 6. TESTIMONIAL SLIDER (Owl Carousel)
- 7. MENU SMOOTH SCROLLING
- 8. PRELOADER
- 9. CALL TO ABOUT
+ 1.  MOBILE MENU
+ 2.  EXPERIENCE SLIDER (Owl Carousel)
+ 3.  EDUCATION SLIDER (Owl Carousel)
+ 4.  PORTFOLIO SLIDER
+ 5.  COUNTER
+ 6.  TESTIMONIAL SLIDER (Owl Carousel)
+ 7.  MENU SMOOTH SCROLLING
+ 8.  PRELOADER
+ 9.  CALL TO ABOUT
  10. BOTTOM TO UP
  11. PARALLAX HEADER
  12. HIRE ME SCROLL
+ 13. CONTACT FORM
  **/
 
 jQuery(function ($) {
@@ -176,14 +177,19 @@ jQuery(function ($) {
   });
 
   /* ----------------------------------------------------------- */
+
   /*  8. PRELOADER
   /* ----------------------------------------------------------- */
 
-  $(window).on('load', function () { // makes sure the whole site is loaded
+  function removePreloader() { // makes sure the whole site is loaded
     $('.progress').fadeOut(); // will first fade out the loading animation
     $('#preloader').delay(100).fadeOut('slow'); // will fade out the white DIV that covers the website.
     $('body').delay(100).css({ 'overflow': 'visible' });
-  });
+  }
+
+  $(window).on('load', removePreloader);
+  // Fallback after 2s (doc should be ready by now)
+  setTimeout(removePreloader, 2000);
 
   /* ----------------------------------------------------------- */
   /* 9. CALL TO ABOUT
@@ -239,5 +245,46 @@ jQuery(function ($) {
       'slow');
   });
 
+  /* ----------------------------------------------------------- */
+  /* 13. CONTACT FORM
+  /* ----------------------------------------------------------- */
+
+const contactFields =['name', 'email', 'subject', 'message'];
+  /**
+   *
+   * @param string {string}
+   * @return {string}
+   */
+  function capFirst(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+  }
+
+  contactFields.forEach(f => {
+    $(`#contact${capFirst(f)}`).blur(function () {
+      $(this).addClass('touched');
+    });
+  });
+
+  $(".submit-btn").click(function(e) {
+    contactFields.forEach(f => {
+      $(`#contact${capFirst(f)}`).each(function () {
+        $(this).addClass('touched');
+      });
+    });
+  });
+
+  $("#contactForm").submit(function (e) {
+    e.preventDefault();
+
+    const posting = $.post('send-message', contactFields.reduce((message, fieldName) => {
+      message[fieldName] = $(`#contact${capFirst(fieldName)}`).val();
+      return message;
+    }, {}));
+
+    /* Alerts the results */
+    posting.done(function (data) {
+      alert('success');
+    });
+  });
 
 });

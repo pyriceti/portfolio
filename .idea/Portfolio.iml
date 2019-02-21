@@ -23,5 +23,6 @@
     <orderEntry type="library" name="jquery.waypoints" level="application" />
     <orderEntry type="library" name="materialize" level="application" />
     <orderEntry type="library" name="@types/materialize-css" level="application" />
+    <orderEntry type="library" name="@types/nodemailer" level="application" />
   </component>
 </module>

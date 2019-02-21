@@ -16,19 +16,19 @@ footer#footer(role='contentinfo')
                 .row
                   .col.s12.m6.l6
                     .contact-form
-                      form
+                      form#contactForm
                         .input-field
-                          input(type='text' class='input-box' name='contactName' id='contact-name')
-                          label.input-label(for='contact-name') Nom
+                          input#contactName.input-box(type='text', name='contactName')
+                          label.input-label(for='contactName') Nom
                         .input-field
-                          input(type='email' class='input-box' name='contactEmail' id='email')
-                          label.input-label(for='email') Email
+                          input#contactEmail.input-box(type='email', name='contactEmail', required)
+                          label.input-label(for='contactEmail') Email*
                         .input-field
-                          input(type='text' class='input-box' name='contactSubject' id='subject')
-                          label.input-label(for='subject') Sujet
+                          input#contactSubject.input-box(type='text', name='contactSubject')
+                          label.input-label(for='contactSubject') Sujet
                         .input-field.textarea-input
-                          textarea#contactTextarea.materialize-textarea(name='contactMessage')
-                          label.input-label(for='contactTextarea') Message
+                          textarea#contactMessage.materialize-textarea(name='contactMessage', required)
+                          label.input-label(for='contactMessage') Message*
                         button.btn-flat.brand-text.submit-btn(type='submit') Envoyer
                   .col.s12.m6.l6
                     .contact-map
