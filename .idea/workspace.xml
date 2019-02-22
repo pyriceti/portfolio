@@ -2,23 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af9137f-7241-4526-a01a-c41e9e96a09f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/portfolio/games/fragments/1.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/portfolio/games/fragments/2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/portfolio/games/fragments/3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/portfolio/games/fragments/4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/portfolio/games/fragments/5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/portfolio/games/fragments/6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/portfolio/games/fragments/7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/portfolio/games/fragments/8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/portfolio/games/fragments/Ableton.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/portfolio/games/fragments/Audacity.PNG" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/portfolio/games/fragments/Rider.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/images/portfolio/games/fragments/Wwise.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/article.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/_imports/article.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/basic-typography.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/_imports/basic-typography.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/_includes/_colors.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/_includes/_colors.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/fragments.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/fragments.pug" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -32,18 +15,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/fragments.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="155">
-              <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
+            <state relative-caret-position="515">
+              <caret line="124" column="73" lean-forward="true" selection-start-line="124" selection-start-column="73" selection-end-line="124" selection-end-column="93" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/1.png">
-          <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -53,31 +31,6 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/3.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/4.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/5.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/6.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/7.png">
-          <provider selected="true" editor-type-id="images" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/8.png">
           <provider selected="true" editor-type-id="images" />
         </entry>
       </file>
@@ -431,7 +384,7 @@
       <workItem from="1550685097606" duration="5012000" />
       <workItem from="1550738897454" duration="17747000" />
       <workItem from="1550758056602" duration="11775000" />
-      <workItem from="1550824977343" duration="21933000" />
+      <workItem from="1550824977343" duration="22189000" />
     </task>
     <task id="LOCAL-00001" summary="Add Node based .gitignore&#10;&#10;Add vcs.xml idea meta file too">
       <created>1549014552399</created>
@@ -444,7 +397,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="127855000" />
+    <option name="totallyTimeSpent" value="128111000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -748,12 +701,8 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/fragments.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="155">
-          <caret line="25" column="16" lean-forward="true" selection-start-line="25" selection-start-column="16" selection-end-line="25" selection-end-column="16" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/1.png">
+      <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/2.png">
       <provider selected="true" editor-type-id="images" />
@@ -761,23 +710,27 @@
     <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/4.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/5.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/6.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/7.png">
+    <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/3.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
     <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/8.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/1.png">
+    <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/4.png">
       <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/6.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/5.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/fragments.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="515">
+          <caret line="124" column="73" lean-forward="true" selection-start-line="124" selection-start-column="73" selection-end-line="124" selection-end-column="93" />
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
