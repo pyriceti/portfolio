@@ -1,0 +1,43 @@
+doctype html
+html(lang='fr')
+  include _pug-includes/head
+
+  body
+
+    // PRELOADER
+    include _pug-includes/preloader
+
+    // HEADER
+    include _pug-includes/project-header
+
+    // MAIN WRAPPER
+    .main-wrapper
+      main(role='main')
+
+        - const bannerTitle = 'Fragments';
+        - const bannerYear = '2019';
+        - const bannerCat = 'Jeux vidéo';
+        - const bannerRoles = ['Sound Designer/Composer', 'Game Designer', 'Programmer'];
+        // BANNER
+        include _pug-includes/banner
+
+        section#article
+          .container
+            .row
+              .col
+                p.
+                  There are many variations of passages of Lorem Ipsum available,
+                  but the majority have suffered alteration in some form, by
+                  injected humour, or randomised words which don't look even
+                  slightly believable
+                p.
+                  There are many variations of passages of Lorem Ipsum available,
+                  but the majority have suffered alteration in some form, by
+                  injected humour, or randomised words which don't look even
+                  slightly believable
+
+        // FOOTER SECTION
+        include _pug-includes/footer-simple
+
+    // SCRIPTS INCLUDES
+    include _pug-includes/scripts

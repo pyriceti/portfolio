@@ -231,7 +231,7 @@ jQuery(function ($) {
   /* 11. PARALLAX HEADER
   /* ----------------------------------------------------------- */
 
-  jQuery('.parallax').parallax();
+  // $('.parallax').parallax();
 
   /* ----------------------------------------------------------- */
   /* 12. HIRE ME SCROLL

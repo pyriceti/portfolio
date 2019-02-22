@@ -16,7 +16,6 @@ i18n.configure({
 });
 
 const indexRouter = require('./routes/index');
-const usersRouter = require('./routes/users');
 
 const app = express();
 
@@ -48,6 +47,5 @@ app.use(function (req, res, next) {
 });
 
 app.use('/', indexRouter);
-app.use('/users', usersRouter);
 
 module.exports = app;

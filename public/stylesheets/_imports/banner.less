@@ -1,0 +1,31 @@
+@import "../_includes/_colors";
+@import "../_includes/_mixins";
+
+#banner {
+  width: 100%;
+
+  .overlay-section {
+    padding-top: 40px;
+    padding-bottom: 20px;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .header-title {
+    color: @almost-white;
+    font-size: 40px;
+    font-weight: 900;
+    line-height: 40px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+
+  .meta-media {
+    width: 100%;
+
+    .single-meta {
+      color: fade(@almost-white, 80%);
+      display: block;
+    }
+  }
+}

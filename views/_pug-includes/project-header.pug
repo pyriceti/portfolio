@@ -1,0 +1,25 @@
+header#header(role='banner')
+  .navbar-fixed
+    nav
+      .container
+        .nav-wrapper
+          // TEXT BASED LOGO
+          a.brand-logo(href='/') Baptiste Perraud
+
+          // Image Based Logo
+          <!-- <a href='index.html' class='brand-logo'><img src='img/logo.jpeg' alt='logo img'></a>  -->
+          ul.right.hide-on-med-and-down.custom-nav
+            li
+              a(href='/') Accueil
+            li.active
+              a(href='#') Projets
+
+          a.sidenav-trigger(href='#', data-target='slide-out')
+            i.material-icons menu
+
+  // For Mobile View
+  ul#slide-out.sidenav.menu-scroll
+    li.first-level
+      a(href='/') Accueil
+    li.first-level.active
+      a(href='#') Projets

@@ -1,0 +1,87 @@
+@import "../_includes/_colors";
+@import "../_includes/_mixins";
+
+#article {
+  background-color: #fafafa;
+  min-height: 500px;
+  width: 100%;
+  padding: 40px 30px;
+
+  h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    line-height: 43px;
+    margin-top: 10px;
+  }
+
+
+  h2 {
+    font-size: 35px;
+    margin-bottom: 10px;
+    line-height: 37px;
+    margin-top: 10px;
+  }
+
+
+  h3 {
+    font-size: 26px;
+    line-height: 28px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+
+  h4 {
+    font-size: 20px;
+    line-height: 23px;
+    margin-bottom: 5px;
+    margin-top: 5px;
+  }
+
+
+  h5 {
+    font-size: 16px;
+    line-height: 18px;
+    margin-top: 5px;
+  }
+
+
+  blockquote {
+    background-color: @almost-white;
+    padding: 10px;
+  }
+
+
+  blockquote p {
+    color: #555;
+    font-size: 17px;
+    margin: 0;
+  }
+
+
+  cite {
+    font-size: 13px;
+    font-style: italic;
+  }
+
+
+  ul, ol {
+    padding-left: 25px;
+  }
+
+
+  ul > li {
+    list-style: disc;
+    color: #555;
+  }
+
+
+  ul > li ul > li {
+    list-style: circle;
+  }
+
+
+  ul > li ul > li ul > li {
+    list-style: square;
+  }
+}

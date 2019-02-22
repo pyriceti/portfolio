@@ -65,6 +65,11 @@ router.get('/', function (req, res, next) {
   res.render('index');
 });
 
+/* GET home page. */
+router.get('/projects/fragments', function (req, res, next) {
+  res.render('fragments');
+});
+
 /* POST send message */
 router.post('/send-message', function (req, res, next) {
   const { name, email, subject, message } = req.body;

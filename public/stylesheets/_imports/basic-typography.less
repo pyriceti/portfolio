@@ -7,10 +7,19 @@
   font-style: normal;
 }
 
-*,
-h1, h2, h3, h4, h5, h6,
-button {
+@font-face {
+  font-family: 'Raleway';
+  src: url('../../fonts/Raleway/Raleway-Regular.ttf') format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+*, button {
   font-family: "Circular Std", "Roboto", sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Raleway", "Circular Std", "Roboto", sans-serif;
 }
 
 #toast-container > div {
@@ -30,8 +39,7 @@ button {
 
 
 nav .brand-logo {
-  font-weight: bold;
-  text-transform: uppercase;
+  font-size: 1.5rem;
 
   img {
     height: 45px;
