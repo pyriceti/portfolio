@@ -1,5 +1,5 @@
 /**
- 1.  MOBILE MENU
+ 1.  MENU
  2.  EXPERIENCE SLIDER (Owl Carousel)
  3.  EDUCATION SLIDER (Owl Carousel)
  4.  PORTFOLIO SLIDER
@@ -18,10 +18,17 @@ jQuery(function ($) {
   M.AutoInit();
 
   /* ----------------------------------------------------------- */
-  /*  1. Mobile MENU
+  /*  1. MENU
   /* ----------------------------------------------------------- */
 
   $(".sidenav").sidenav();
+
+  // const elems = document.querySelectorAll(".dropdown-trigger[data-target='portfolioDropdown']");
+  // M.Dropdown.init(elems, {
+  //   coverTrigger: false,
+  //   hover:        true,
+  // });
+
 
   /* ----------------------------------------------------------- */
   /*  2. Experience SLider(Owl Carousel)
@@ -175,6 +182,15 @@ jQuery(function ($) {
         .end().filter("[href='#" + id + "']").parent().addClass("active");
     }
   });
+
+  // Handle if navigating from outside
+  const anchor = window.location.hash;
+  if (anchor.startsWith('#')) {
+    const offsetTop = anchor === "#" ? 0 : $(anchor).offset().top - topMenuHeight + 15;
+    jQuery('html, body').stop().animate({
+      scrollTop: offsetTop,
+    }, 900);
+  }
 
   /* ----------------------------------------------------------- */
 

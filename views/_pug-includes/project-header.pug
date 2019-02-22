@@ -12,7 +12,13 @@ header#header(role='banner')
             li
               a(href='/') Accueil
             li.active
-              a(href='#') Projets
+              a(href='/#portfolio') Portfolio
+              //a.dropdown-trigger(href='#', data-target='portfolioDropdown') Portfolio
+              //ul#portfolioDropdown.dropdown-content
+              //  li
+              //    a(href='/?clang=fr') fr
+              //  li
+              //    a(href='/?clang=en') en
 
           a.sidenav-trigger(href='#', data-target='slide-out')
             i.material-icons menu
@@ -22,4 +28,4 @@ header#header(role='banner')
     li.first-level
       a(href='/') Accueil
     li.first-level.active
-      a(href='#') Projets
+      a(href='/#portfolio') Portfolio
