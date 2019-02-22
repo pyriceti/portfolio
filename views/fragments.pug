@@ -15,7 +15,7 @@ html(lang='fr')
       main(role='main')
 
         - const bannerTitle = 'Fragments';
-        - const bannerYear = '2019';
+        - const bannerYear = '2019 (2 mois)';
         - const bannerCat = 'Jeux vidéo';
         - const bannerRoles = ['Sound Designer/Composer', 'Game Designer', 'Programmer'];
         // BANNER
@@ -25,16 +25,123 @@ html(lang='fr')
           .container
             .row
               .col
+                h2 Présentation
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/fragments/1.png")
                 p.
-                  There are many variations of passages of Lorem Ipsum available,
-                  but the majority have suffered alteration in some form, by
-                  injected humour, or randomised words which don't look even
-                  slightly believable
+                  Fragments est un #[span.bold jeu vidéo narratif] réalisé en 2019
+                  dans le cadre du séminaire "Histoire interactive" au sein du mastère
+                  IDE à GOBELINS, l'école de l'image. Le but du projet était de
+                  créer une expérience à forte composante narrative. Mon groupe
+                  a choisi de réaliser un "#[span.it walking simulator]".
+
+            .row
+              .col
+                h2 Concept
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/fragments/2.png")
                 p.
-                  There are many variations of passages of Lorem Ipsum available,
-                  but the majority have suffered alteration in some form, by
-                  injected humour, or randomised words which don't look even
-                  slightly believable
+                  Fragments est une expérience qui explore
+                  le traumatisme et l’émancipation par
+                  l’introspection, à travers un point de vue
+                  très intimiste. Le joueur incarne Lauren,
+                  une jeune adulte de 33 ans, qui va revivre
+                  certains souvenirs liés à sa relation
+                  fraternelle, pour tourner la page d’une étape
+                  douloureuse de sa vie.
+
+            .row
+              .col
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/fragments/3.png")
+                p.
+                  Le #[span.it hub] dans lequel
+                  il reconstruit les souvenirs de Lauren est un
+                  espace éthéré, brumeux : il s'agit du palais mental de Lauren.
+                  Des "fragments" de scènes sont répartis sur des îlots qui
+                  flottent dans le vide. On y retrouve des
+                  morceaux de bâtiments, de forêt ou encore
+                  de pavillon résidentiel qui peuplent la
+                  mémoire de Lauren et servent de support à
+                  la narration.
+
+            .row
+              .col
+                h2 Rôle & responsabilités
+                img.materialboxed.responsive-img.illus(src="/images/portfolio/games/fragments/4.png")
+                p.
+                  Dans ce projet, j'ai assisté mon équipe en #[span.it game design]
+                  et scénarisation pour que nous soyons sûrs que le #[span.it gameplay] et la
+                  narration de notre jeu aillent bien de pair. Néanmoins, j'ai
+                  surtout assumé les rôles de #[span.bold #[span.it Sound Designer]]
+                  et de #[span.bold #[span.it Composer]].
+
+            .row
+              .col
+                h3 Composition
+                img.materialboxed.responsive-img.illus(src="/images/portfolio/games/fragments/Ableton.png")
+                p.
+                  J'ai composé l'ensemble de la bande originale de Fragments
+                  à l'aide d'Ableton et de VST gratuits. Il s'agissait d'un
+                  #[span.it challenge] intéressant, par rapport à la l'écriture
+                  d'une musique interactive qui #[span.bold s'adapte] aux actions du joueur.
+
+            .row
+              .col
+                h3 Enregistrement & Mixage
+                img.materialboxed.responsive-img.illus(src="/images/portfolio/games/fragments/Audacity.png")
+                p.
+                  Nous avons fait appel à une comédienne professionnelle pour
+                  obtenir les voix de Lauren et de son frère Tommy. J'ai supervisé
+                  l'enregistrement de sa voix dans un studio dédié de l'école,
+                  puis nettoyé et mixé les fichiers résultants dans Audacity,
+                  en appliquant au besoin certains effets (voix du passé,
+                  au téléphone, etc.).
+
+            .row
+              .col
+                h3 Intégration
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/fragments/Wwise.png")
+                p.
+                  Nous avons fait appel à un étudiant en #[span.it sound design] pour m'épauler
+                  dans mon travail : Matthieu. Ce dernier a produit les bruitages
+                  dont nous avions besoin pour le jeu. Je me suis occupé d'intégrer
+                  l'ensemble des ressources sonores du projet (voix, bruitages et
+                  musique) dans le moteur audio Wwise dédié, puis à mixer et
+                  équilibrer les sorties pour obtenir un résultat convainquant.
+
+            .row
+              .col
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/fragments/Rider.png")
+                p.
+                  Enfin, j'ai finalisé l'intégration sonore du projet en interfaçant
+                  Wwise et Unity grâce à l'API officielle. Il s'agissait #[span.it in fine]
+                  de scripter les interactions entre les deux moteurs pour que les
+                  sons se déclenchent au bon moment, en fonction de l'action du joueur.
+
+            .row
+              .col
+                h2 Crédits
+                ul.no-bullets
+                  li #[strong.medium  Anthony DE RUEDA] : storytelling, direction artistique
+                  li #[strong.medium  Jeremy HA] : storytelling, game design, programmation
+                  li #[strong.medium  Lara PLOIX] : storytelling & direction artistique
+                p avec l'aimable participation de :
+                ul.no-bullets
+                  li #[strong.medium  Matthieu RAUBER] : sound design
+                  li #[strong.medium  Aurore JAMES] : voicing
+
+            .row
+              .col
+                h2 Liens utiles
+                ul
+                  li.
+                    Un build Windows permettant de jouer au projet se trouve #[a(href='https://drive.google.com/open?id=1mI1NzlP8sbjg2HRBTVEhCR8VAxWwHE-Z') ici].
+                    Pour jouer : télécharger l'archive au lien indiqué, la décompresser puis lancer 'Fragments.exe'
+                    en laissant les paramètres par défaut. Attention, il est conseillé d'avoir une carte graphique
+                    dédiée pour que le jeu soit stable.
+                  li.
+                    Un #[span.it walkthrough] de l'ensemble du jeu est disponible #[a(href='https://drive.google.com/open?id=1-HhshQ6JBwDPxccpEKwQsA4p00ajjsfm') ici].
+                  li.
+                    La bande originale complète est disponible #[a(href='https://soundcloud.com/user-128757034/sets/fragments-original-soundtrack') ici]
+                    sur mon profil SoundCloud.
 
         // FOOTER SECTION
         include _pug-includes/footer-simple

@@ -7,8 +7,40 @@
   width: 100%;
   padding: 40px 30px;
 
+  .illus {
+    float: left;
+    width: 50%;
+    margin-top: 10px;
+    margin-right: 12px;
+    padding-right: 12px;
+    margin-bottom: 16px;
+
+    &.right {
+      margin-right: 0;
+      margin-left: 12px;
+      padding-right: 0;
+      padding-left: 12px;
+    }
+
+    @media (max-width: 767px ) {
+      &, &.right {
+        float: none !important;
+        width: 100%;
+        padding: 0;
+        margin: 0 0 16px;
+      }
+    }
+  }
+
   p {
-    font-size: 16px;
+    font-size: 18px;
+    line-height: 1.65;
+  }
+
+  a {
+    &:hover {
+      color: @accent-color;
+    }
   }
 
   h1 {
@@ -71,6 +103,16 @@
 
   ul, ol {
     padding-left: 25px;
+    font-size: 16px;
+
+    &.no-bullets {
+      padding-left: 0;
+
+      li {
+        list-style: none;
+        margin-bottom: 6px;
+      }
+    }
   }
 
 
