@@ -65,9 +65,9 @@ router.get('/', function (req, res, next) {
   res.render('index');
 });
 
-/* GET home page. */
-router.get('/projects/fragments', function (req, res, next) {
-  res.render('fragments');
+/* GET projects pages */
+router.get('/projects/:name', function (req, res, next) {
+  res.render(req.params.name);
 });
 
 /* POST send message */
