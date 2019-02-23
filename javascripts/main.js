@@ -23,11 +23,12 @@ jQuery(function ($) {
 
   $(".sidenav").sidenav();
 
-  // const elems = document.querySelectorAll(".dropdown-trigger[data-target='portfolioDropdown']");
-  // M.Dropdown.init(elems, {
-  //   coverTrigger: false,
-  //   hover:        true,
-  // });
+  const elems = document.querySelectorAll(".dropdown-trigger[data-target='resumeDropdown']");
+  M.Dropdown.init(elems, {
+    coverTrigger: false,
+    hover:        true,
+    constrainWidth: false,
+  });
 
 
   /* ----------------------------------------------------------- */

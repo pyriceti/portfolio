@@ -14,7 +14,14 @@ header#header(role='banner')
             li
               a(href='#about') Qui suis-je
             li
-              a.dropdown-button(href='#resume', data-activates='resume-dropdown') CV
+              a.dropdown-trigger(href='#resume', data-target='resumeDropdown') CV
+              ul#resumeDropdown.dropdown-content
+                li.second-level
+                  a.sub-section(href='#skill') Compétences
+                li.second-level
+                  a.sub-section(href='#experience') Expérience
+                li.second-level
+                  a.sub-section(href='#education') Études
             li
               a(href='#portfolio') Portfolio
             // li
@@ -44,15 +51,14 @@ header#header(role='banner')
   ul#slide-out.sidenav.menu-scroll
     li.first-level
       a(href='#about') Qui suis-je
-    li
-      .nolink CV
-      ul
-        li.second-level
-          a.sub-section(href='#skill') Compétences
-        li.second-level
-          a.sub-section(href='#experience') Expérience
-        li.second-level
-          a.sub-section(href='#education') Études
+    li.first-level
+      a(href='#resume') CV
+    li.second-level
+      a.sub-section(href='#skill') Compétences
+    li.second-level
+      a.sub-section(href='#experience') Expérience
+    li.second-level
+      a.sub-section(href='#education') Études
     li.first-level
       a(href='#portfolio') Portfolio
     // li
