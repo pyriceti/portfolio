@@ -1,0 +1,117 @@
+doctype html
+html(lang='fr')
+  include _pug-includes/head
+
+  body
+
+    // PRELOADER
+    include _pug-includes/preloader
+
+    // HEADER
+    include _pug-includes/project-header
+
+    // MAIN WRAPPER
+    .main-wrapper
+      main(role='main')
+
+        - const bannerTitle = '2116';
+        - const bannerYear = '2018 (1 mois)';
+        - const bannerCat = 'Autres (jeu de société)';
+        - const bannerRoles = ['Game Designer', 'Programmer'];
+        // BANNER
+        include _pug-includes/banner
+
+        section#article
+          .container
+            .row
+              .col
+                h2 Présentation
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/other/2116/board.jpg")
+                p.
+                  2116 est un jeu de plateau de stratégie asymétrique à 4 joueurs
+                  réalisé en 2018 dans le cadre du séminaire "jeu de société"
+                  au sein du mastère IDE à GOBELINS, l'école de l'image.
+                  Le but du projet était de concevoir un jeu de société sur le
+                  thème du changement climatique. Notre groupe a réalisé un jeu
+                  où la Planète cherche à éradiquer les humains. Par la suite,
+                  nous avons réalisé une version hybride du jeu pour le séminaire
+                  "objet connecté".
+
+            .row
+              .col
+                h2 Concept
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/other/2116/cards.jpg")
+                p.
+                  Dans 2216, la Planète veut se débarrasser de l'espèce humaine
+                  à l'aide de cataclysmes et montées de la température.
+                  Nous voulions sensibiliser les joueurs sur la question du
+                  changement climatique, tout en insistant sur la difficulté de
+                  faire corps ensemble face à cette question. Il s'agit d'un jeu
+                  asymétrique : un joueur incarne la Planète et affronte les trois
+                  autres joueurs Humain.
+
+            .row
+              .col
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/other/2116/combos.jpg")
+                p.
+                  La coopération du côté des humains est
+                  cruciale, mais pas nécessaire pour l'emporter : un joueur Humain
+                  peut gagner seul s'il parvient à construire son Arche de Noé.
+                  Le bluff et la gestion des ressources sont également des
+                  éléments de #[span.it gameplay] essentiels pour gagner la
+                  partie.
+
+            .row
+              .col
+                h2 Jeu hybride
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/other/2116/geode.jpg")
+                p.
+                  Nous avons choisi de poursuivre ce projet en l'hybridant.
+                  Concrètement, nous avons réalisé un plateau en forme de demi
+                  dôme géodésique où se grefferait de l'électronique (LED,
+                  boutons poussoirs, etc.) contrôlé par une carte Arduino.
+                  L'intérêt était triple : faciliter la mise en place du plateau,
+                  permettre des innovations en terme de #[span.it gameplay],
+                  et favorisation de la sensibilisation sur le sujet environnemental
+                  (#[span.it via] une simplification des règles).
+
+            .row
+              .col
+                h2 Rôle & responsabilités
+                img.materialboxed.responsive-img.illus(src="/images/portfolio/other/2116/arduino.jpg")
+                p.
+                  Pour le séminaire "jeu de société", j'ai participé activement
+                  à l'écriture des règles, leur équilibrage et leur correction
+                  itérative. Il s'agissait d'un processus complexe qui nous a
+                  demandé bon nombre de #[span.it playtests] pour arriver à une
+                  version satisfaisante.
+
+                p.
+                  Dans le cadre de l'hybridation du jeu, j'ai retravaillé sur
+                  les règles en aidant à leur adaptation. D'autre part, j'ai
+                  prototypé des circuits Arduino utilisant des registres à
+                  décalage afin de pouvoir contrôler une centaine de LED
+                  et boutons poussoir.
+
+            .row
+              .col
+                h2 Crédits
+                ul.no-bullets
+                  li #[strong.medium  Nadège BOURGUIGNON] : game designer, construction/assemblage, programmation
+                  li #[strong.medium  Camille DURIF] : game designer, programmation
+                  li #[strong.medium  Pauline MARSEGLIA] : game designer, direction artistique
+                  li #[strong.medium  Mathilde MIOSSEC] : game designer, direction artistique, construction/assemblage
+                  li #[strong.medium  Baptiste PERRAUD] : game designer, programmation
+
+            .row
+              .col
+                h2 Liens utiles
+                ul
+                  li.
+                    Les règles du jeu sont disponibles en ligne #[a(href='https://drive.google.com/open?id=1IuktxVZ7E-NwwhtZUH6-kG4WeIWWKRSe') ici].
+
+        // FOOTER SECTION
+        include _pug-includes/footer-simple
+
+    // SCRIPTS INCLUDES
+    include _pug-includes/scripts
