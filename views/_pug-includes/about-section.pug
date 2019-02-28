@@ -4,10 +4,10 @@ section#about
       .col.s12
         .about-inner
           .row
-            div(class='col s12 m4 l3')
+            .col.s12.m4.l3
               .about-inner-left
-                img(class='profile-img', src='images/profile-img.jpg', alt='Profile Image')
-            div(class='col s12 m8 l9')
+                img.profile-img(src='images/profile-img.jpg', alt='Profile Image')
+            .col.s12.m8.l9
               .about-inner-right
                 h3 Qui suis-je ?
                 p.
@@ -21,7 +21,7 @@ section#about
                   p.
                     "Comment concevoir un bon jeu-vidéo (#[span.it i.e.] #[em fun])
                     à forte valeur pédagogique ?"
-                div(class='personal-information col s12 m12 l6')
+                .personal-information.col.s12.m12.l6
                   h3 Informations personnelles
                   ul
                     li
@@ -39,7 +39,7 @@ section#about
                     li
                       span Adresse :
                       | Région parisienne, France
-                div(class='resume-download col s12 m12 l6')
-                  a(href='files/CV.pdf', class='waves-effect waves-light btn-large resume-btn', download)
+                .resume-download.col.s12.m12.l6
+                  a.waves-effect.waves-light.btn-large.resume-btn(href='/files/CV.pdf', download)
                     i.material-icons.left archive
                     | Télécharger mon CV

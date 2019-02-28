@@ -26,7 +26,10 @@ html(lang='fr')
             .row
               .col
                 h2 Présentation
-                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/fragments/1.png")
+                .video-wrapper.illus.right
+                  .video-container
+                    iframe(width='560', height='315', src='https://www.youtube.com/embed/iLX7c1kZFtM?rel=0',
+                    frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
                 p.
                   Fragments est un #[span.bold jeu vidéo narratif] réalisé en 2019
                   sous Unity dans le cadre du séminaire "Histoire interactive"
@@ -37,7 +40,7 @@ html(lang='fr')
             .row
               .col
                 h2 Concept
-                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/fragments/2.png")
+                img.materialboxed.responsive-img.illus.right(src='/images/portfolio/games/fragments/1.png')
                 p.
                   Fragments est une expérience qui explore
                   le traumatisme et l'émancipation par
@@ -50,7 +53,7 @@ html(lang='fr')
 
             .row
               .col
-                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/fragments/3.png")
+                img.materialboxed.responsive-img.illus.right(src='/images/portfolio/games/fragments/2.png')
                 p.
                   Le #[span.it hub] dans lequel
                   il reconstruit les souvenirs de Lauren est un
@@ -65,7 +68,7 @@ html(lang='fr')
             .row
               .col
                 h2 Rôle & responsabilités
-                img.materialboxed.responsive-img.illus(src="/images/portfolio/games/fragments/4.png")
+                img.materialboxed.responsive-img.illus(src='/images/portfolio/games/fragments/3.png')
                 p.
                   Dans ce projet, j'ai assisté mon équipe en #[span.it game design]
                   et scénarisation pour que nous soyons sûrs que le #[span.it gameplay] et la
@@ -76,7 +79,8 @@ html(lang='fr')
             .row
               .col
                 h3 Composition
-                img.materialboxed.responsive-img.illus(src="/images/portfolio/games/fragments/Ableton.png")
+                <iframe width='100%' height='300' scrolling='no' frameborder='no' allow='autoplay' src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/714562665&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true'></iframe>
+                img.materialboxed.responsive-img.illus(src='/images/portfolio/games/fragments/Ableton.png')
                 p.
                   J'ai composé l'ensemble de la bande originale de Fragments
                   à l'aide d'Ableton et de VST gratuits. Il s'agissait d'un
@@ -86,7 +90,7 @@ html(lang='fr')
             .row
               .col
                 h3 Enregistrement & Mixage
-                img.materialboxed.responsive-img.illus(src="/images/portfolio/games/fragments/Audacity.png")
+                img.materialboxed.responsive-img.illus(src='/images/portfolio/games/fragments/Audacity.png')
                 p.
                   Nous avons fait appel à une comédienne professionnelle pour
                   obtenir les voix de Lauren et de son frère Tommy. J'ai supervisé
@@ -98,7 +102,7 @@ html(lang='fr')
             .row
               .col
                 h3 Intégration
-                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/fragments/Wwise.png")
+                img.materialboxed.responsive-img.illus.right(src='/images/portfolio/games/fragments/Wwise.png')
                 p.
                   Nous avons fait appel à un étudiant en #[span.it sound design] pour m'épauler
                   dans mon travail : Matthieu. Ce dernier a produit les bruitages
@@ -109,7 +113,7 @@ html(lang='fr')
 
             .row
               .col
-                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/fragments/Rider.png")
+                img.materialboxed.responsive-img.illus.right(src='/images/portfolio/games/fragments/Rider.png')
                 p.
                   Enfin, j'ai finalisé l'intégration sonore du projet en interfaçant
                   Wwise et Unity grâce à l'API officielle. Il s'agissait #[span.it in fine]
@@ -138,11 +142,6 @@ html(lang='fr')
                     Pour jouer : télécharger l'archive au lien indiqué, la décompresser puis lancer 'Fragments.exe'
                     en laissant les paramètres par défaut. Attention, il est conseillé d'avoir une carte graphique
                     dédiée pour que le jeu soit stable.
-                  li.
-                    Un #[span.it walkthrough] de l'ensemble du jeu est disponible #[a(href='https://drive.google.com/open?id=1-HhshQ6JBwDPxccpEKwQsA4p00ajjsfm') ici].
-                  li.
-                    La bande originale complète est disponible #[a(href='https://soundcloud.com/user-128757034/sets/fragments-original-soundtrack') ici]
-                    sur mon profil SoundCloud.
 
         // FOOTER SECTION
         include _pug-includes/footer-simple

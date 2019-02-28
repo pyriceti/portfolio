@@ -5,7 +5,8 @@ section#banner
       .meta-media
         .single-meta.
           Date de réalisation : #{bannerYear}
+        - const bannerRolesHeader = bannerCat === 'Web' ? 'Technologies' : 'Rôles';
         .single-meta.
           Catégorie : #{bannerCat}
         .single-meta.
-          Rôles : #{bannerRoles.join(', ')}
+          #{bannerRolesHeader} : #{bannerRoles.join(', ')}

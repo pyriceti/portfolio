@@ -26,7 +26,10 @@ html(lang='fr')
             .row
               .col
                 h2 Présentation
-                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/dynamo/Shadows.jpg")
+                .video-wrapper.illus.right
+                  .video-container
+                    iframe(width='560', height='315', src='https://www.youtube.com/embed/rxKF9MgrZcI?rel=0',
+                    frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
                 p.
                   Dynamo est un jeu vidéo de type #[span.bold platformer 2D]
                   réalisé en 2018 sous Unity dans le cadre du séminaire "#[span.it game jam]"
@@ -115,10 +118,11 @@ html(lang='fr')
               .col
                 h2 Liens utiles
                 ul
-                  li.
-                    Le jeu est disponible en ligne sur #[a(href='https://alabamaben.itch.io/dynamo') itch.io].
-                  li.
-                    Un #[span.it walkthrough] du jeu est disponible #[a(href='https://drive.google.com/file/d/19jTQG8gDOOKmjHQKiInNYrc3lJ1-M-SM/view?usp=sharing') ici].
+                  li
+                    | Le jeu est disponible en ligne sur
+                    |
+                    a(href='https://alabamaben.itch.io/dynamo', target='_blank') itch.io
+                    | .
 
         // FOOTER SECTION
         include _pug-includes/footer-simple

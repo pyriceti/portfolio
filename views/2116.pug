@@ -107,8 +107,11 @@ html(lang='fr')
               .col
                 h2 Liens utiles
                 ul
-                  li.
-                    Les règles du jeu sont disponibles en ligne #[a(href='https://drive.google.com/open?id=1IuktxVZ7E-NwwhtZUH6-kG4WeIWWKRSe') ici].
+                  li
+                    | Les règles du jeu sont disponibles
+                    |
+                    a(href='/files/2116-rules.pdf', download) ici
+                    | .
 
         // FOOTER SECTION
         include _pug-includes/footer-simple
