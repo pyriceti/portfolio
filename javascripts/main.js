@@ -23,10 +23,10 @@ jQuery(function ($) {
 
   $(".sidenav").sidenav();
 
-  const elems = document.querySelectorAll(".dropdown-trigger[data-target='resumeDropdown']");
+  const elems = document.querySelectorAll(".dropdown-trigger[data-target='resumeDropdown'],.dropdown-trigger[data-target='portfolioDropdown']");
   M.Dropdown.init(elems, {
-    coverTrigger: false,
-    hover:        true,
+    coverTrigger:   false,
+    hover:          true,
     constrainWidth: false,
   });
 
@@ -78,7 +78,7 @@ jQuery(function ($) {
   /*  4. PORTFOLIO SLIDER
   /* ----------------------------------------------------------- */
 
-  const $portfolioList = $('#portfolio-list');
+  const $portfolioList = $('#portfolioList');
   if ($portfolioList.length) {
     mixitup($portfolioList[0], {
       animation: {
@@ -145,21 +145,19 @@ jQuery(function ($) {
   // Bind click handler to menu items
   // so we can get a fancy scroll animation
   menuItems.click(function (e) {
-    const href      = $(this).attr("href");
+    e.preventDefault();
+    const href = $(this).attr("href");
+
+    if (href === '#portfolio') {
+      const target = $(this).attr("data-anchor");
+      $(`#portfolio .controls button.filter:nth-child(${target})`).trigger('click');
+    }
+
     const offsetTop = href === "#" ? 0 : $(href).offset().top - topMenuHeight + 15;
-    jQuery('html, body').stop().animate({
+    $('html, body').stop().animate({
       scrollTop: offsetTop,
     }, 900);
-    e.preventDefault();
   });
-
-  // menuItems.hover(function (e) {
-  //   console.log(1);
-  //   if (!$(this)[0].classList.contains('dropdown-button')) return;
-  //   console.log(2);
-  //   $(this).dropdown('open');
-  //   console.log($(this));
-  // });
 
   // Bind to scroll
   $(window).scroll(function () {
@@ -187,6 +185,25 @@ jQuery(function ($) {
   // Handle if navigating from outside
   const anchor = window.location.hash;
   if (anchor.startsWith('#')) {
+    if (anchor === '#portfolio') {
+      let target = window.location.search.split('?a=')[1];
+      switch (target) {
+        case 'all':
+          target = '1';
+          break;
+        case 'games':
+          target = '2';
+          break;
+        case 'web':
+          target = '3';
+          break;
+        case 'other':
+          target = '4';
+          break;
+      }
+      $(`#portfolio .controls button.filter:nth-child(${target})`).trigger('click');
+    }
+
     const offsetTop = anchor === "#" ? 0 : $(anchor).offset().top - topMenuHeight + 15;
     jQuery('html, body').stop().animate({
       scrollTop: offsetTop,
@@ -212,7 +229,7 @@ jQuery(function ($) {
   /* 9. CALL TO ABOUT
   /* ----------------------------------------------------------- */
 
-  jQuery(".call-to-about").click(function () {
+  $(".call-to-about").on('click', function () {
     jQuery('html,body').animate({
         scrollTop: $("#about").offset().top,
       },
@@ -225,7 +242,7 @@ jQuery(function ($) {
 
   const $window = $(window);
   const $upBtn  = $(".up-btn");
-  $upBtn.click(() => {
+  $upBtn.on('click', () => {
     if ($upBtn[0].classList.contains('hidden')) return;
     $('html, body').animate({
         scrollTop: $("#header").offset().top,

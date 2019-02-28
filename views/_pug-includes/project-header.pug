@@ -12,13 +12,14 @@ header#header(role='banner')
             li
               a(href='/') Accueil
             li.active
-              a(href='/#portfolio') Portfolio
-              //a.dropdown-trigger(href='#', data-target='portfolioDropdown') Portfolio
-              //ul#portfolioDropdown.dropdown-content
-              //  li
-              //    a(href='/?clang=fr') fr
-              //  li
-              //    a(href='/?clang=en') en
+              a.dropdown-trigger(href='/?a=all#portfolio', data-target='portfolioDropdown') Portfolio
+              ul#portfolioDropdown.dropdown-content
+                li.second-level
+                  a.sub-section(href='/?a=games#portfolio') Jeux vidéo
+                li.second-level
+                  a.sub-section(href='/?a=web#portfolio') Web
+                li.second-level
+                  a.sub-section(href='/?a=other#portfolio') Autres
 
           a.sidenav-trigger(href='#', data-target='slide-out')
             i.material-icons menu
@@ -28,4 +29,10 @@ header#header(role='banner')
     li.first-level
       a(href='/') Accueil
     li.first-level.active
-      a(href='/#portfolio') Portfolio
+      a(href='/?a=all#portfolio') Portfolio
+    li.second-level
+      a.sub-section(href='/?a=games#portfolio') Jeux vidéo
+    li.second-level
+      a.sub-section(href='/?a=web#portfolio') Web
+    li.second-level
+      a.sub-section(href='/?a=other#portfolio') Autres
