@@ -8,6 +8,10 @@ Author URI : http://www.markups.io/
 
 a {
   color: @main-color;
+
+  &:hover {
+    color: @accent-color
+  }
 }
 
 .navbar-fixed nav {
@@ -152,6 +156,7 @@ input[type="search"]:not(.browser-default):focus:not([readonly]) + label,
 textarea.materialize-textarea:focus:not([readonly]) + label {
   color: @main-color;
 }
+
 input[type="text"]:not(.browser-default):focus:not([readonly]),
 input[type="password"]:not(.browser-default):focus:not([readonly]),
 input[type="email"]:not(.browser-default):focus:not([readonly]),
