@@ -14,10 +14,10 @@ html(lang='fr')
     .main-wrapper
       main(role='main')
 
-        - const bannerTitle = 'ChatTree';
-        - const bannerYear = '2017 (9 mois)';
+        - const bannerTitle = 'Carto-ENM';
+        - const bannerYear = '2016 – 2017 (8 mois)';
         - const bannerCat = 'Web';
-        - const bannerRoles = ['Stack MEAN (MongoDB, Express.js, Angular 2+, Node.js)', 'Android', 'Java'];
+        - const bannerRoles = ['Stack WAMP (Windows, Apache Server, MySQL, PHP)', 'VB/VBA', 'Python'];
         // BANNER
         include _pug-includes/banner
 
@@ -26,99 +26,83 @@ html(lang='fr')
             .row
               .col
                 h2 Présentation
-                .video-wrapper.illus.right
-                  .video-container
-                    iframe(width='560', height='315', src='https://www.youtube.com/embed/gTLoVibgaBY?rel=0',
-                    frameborder='0', allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture', allowfullscreen)
+                img.materialboxed.responsive-img.illus.right(src='/images/portfolio/web/cartoenm/home.png')
                 p.
-                  ChatTree est une application prototypée en web et Android
-                  de messagerie instantannée permettant de créer et de gérer
-                  des #[strong conversations arborescentes]. Il s'agit d'un
-                  projet étudiant réalisé dans le cadre de deux cours à l'UTC
-                  en équipe de 5 étudiants, que j'ai ensuite repris avec une
-                  équipe de 4 étudiants à l'Université de Sherbrooke.
+                  Carto-ENM est une application web réalisée dans le cadre d'un job étudiant à l'UTC en binôme
+                  avec Raphaël Debray et sous la direction d'Hamid Le Fleurier. L'application propose une
+                  cartographie des articles de lois liés à la gestion des successions dans les différents pays
+                  signataires du Règlement. L'ENM est le commanditaire de la plateforme, destinée à être utilisée
+                  par un large public (notamment les étudiants).
 
             .row
               .col
                 h2 Concept
-                img.materialboxed.responsive-img.illus.right(src='/images/portfolio/web/chattree/creation_thread.png')
+                img.materialboxed.responsive-img.illus.right(src='/images/portfolio/web/cartoenm/main.png')
                 p.
-                  C'est suite à une prise de recul sur nos pratiques quotidiennes de messagerie instantanée et sur
-                  la frustration qui en découle parfois que le concept de ChatTree est né. La linéarité verticale
-                  des messageries instantanées classiques se révèle vite inefficace en cas de conversations de groupe,
-                  et en particulier celles dédiées à l'organisation d'un événement, à la gestion d'un projet,
-                  ou même à de simples conversations entre amis.
-
-            .row
-              .col
-                img.materialboxed.responsive-img.illus.right(src='/images/portfolio/web/chattree/discussion_thread.png')
+                  La gestion des successions dans le Règlement repose sur bon nombre de textes de lois, qu'il est difficile
+                  de comparer ou d'avoir accès de manière facile et centralisée. Le projet Carto-ENM vise à simplifier
+                  la vision de ces derniers en offrant une cartographie par pays signataire du règlement.
                 p.
-                  ChatTree cherche à travers "l'arbre à threads" de briser la linéarité verticale en apportant
-                  la possibilité de structurer une conversation en multiples sous-fils de conversation. Chacun de ces
-                  threads est paramétrable du point de vue des notifications, nommable, tagable pour faciliter
-                  l'identification de leurs contenus. ChatTree offre une vue de chaque conversation sous forme d'arbre
-                  à threads qui en apporte un aperçu global clair et concis.
-
-            .row
-              .col
-                h2 Application Android
-                .video-wrapper.illus.right
-                  .video-container
-                    iframe(width='560', height='315', src='https://www.youtube.com/embed/EObvNMn0vMM?rel=0',
-                    frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen)
-                p.
-                  Après avoir travaillé sur ce projet à l'UTC, j'ai eu envie de le poursuivre dans le cadre
-                  de deux autres cours pendant mon semestre d'études à l'Université de Sherbrooke (Québec). Mon
-                  envie était d'avoir l'opportunité de confirmer notre intuition que le concept avait une réelle
-                  valeur, en se basant sur une nouvelle série de #[span.it playtests] après avoir affiné le projet.
-                  J'ai donc monté une nouvelle équipe de 4 étudiants et ensemble, nous avons finalement
-                  décidé de prototyper une version Android de l'application, pour obtenir des #[span.it playtests]
-                  pertinents sur un usage mobile des messageries instantanées, et donc sur la proposition de
-                  concept de ChatTree.
+                  L'interface propose ainsi de sélectionner le pays puis de filtrer les types de textes désirés
+                  (fond, procédure, autorité). Les résultats sont ensuite chargés depuis la base de données
+                  sous forme de liste ordonnée les différentes phases de succession légales. L'utilisateur peut
+                  alors être redirigé vers les articles sources des résultats de sa recherche.
 
             .row
               .col
                 h2 Rôle & responsabilités
-                img.materialboxed.responsive-img.illus(src='/images/portfolio/web/chattree/architecture.png')
                 p.
-                  Dans le cadre du projet UTC, j'ai participé avec le reste de l'équipe à l'élaboration du concept,
-                  notamment en produisant des maquettes et #[span.it storyboards] de cas d'usage de ChatTree.
-                  J'ai par ailleurs réalisé des entretiens utilisateur dans la phase de définition du projet, et des
-                  tests utilisateur avec sondages en fin de projet pour déterminer les forces et faiblesses
-                  du prototype web et par extension du projet ChatTree. En programmation, j'ai œuvré à la fois
-                  sur l'architecture serveur (système multi-agents, BDD), l'application cliente et la communication
-                  entre les deux #[span.it via] websockets en tant que fullstack développeur.
+                  J'ai principalement assumé le rôle de développeur backend sur ce projet, sous plusieurs aspects :
+                  #[span.it pipeline] d'alimentation de la BDD, programmation plateforme et mise en place de la zone
+                  admin. Toutefois, j'ai également assumé un rôle de coordinateur technique sur le projet, afin
+                  d'avancer en phase avec les participants externes au projet (docteure alimentant les textes de lois
+                  pour la BDD, traducteurs&hellip;).
 
             .row
               .col
-                img.materialboxed.responsive-img.illus.right(src='/images/portfolio/web/chattree/gantt.jpg')
+                h3 Alimentation BDD
                 p.
-                  Une fois à l'Université de Sherbrooke, j'ai repris ChatTree en tant que chef projet, afin de
-                  m'assurer que l'application conserve son identité et son originalité, indépendamment de ses
-                  mutations techniques ou visuelles. J'ai donc planifié le travail de l'équipe, ordonné les
-                  tâches et leur priorité et produit les documents de cadrage projet nécessaires à la production
-                  d'un nouveau prototype en quelques mois de travail. Enfin, j'ai aussi participé activement
-                  à la programmation Android de l'application, en particulier la migration des fonctionnalités
-                  #[span.it core] de ChatTree.
+                  J'ai élaboré un #[span.it pipeline] d'alimentation de la BDD selon les entrées xls que nous
+                  recevions. J'ai donc conçu des macros en VB/VBA afin de formatter/standardiser correctement
+                  les données d'entrée de chaque pays. Ensuite, j'ai réalisé des scripts VB/VBA & Python afin
+                  de générer des CSV au format dédié à l'architecture de la BDD. Enfin, j'ai écrit des scripts
+                  d'insertion #[span.it bulk] SQL des données CSV pour alimenter la BDD correctement. Le site
+                  étant disponible en plusieurs langues, j'ai également adapté le #[span.it pipeline] afin de
+                  gérer les données traduites jusqu'à leur insertion en BDD.
+
+            .row
+              .col
+                h3 Programmation plateforme
+                p.
+                  J'ai programmé la logique centrale de la plateforme permettant de traiter la requête d'un
+                  utilisateur. Lorsque ce dernier lance une recherche, le serveur récupère depuis la BDD
+                  les données adéquates traduites correspondant à cette dernière, puis les ordonne selon
+                  une architecture arborescente avant de les renvoyer à l'utilisateur.
+
+            .row
+              .col
+                h3 Zone admin
+                p.
+                  Enfin, j'ai développé une interface administrateur permettant de modifier l'url d'un texte de loi,
+                  d'ajouter un admin à la plateforme ainsi que de modifier son mot de passe.
 
             .row
               .col
                 h2 Crédits
-
-                h3 Équipe UTC
                 ul.no-bullets
-                  li #[strong.medium  Fabien BOUCAUD] : backend developper
-                  li #[strong.medium  Agathe GUILLEMOT] : frontend developper, ui designer
-                  li #[strong.medium  Camille LEGERON] : backend developper
-                  li #[strong.medium  Mathilde LONGUET] : backend developper
-                  li #[strong.medium  Baptiste PERRAUD] : fullstack developper
+                  li #[strong.medium Raphaël DEBRAY] : frontend developper
+                  li #[strong.medium Hamid LE FLEURIER] : coordinateur projet
+                  li #[strong.medium Baptiste PERRAUD] : coordinateur technique, backend developper
 
-                h3 Équipe Sherbrooke
-                ul.no-bullets
-                  li #[strong.medium  Augustin DE CHAMPS] : data programmer
-                  li #[strong.medium  Steve DIAS] : frontend developper
-                  li #[strong.medium  Désir PEMBELE] : frontend developper
-                  li #[strong.medium  Baptiste PERRAUD] : fullstack developper
+            .row
+              .col
+                h2 Liens utiles
+                ul
+                  li
+                    | La plateforme est actuellement disponible
+                    |
+                    a(href='https://ics.utc.fr/cartoenm/', target='_blank') ici
+                    | .
 
         // FOOTER SECTION
         include _pug-includes/footer-simple
