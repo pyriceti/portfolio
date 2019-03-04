@@ -1,0 +1,101 @@
+doctype html
+html(lang='fr')
+  include _pug-includes/head
+
+  body
+
+    // PRELOADER
+    include _pug-includes/preloader
+
+    // HEADER
+    include _pug-includes/project-header
+
+    // MAIN WRAPPER
+    .main-wrapper
+      main(role='main')
+
+        - const bannerTitle = 'IcI';
+        - const bannerYear = '2015 (6 mois)';
+        - const bannerCat = 'Jeux vidéo';
+        - const bannerRoles = ['Composer'];
+        // BANNER
+        include _pug-includes/banner
+
+        section#article
+          .container
+            .row
+              .col
+                h2 Présentation
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/ici/1.png")
+                p.
+                  IcI magique est un jeu vidéo de type #[span.it walking simulator] onirique réalisé
+                  en 2015 à l'Université de Technologie de Compiègne (UTC) dans le
+                  cadre du cours SI28 (Écriture interactive et multimédia).
+                  Mon groupe a choisi de réaliser un jeu onirique où la musique est au cœur du #[span.it gameplay].
+
+            .row
+              .col
+                h2 Concept
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/ici/2.png")
+                p.
+                  Avec IcI, nous avons voulu proposer une aventure scénarisée où la musique se
+                  retrouve au cœur de l'histoire et du #[span.it gameplay]. L'univers se présente sous la forme d'un
+                  conte, d'un parcours initiatique. Le joueur incarne un astronaute perdu sur une planète étrange.
+                  Il fait la rencontre d'un étrange oiseau qui lui apprendra comment se frayer un chemin en utilisant
+                  la musique pour modifier son environnement.
+
+            .row
+              .col
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/ici/3.png")
+                p.
+                  Le visuel et le sonore ont été pensés pour tenter de former une véritable synergie, s'influençant l'un
+                  et l'autre. L'idée est qu'un changement de la musique impacte l'environnement, et réciproquement. Dans
+                  le tableau que nous avons pu réaliser, ceci se matérialise par le changement des saisons en altérant
+                  le thème principal : mélodie mineure pour l'hiver, majeure pour le printemps.
+
+            .row
+              .col
+                h2 Rôle & responsabilités
+                img.materialboxed.responsive-img.illus(src="/images/portfolio/games/ici/4.png")
+                p.
+                  Dans ce projet, je me suis occupé de composer la musique allant de pair avec le #[span.it 2D gameplay]
+                  que nous souhaitions pour le jeu.
+
+            .row
+              .col
+                h3 Composition
+                iframe(width='100%', height='300', scrolling='no', frameborder='no', allow='autoplay',
+                src='https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/722097279&color=%23ff5500&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true&visual=true')
+                img.materialboxed.responsive-img.illus(src="/images/portfolio/games/ici/5.png")
+                p.
+                  J'ai composé la musique à l'aide de Finale, en utilisant une orchestration inspirée des contes de
+                  fées et aventures oniriques modernes (Child of Light par exemple) : violons et vents surtout.
+                  Le tableau comporte un thème principal que j'ai composé selon deux déclinaisons : l'une majeure et
+                  l'autre mineure. Lorsque le joueur passe de l'un à l'autre, un #[span.it 2D cross fade] permet
+                  de faire la transition entre les deux modes.
+
+            .row
+              .col
+                h2 Crédits
+                ul.no-bullets
+                  li #[strong.medium Alexandre BALLET] : game design, programmation
+                  li #[strong.medium Nicolas BORRI] : game design, direction artistique
+                  li #[strong.medium Loïc LERAT] :  game design, programmation
+                  li #[strong.medium Baptiste PERRAUD] : game design, composition
+
+            // TODO
+            //.row
+            //  .col
+            //    h2 Liens utiles
+            //    ul
+            //      li
+            //        | Le jeu est disponible en ligne sur
+            //        |
+            //        a(href='https://pyriceti.itch.io/chaudron-magique', target='_blank') itch.io
+            //        | .
+
+        // FOOTER SECTION
+        include _pug-includes/footer-simple
+
+    // SCRIPTS INCLUDES
+    include _pug-includes/scripts
