@@ -1,0 +1,121 @@
+doctype html
+html(lang='fr')
+  include _pug-includes/head
+
+  body
+
+    // PRELOADER
+    include _pug-includes/preloader
+
+    // HEADER
+    include _pug-includes/project-header
+
+    // MAIN WRAPPER
+    .main-wrapper
+      main(role='main')
+
+        - const bannerTitle = 'Chaudron magique';
+        - const bannerYear = '2016 (6 mois)';
+        - const bannerCat = 'Jeux vidéo';
+        - const bannerRoles = ['2D Artist', 'Composer', 'Programmer'];
+        // BANNER
+        include _pug-includes/banner
+
+        section#article
+          .container
+            .row
+              .col
+                h2 Présentation
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/chaudron/home.png")
+                p.
+                  Chaudron magique est un jeu vidéo narratif à embranchements réalisé
+                  en 2016 à l'Université de Technologie de Compiègne (UTC) dans le
+                  cadre du cours IC06 (Industrie et conception des jeux vidéo).
+                  Mon groupe a choisi de réaliser un jeu inspiré des livres dont vous
+                  êtes le héros sous la forme d'une aventure au ton humoristique.
+
+            .row
+              .col
+                h2 Concept
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/chaudron/game.png")
+                p.
+                  Chaudron magique est un jeu narratif où le joueur se met en route afin
+                  de rencontrer le célèbre sorcier Zek. L'univers est fantastique et l'écriture
+                  teintée d'humour, à la manière d'un conte de fées décalé. Le jeu est divisée en
+                  deux phases. Dans la première, le joueur incarne d'abord Zek lui-même, pris
+                  de panique face à son chaudron sur le point d'exploser. Il doit verser plusieurs
+                  ingrédients dedans dans un temps imparti. Dans la seconde phase, le joueur
+                  incarne un promeneur parti à la recherche de Zek, et qui devra faire face
+                  aux conséquences magiques dues aux ingrédients mis dans le chaudron auparavant.
+
+            .row
+              .col
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/chaudron/achievements.png")
+                p.
+                  Comme tout jeu à embranchements, le joueur doit avancer en faisant des choix
+                  qui modifieront son aventure au fur et à mesure qu'il progresse dans l'histoire.
+                  Le jeu contient d'ailleurs plusieurs fins possibles, certaines plus faciles
+                  à débloquer que d'autres.
+
+            .row
+              .col
+                h2 Rôle & responsabilités
+                img.materialboxed.responsive-img.illus(src="/images/portfolio/games/chaudron/game2.png")
+                p.
+                  Dans ce projet, j'ai assumé trois rôles principaux, notamment en raison
+                  de notre faible effectif de groupe : #[span.it 2D artist], #[span.it composer] et #[span.it 2D programmer].
+
+            .row
+              .col
+                h3 Artistic Direction
+                img.materialboxed.responsive-img.illus(src="/images/portfolio/games/chaudron/chaudrons.jpg")
+                p.
+                  Je me suis occupé de la direction artistique dans ce projet, notamment en dessinant les illustrations
+                  qui accompagnent le texte tout au long de l'histoire. J'ai notamment réalisé plusieurs états du
+                  chaudron pour donner un effet #[span.it 2D step motion] à ce dernier lorsqu'il bout de plus en plus
+                  fort durant la phase 1.
+
+            .row
+              .col
+                h3 Composition
+                img.materialboxed.responsive-img.illus(src="/images/portfolio/games/chaudron/finale.png")
+                p.
+                  J'ai composé la musique de Chaudron magique en utilisant Finale. Elle se compose de plusieurs
+                  thèmes correspondant aux différentes phases de jeu : réveil de Zek, chaudron qui bout, etc.
+                  L'instrumentation est inspirée des grands orchestres symphoniques souvent présents dans les
+                  univers fantastiques et contes de fées classiques (cordes frottées, instruments à vents). Les
+                  #[span.it 2D sound effects] ont eux été récupérés depuis des banques de son gratuites.
+
+            .row
+              .col
+                h3 Programmation
+                img.materialboxed.responsive-img.illus.right(src="/images/portfolio/games/chaudron/squelette.jpg")
+                p.
+                  J'ai porté la narration à embranchements sur Twine, afin d'obtenir une version web du jeu
+                  sans avoir à reprogrammer l'ensemble des mécaniques propres au genre. Twine étant basé sur
+                  du javascript, j'ai ensuite implémenté des scripts au dessus afin d'avoir certains comportements
+                  particuliers (e.g. transition en fondu) non natifs dans le #[span.it framework].
+
+            .row
+              .col
+                h2 Crédits
+                ul.no-bullets
+                  li #[strong.medium Fabien BOUCAUD] : game design, storytelling, programmation
+                  li #[strong.medium Maxime NIVELLE] : game design, storytelling
+                  li #[strong.medium Baptiste PERRAUD] : direction artistique, composition, programmation
+
+            .row
+              .col
+                h2 Liens utiles
+                ul
+                  li
+                    | Le jeu est disponible en ligne sur
+                    |
+                    a(href='https://pyriceti.itch.io/chaudron-magique', target='_blank') itch.io
+                    | .
+
+        // FOOTER SECTION
+        include _pug-includes/footer-simple
+
+    // SCRIPTS INCLUDES
+    include _pug-includes/scripts
