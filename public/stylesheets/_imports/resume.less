@@ -1,5 +1,6 @@
 @import "../_includes/_colors";
 @import "../_includes/_mixins";
+@import "../_includes/_sizes";
 
 #resume {
   width: 100%;
@@ -15,7 +16,7 @@
   width: 100%;
 
   p {
-    font-size: 16px;
+    font-size: @text-size;
     line-height: 30px;
     font-weight: 400;
   }
@@ -39,7 +40,7 @@
 
   > span {
     display: inline-block;
-    font-size: 16px;
+    font-size: @text-size;
     font-weight: normal;
     margin-bottom: 5px;
   }
@@ -129,7 +130,7 @@
 
   > p {
     color: @almost-white;
-    font-size: 16px;
+    font-size: @text-size;
     font-weight: 400;
     line-height: 30px;
   }
@@ -217,7 +218,7 @@
   width: 100%;
 
   > p {
-    font-size: 16px;
+    font-size: @text-size;
     font-weight: 400;
     line-height: 30px;
   }
