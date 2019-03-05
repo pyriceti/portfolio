@@ -25,5 +25,12 @@
     <orderEntry type="library" name="@types/materialize-css" level="application" />
     <orderEntry type="library" name="@types/nodemailer" level="application" />
     <orderEntry type="library" name="@types/toastr" level="application" />
+    <orderEntry type="library" name="@types/gulp" level="application" />
+    <orderEntry type="library" name="@types/gulp-pug" level="application" />
+    <orderEntry type="library" name="@types/gulp-less" level="application" />
+    <orderEntry type="library" name="@types/gulp-csso" level="application" />
+    <orderEntry type="library" name="@types/gulp-babel" level="application" />
+    <orderEntry type="library" name="@types/gulp-uglify" level="application" />
+    <orderEntry type="library" name="@types/gulp-rename" level="application" />
   </component>
 </module>

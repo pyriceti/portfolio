@@ -2,32 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2af9137f-7241-4526-a01a-c41e9e96a09f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/logos/envelope.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/public/stylesheets/_includes/_sizes.less" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/.htaccess" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/Portfolio.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Portfolio.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/FontAwesome.otf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.eot" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.ttf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/fonts/fontawesome-webfont.woff2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/logos/github.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/logos/github.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/logos/soundcloud.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/logos/soundcloud.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/about.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/_imports/about.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/footer.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/_imports/footer.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/resume.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/_imports/resume.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/font-awesome.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/style.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/theme.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/theme.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/theme.css.map" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/theme.css.map" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/stylesheets/theme.less" beforeDir="false" afterPath="$PROJECT_DIR$/public/stylesheets/theme.less" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/_pug-includes/about-section.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/_pug-includes/about-section.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/_pug-includes/footer.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/_pug-includes/footer.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/_pug-includes/head.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/_pug-includes/head.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/_pug-includes/portfolio.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/_pug-includes/portfolio.pug" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/index.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/index.pug" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/_index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog-archive.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog-single-left-sidebar.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/blog-single.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/about.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/article.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/banner.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/basic-typography.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/footer.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/home.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/portfolio.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/preloader.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/_imports/resume.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/_includes/_colors.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/_includes/_mixins.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/_includes/_sizes.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/style.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/theme.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/stylesheets/theme.less" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/views/_pug-includes/scripts.pug" beforeDir="false" afterPath="$PROJECT_DIR$/views/_pug-includes/scripts.pug" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -41,69 +43,73 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/_pug-includes/portfolio.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="653">
-              <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/index.pug">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="317">
-              <caret line="24" selection-start-line="24" selection-end-line="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/theme.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="515">
-              <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/_pug-includes/about-section.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="12" selection-end-column="75" />
+            <state>
+              <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/about.less">
+        <entry file="file://$PROJECT_DIR$/views/_pug-includes/header.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="437">
-              <caret line="47" selection-start-line="47" selection-end-line="50" selection-end-column="24" />
+            <state relative-caret-position="1872">
+              <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/footer.less">
+        <entry file="file://$PROJECT_DIR$/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+            <state relative-caret-position="24">
+              <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/images/logos/itchio.svg">
-          <provider selected="true" editor-type-id="images" />
+        <entry file="file://$PROJECT_DIR$/Gulpfile.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="174">
+              <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/.htaccess">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="168">
+              <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/views/_pug-includes/portfolio.pug">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="317">
+              <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/stylesheets/_imports/home.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="288">
+              <caret line="12" selection-start-line="12" selection-end-line="12" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/_pug-includes/footer.pug">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="384">
-              <caret line="43" column="95" selection-start-line="43" selection-start-column="95" selection-end-line="43" selection-end-column="95" />
+            <state relative-caret-position="1008">
+              <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
             </state>
           </provider>
         </entry>
@@ -112,7 +118,7 @@
         <entry file="file://$PROJECT_DIR$/views/_pug-includes/head.pug">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="96">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+              <caret line="4" selection-start-line="4" selection-end-line="4" />
             </state>
           </provider>
         </entry>
@@ -198,10 +204,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/public/blog-single.html" />
-        <option value="$PROJECT_DIR$/public/blog-archive.html" />
-        <option value="$PROJECT_DIR$/public/blog-single-left-sidebar.html" />
-        <option value="$PROJECT_DIR$/public/stylesheets/_imports/preloader.less" />
         <option value="$PROJECT_DIR$/javascripts/_helpers.js" />
         <option value="$PROJECT_DIR$/bin/index.js" />
         <option value="$PROJECT_DIR$/credentials.json" />
@@ -210,7 +212,6 @@
         <option value="$PROJECT_DIR$/bin/www" />
         <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/public/javascripts/parallax.min.js" />
-        <option value="$PROJECT_DIR$/views/_pug-includes/scripts.pug" />
         <option value="$PROJECT_DIR$/public/stylesheets/_imports/banner.less" />
         <option value="$PROJECT_DIR$/public/stylesheets/_imports/basic-typography.less" />
         <option value="$PROJECT_DIR$/public/stylesheets/_includes/_mixins.less" />
@@ -226,7 +227,6 @@
         <option value="$PROJECT_DIR$/public/stylesheets/_imports/article.less" />
         <option value="$PROJECT_DIR$/views/_pug-includes/footer-simple.pug" />
         <option value="$PROJECT_DIR$/public/stylesheets/_imports/portfolio.less" />
-        <option value="$PROJECT_DIR$/views/_pug-includes/header.pug" />
         <option value="$PROJECT_DIR$/javascripts/main.js" />
         <option value="$PROJECT_DIR$/views/_pug-includes/project-header.pug" />
         <option value="$PROJECT_DIR$/views/dynamo.pug" />
@@ -240,15 +240,21 @@
         <option value="$PROJECT_DIR$/views/fragments.pug" />
         <option value="$PROJECT_DIR$/public/stylesheets/_includes/_sizes.less" />
         <option value="$PROJECT_DIR$/public/stylesheets/_imports/resume.less" />
-        <option value="$PROJECT_DIR$/public/stylesheets/_imports/about.less" />
         <option value="$PROJECT_DIR$/public/stylesheets/style.less" />
-        <option value="$PROJECT_DIR$/views/_pug-includes/about-section.pug" />
         <option value="$PROJECT_DIR$/public/stylesheets/theme.less" />
-        <option value="$PROJECT_DIR$/views/_pug-includes/portfolio.pug" />
         <option value="$PROJECT_DIR$/views/index.pug" />
         <option value="$PROJECT_DIR$/views/_pug-includes/head.pug" />
         <option value="$PROJECT_DIR$/public/stylesheets/_imports/footer.less" />
         <option value="$PROJECT_DIR$/views/_pug-includes/footer.pug" />
+        <option value="$PROJECT_DIR$/public/stylesheets/_imports/about.less" />
+        <option value="$PROJECT_DIR$/views/_pug-includes/about-section.pug" />
+        <option value="$PROJECT_DIR$/views/_pug-includes/header.pug" />
+        <option value="$PROJECT_DIR$/gulpfile.js" />
+        <option value="$PROJECT_DIR$/views/_pug-includes/scripts.pug" />
+        <option value="$PROJECT_DIR$/views/_pug-includes/portfolio.pug" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/Gulpfile.js" />
+        <option value="$PROJECT_DIR$/public/.htaccess" />
       </list>
     </option>
   </component>
@@ -282,71 +288,6 @@
               <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
               <item name="portfolio" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="javascripts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="files" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
-              <item name="logos" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
-              <item name="_imports" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="public" type="462c0819:PsiDirectoryNode" />
-              <item name="stylesheets" type="462c0819:PsiDirectoryNode" />
-              <item name="_includes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="routes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="portfolio" type="b2602c69:ProjectViewProjectNode" />
-              <item name="portfolio" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="_pug-includes" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
@@ -357,8 +298,9 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="NewWatcherDialog.advanced.open" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="add_unversioned_files" value="$PROJECT_DIR$/.env&#10;true" />
+    <property name="add_unversioned_files" value="$PROJECT_DIR$/public/javascripts/main.js&#10;true" />
     <property name="javascript.nodejs.core.library.configured.version" value="10.14.1" />
+    <property name="js.buildTools.gulp.gulp_package_dir" value="$PROJECT_DIR$/node_modules/gulp" />
     <property name="last_opened_file_path" value="$USER_HOME$/Application Data" />
     <property name="node.js.detected.package.jscs" value="true" />
     <property name="node.js.path.for.package.jscs" value="project" />
@@ -368,23 +310,23 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="restartRequiresConfirmation" value="false" />
-    <property name="settings.editor.selected.configurable" value="watcher.settings" />
-    <property name="ts.external.directory.path" value="C:\Users\Pyriceti\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\183.5429.34\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
+    <property name="settings.editor.selected.configurable" value="JavaScript.Libraries" />
+    <property name="ts.external.directory.path" value="C:\Users\Pyriceti\AppData\Local\JetBrains\Toolbox\apps\WebStorm\ch-0\183.5912.23\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\trash" />
       <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\images\portfolio\games\exhibition" />
       <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\images\portfolio\games" />
       <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\images\logos" />
       <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\files" />
-      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\images\portfolio\web\cartoenm" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio" />
       <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\images\logos" />
       <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\images\portfolio\games\ici" />
       <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\views" />
       <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\images\portfolio\games\chaudron" />
-      <recent name="C:\Users\Pyriceti\WebstormProjects\portfolio\public\images\portfolio\games\exhibition" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -398,6 +340,72 @@
         </RuleState>
       </list>
     </option>
+  </component>
+  <component name="RunManager" selected="npm.build">
+    <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/portfolio/index.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="default" type="js.build_tools.gulp" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/Gulpfile.js</gulpfile>
+      <tasks>
+        <task>default</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="html" type="js.build_tools.gulp" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/Gulpfile.js</gulpfile>
+      <tasks>
+        <task>html</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="js" type="js.build_tools.gulp" temporary="true">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile>$PROJECT_DIR$/Gulpfile.js</gulpfile>
+      <tasks>
+        <task>js</task>
+      </tasks>
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+        <item itemvalue="Gulp.js.default" />
+        <item itemvalue="Gulp.js.html" />
+        <item itemvalue="JavaScript Debug.index.html" />
+        <item itemvalue="Gulp.js.js" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SvnConfiguration">
     <configuration />
@@ -438,7 +446,8 @@
       <workItem from="1551363159493" duration="1931000" />
       <workItem from="1551690757946" duration="24316000" />
       <workItem from="1551729834382" duration="641000" />
-      <workItem from="1551774908780" duration="7812000" />
+      <workItem from="1551774908780" duration="13561000" />
+      <workItem from="1551794847617" duration="4253000" />
     </task>
     <task id="LOCAL-00001" summary="Add Node based .gitignore&#10;&#10;Add vcs.xml idea meta file too">
       <created>1549014552399</created>
@@ -451,16 +460,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="198296000" />
+    <option name="totallyTimeSpent" value="208298000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Structure" order="0" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info id="npm" order="2" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="3" visible="true" weight="0.17430703" />
+      <window_info active="true" content_ui="combo" id="Project" order="3" sideWeight="0.72442245" visible="true" weight="0.17430703" />
+      <window_info id="Gulp" order="4" sideWeight="0.27557755" side_tool="true" visible="true" weight="0.17430703" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3261105" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49946696" visible="true" weight="0.3434453" />
@@ -472,7 +481,7 @@
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.32936078" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.51342285" side_tool="true" weight="0.32719547" />
       <window_info anchor="bottom" id="TypeScript" order="10" />
-      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.48657718" weight="0.28118163" />
+      <window_info anchor="bottom" id="Terminal" order="11" sideWeight="0.48657718" weight="0.28060672" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -528,98 +537,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="Add Node based .gitignore&#10;&#10;Add vcs.xml idea meta file too" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/_pug-includes/banner.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="7" column="17" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/article.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="528">
-          <caret line="88" column="12" selection-start-line="88" selection-start-column="12" selection-end-line="88" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/_pug-includes/footer-simple.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="10" selection-start-line="10" selection-end-line="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/fragments/1.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/lib/platform-impl.jar!/resources/html5-schema/html5/embed.rnc">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="436" column="16" selection-start-line="436" selection-start-column="16" selection-end-line="436" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/http_code.jquery.com_jquery-3.3.1.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="10202" selection-start-line="10202" selection-end-line="10202" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/_pug-includes/header.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1800">
-          <caret line="75" column="62" selection-start-line="75" selection-start-column="62" selection-end-line="75" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/_pug-includes/project-header.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="888">
-          <caret line="37" column="35" selection-start-line="37" selection-start-column="35" selection-end-line="37" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/javascripts/main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4512">
-          <caret line="188" column="51" selection-start-line="188" selection-start-column="51" selection-end-line="188" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/portfolio.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="624">
-          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="312">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/portfolio/games/exhibition/menu.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/portfolio/web/cartoenm/main.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/images/portfolio/web/cartoenm/home.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/chattree.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="117" column="37" selection-start-line="117" selection-start-column="37" selection-end-line="117" selection-end-column="37" />
-          <caret line="118" column="37" selection-start-line="118" selection-start-column="37" selection-end-line="118" selection-end-column="37" />
-          <caret line="119" column="37" selection-start-line="119" selection-start-column="37" selection-end-line="119" selection-end-column="37" />
-          <caret line="120" column="37" selection-start-line="120" selection-start-column="37" selection-end-line="120" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/views/2116.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="56">
@@ -710,46 +627,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/basic-typography.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1368" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/_includes/_colors.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="21" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/_includes/_sizes.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/blog-single.html">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/basic-typography.less" />
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/_includes/_colors.less" />
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/_includes/_sizes.less" />
+    <entry file="file://$PROJECT_DIR$/trash/blog-single.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="319">
           <caret line="183" column="27" lean-forward="true" selection-start-line="183" selection-start-column="27" selection-end-line="186" selection-end-column="77" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/_pug-includes/portfolio.pug">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="653">
-          <caret line="28" column="61" selection-start-line="28" selection-start-column="61" selection-end-line="28" selection-end-column="61" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/font-awesome.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="24">
-          <caret line="1" column="39" lean-forward="true" selection-start-line="1" selection-start-column="39" selection-end-line="1" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/font-awesome.css" />
     <entry file="file://$PROJECT_DIR$/views/index.pug">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -766,45 +654,115 @@
     <entry file="file://$PROJECT_DIR$/public/images/logos/soundcloud.svg">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/_pug-includes/head.pug">
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/theme.less" />
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/footer.less" />
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/about.less" />
+    <entry file="file://$PROJECT_DIR$/public/favicon.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$APPLICATION_CONFIG_DIR$/javascript/extLibs/global-types/node_modules/@types/gulp-less/index.d.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/stylesheets/style.less">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/index.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.babelrc">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/main.js" />
+    <entry file="file://$PROJECT_DIR$/views/_pug-includes/scripts.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="10" column="33" selection-start-line="10" selection-start-column="33" selection-end-line="10" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/stylesheets/style.css">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/views/_pug-includes/about-section.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="12" selection-end-column="75" />
+        <state>
+          <caret line="34" column="49" selection-start-line="34" selection-start-column="49" selection-end-line="34" selection-end-column="49" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/theme.less">
+    <entry file="file://$PROJECT_DIR$/views/_pug-includes/header.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="22" column="1" selection-start-line="22" selection-start-column="1" selection-end-line="22" selection-end-column="1" />
+        <state relative-caret-position="1872">
+          <caret line="78" column="9" selection-start-line="78" selection-start-column="9" selection-end-line="78" selection-end-column="9" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/about.less">
+    <entry file="file://$PROJECT_DIR$/stylesheets/_imports/home.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="437">
-          <caret line="47" selection-start-line="47" selection-end-line="50" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/_imports/footer.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="67" column="23" selection-start-line="67" selection-start-column="23" selection-end-line="67" selection-end-column="23" />
+        <state relative-caret-position="288">
+          <caret line="12" selection-start-line="12" selection-end-line="12" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/_pug-includes/footer.pug">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="43" column="95" selection-start-line="43" selection-start-column="95" selection-end-line="43" selection-end-column="95" />
+        <state relative-caret-position="1008">
+          <caret line="42" column="53" selection-start-line="42" selection-start-column="53" selection-end-line="42" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/_pug-includes/head.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/_pug-includes/portfolio.pug">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="317">
+          <caret line="20" column="20" selection-start-line="20" selection-start-column="20" selection-end-line="20" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="24">
+          <caret line="4" column="14" selection-start-line="4" selection-start-column="14" selection-end-line="4" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/projects/2116.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="96">
+          <caret line="4" column="52" selection-start-line="4" selection-start-column="52" selection-end-line="4" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="215">
+          <caret line="66" column="17" selection-start-line="66" selection-start-column="17" selection-end-line="66" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gulpfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="174">
+          <caret line="18" column="1" lean-forward="true" selection-start-line="18" selection-start-column="1" selection-end-line="18" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/.htaccess">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="168">
+          <caret line="7" lean-forward="true" selection-start-line="7" selection-end-line="7" />
         </state>
       </provider>
     </entry>

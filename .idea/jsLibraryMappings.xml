@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="JavaScriptLibraryMappings">
-    <file url="PROJECT" libraries="{@types/express, @types/i18n, @types/jquery, @types/materialize-css, @types/node, @types/nodemailer, @types/toastr, jquery-3.3.1, jquery.mixitup, jquery.waypoints, materialize}" />
+    <file url="PROJECT" libraries="{@types/express, @types/gulp, @types/gulp-babel, @types/gulp-csso, @types/gulp-less, @types/gulp-pug, @types/gulp-rename, @types/gulp-uglify, @types/i18n, @types/jquery, @types/materialize-css, @types/node, @types/nodemailer, @types/toastr, jquery-3.3.1, jquery.mixitup, jquery.waypoints, materialize}" />
     <includedPredefinedLibrary name="Node.js Core" />
   </component>
 </project>
