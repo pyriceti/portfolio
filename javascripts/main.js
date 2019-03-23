@@ -200,6 +200,8 @@ jQuery(function ($) {
         case 'other':
           target = '4';
           break;
+        default:
+          target = '1';
       }
       $(`#portfolio .controls button.filter:nth-child(${target})`).trigger('click');
     }
