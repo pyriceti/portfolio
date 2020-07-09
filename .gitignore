@@ -70,3 +70,5 @@ typings/
 /public/stylesheets/theme.css
 /public/stylesheets/style.css
 /public/**/*.html
+
+**/Thumbs.db
