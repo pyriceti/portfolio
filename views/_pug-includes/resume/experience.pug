@@ -6,17 +6,74 @@ section#experience
         p.
           Je me suis très tôt intéressé aux technologies web, travaillant principalement
           avec la stack WAMP/LAMP sur des petits projets personnels. Par la suite,
-          j'ai eu la chance de travailler pour plusieurs clients en tant que #[span.it freelance],
-          ainsi que de réaliser plusieurs stages dans des contextes techniques divers.
-          Ces riches expériences m'ont permis de professionaliser mon savoir-faire actuel.
+          j’ai eu la chance de travailler pour plusieurs clients en tant que #[span.it freelance],
+          ainsi que de réaliser plusieurs stages dans des contextes techniques divers, jusqu’à me
+          spécialiser aujourd’hui en développement sous Unity 3D.
+          Ces riches expériences m’ont permis de professionaliser mon savoir-faire actuel.
 
         .carousel-container
           #owl-carousel.experience-slider.row
+            // Upian
+            .col.s12
+              .card
+                - var role = 'Développeur intégrateur Unity 3D'
+                - var href = 'https://www.upian.com/'
+                - var place = 'Upian – Paris'
+                .card-image.waves-effect.waves-block.waves-light
+                  h2.experience-title.semi-bold Janvier 2020 - Aujourd’hui
+                  img(class='activator', src='images/experiences/unmaze.jpg')
+                .card-content
+                  span.card-title.activator.reveal-title #{role}
+                    i.material-icons.right more_vert
+                  p
+                    a(href=href, target='_blank') #{place}
+                .card-reveal
+                  span.card-title.reveal-title #{role}
+                    i.material-icons.right close
+                  a.card-subtitle(href=href) #{place}
+                  p.
+                    Suite à mon stage chez Upian, j’ai été embauché pour
+                    assumer une grande partie du développement technique du
+                    projet Unmaze jusqu’à la fin de sa production. Ce travail
+                    passionnant est également source d’apprentissages divers,
+                    notamment sur l’importance de l’optimisation pour un jeu
+                    développé pour mobiles. Enfin, le challenge technique et
+                    d’interaction, loin d’être absent, s’incarne dans la
+                    difficulté à développer un gameplay convaincant autour
+                    de l’environnement lumineux du joueur/de la joueuse.
+                    Affaire à suivre…
+            // Upian (stage)
+            .col.s12
+              .card
+                - var role = 'Stagiaire développeur intégrateur Unity 3D'
+                - var href = 'https://www.upian.com/'
+                - var place = 'Upian – Paris'
+                .card-image.waves-effect.waves-block.waves-light
+                  h2.experience-title.semi-bold Mai 2019 - Novembre 2019
+                  img(class='activator', src='images/experiences/mobilegaming.jpg')
+                .card-content
+                  span.card-title.activator.reveal-title #{role}
+                    i.material-icons.right more_vert
+                  p
+                    a(href=href, target='_blank') #{place}
+                .card-reveal
+                  span.card-title.reveal-title #{role}
+                    i.material-icons.right close
+                  a.card-subtitle(href=href) #{place}
+                  p.
+                    Au cours de ce stage chez Upian, j’ai rapidement monté en
+                    compétences sous Unity 3D en rejoignant le projet Unmaze
+                    sous la tutelle d’#[a(href='http://www.andreberlemont.com/') André Berlemont].
+                    J’ai ainsi accompagné l’équipe sur la mise en place d’une
+                    #[span.it vertical slice]. Par ailleurs, j’ai eu la chance
+                    de pouvoir m’occuper du #[span.it sound design] et mixage
+                    des épisodes de la saison 1 de l’émission #[a(href='https://www.upian.com/fr/project/faq-arte') FAQ]
+                    grâce à mes connaissances en la matière.
             // Playbots
             .col.s12
               .card
                 - var role = 'Stagiaire ingénieur web full stack'
-                - var href = 'https://www.linkedin.com/company/playbots.io/'
+                - var href = 'https://www.societe.com/societe/playbots-820985653.html'
                 - var place = 'Playbots – Paris'
                 .card-image.waves-effect.waves-block.waves-light
                   h2.experience-title.semi-bold Février 2018 - Juillet 2018
@@ -31,19 +88,19 @@ section#experience
                     i.material-icons.right close
                   a.card-subtitle(href=href) #{place}
                   p.
-                    Ce stage chez Playbots m'a permis de devenir complètement
-                    autonome avec la stack MEAN. J'ai eu l'occasion de travailler
+                    Ce stage chez Playbots m’a permis de devenir complètement
+                    autonome avec la stack MEAN. J’ai eu l’occasion de travailler
                     sur la plateforme de création/gestion de #[span.it bots] de
-                    l'entreprise, dans un contexte agile et avec de fortes
-                    responsabilités. J'ai également assumé avec enthousiasme la fonction
-                    d'#[span.it UI/UX designer] dans l'équipe, faute d'expert
-                    dans l'équipe.
+                    l’entreprise, dans un contexte agile et avec de fortes
+                    responsabilités. J’ai également assumé avec enthousiasme la fonction
+                    d’#[span.it UI/UX designer] dans l’équipe, faute d’expert
+                    dans l’équipe.
             // CartoENM
             .col.s12
               .card
                 - var role = 'Développeur web backend PHP/SQL'
                 - var href = 'https://ics.utc.fr/cartoenm/'
-                - var place = 'ENM, mandaté par l\'UTC – Paris & Compiègne'
+                - var place = 'ENM, mandaté par l’UTC – Paris & Compiègne'
                 .card-image.waves-effect.waves-block.waves-light
                   h2.experience-title.semi-bold 2016 - 2017
                   img(class='activator', src='images/experiences/law.jpg')
@@ -57,12 +114,12 @@ section#experience
                     i.material-icons.right close
                   a.card-subtitle(href=href) #{place}
                   p.
-                    Dans le cadre d'un job étudiant à l'UTC, j'ai conçu le système
+                    Dans le cadre d’un job étudiant à l’UTC, j’ai conçu le système
                     #[span.it backend] du projet CartoENM : extraction de données
                     depuis feuilles de calcul, imports en BDD et construction de
-                    l'arbre de réponses lié à une requête utilisateur.
-                    Ce fut l'occasion de mettre en place une réflexion centrée
-                    utilisateur par rapport aux élèves de l'ENM, commanditaire
+                    l’arbre de réponses lié à une requête utilisateur.
+                    Ce fut l’occasion de mettre en place une réflexion centrée
+                    utilisateur par rapport aux élèves de l’ENM, commanditaire
                     du projet.
             // DCE
             .col.s12
@@ -83,12 +140,12 @@ section#experience
                     i.material-icons.right close
                   a.card-subtitle(href=href) #{place}
                   p.
-                    J'ai intégré l'équipe de DreamCentury E. pendant 6 mois riches
-                    d'apprentissages. Ce premier stage long m'a inculqué la rigueur
-                    professionnelle dans l'écriture de code fonctionnel, stable
-                    et adaptatif, dans un cadre de travail semi-agile. J'ai ainsi
+                    J’ai intégré l’équipe de DreamCentury E. pendant 6 mois riches
+                    d’apprentissages. Ce premier stage long m’a inculqué la rigueur
+                    professionnelle dans l’écriture de code fonctionnel, stable
+                    et adaptatif, dans un cadre de travail semi-agile. J’ai ainsi
                     pu assumer la responsabilité du développement de plusieurs
-                    modules, chacun posant son lot de défis en terme d'interactions
+                    modules, chacun posant son lot de défis en terme d’interactions
                     utilisateur et de contraintes techniques (e.g. dépendances à des
                     services externes).
             // Peripro
@@ -110,10 +167,10 @@ section#experience
                     i.material-icons.right close
                   a.card-subtitle(href=href) #{place}
                   p.
-                    J'ai eu l'occasion de mettre à l'épreuve mes jeunes connaissances
+                    J’ai eu l’occasion de mettre à l’épreuve mes jeunes connaissances
                     en #[span.it web design] dès 2014 avec plusieurs clients
-                    concrets, dont notamment Peripro fencing chez qui j'ai effectué
-                    un stage cours en été 2014. Ces expériences m'ont permis de
+                    concrets, dont notamment Peripro fencing chez qui j’ai effectué
+                    un stage cours en été 2014. Ces expériences m’ont permis de
                     prendre mes marques et de mieux comprendre certaines problématiques
                     techniques pour trouver des solutions #[span.it ad hoc] à ces
                     dernières.

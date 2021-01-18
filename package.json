@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "start": "node ./bin/www",
@@ -17,9 +17,10 @@
     "debug": "~2.6.9",
     "dotenv": "^6.2.0",
     "express": "~4.16.0",
+    "gulp-htmlmin": "^5.0.1",
     "i18n": "^0.8.3",
     "less": "^3.9.0",
-    "less-middleware": "~2.2.1",
+    "less-middleware": "^3.1.0",
     "materialize-css": "^1.0.0-rc.2",
     "morgan": "~1.9.0",
     "nodemailer": "^5.1.1",

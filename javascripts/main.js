@@ -146,7 +146,16 @@ jQuery(function ($) {
   // so we can get a fancy scroll animation
   menuItems.click(function (e) {
     e.preventDefault();
+
     const href = $(this).attr("href");
+
+    // Detect if 404
+    if ($('#home').hasClass('err404')) {
+      if (href !== '#portfolio') {
+        window.location.replace(`/${href}`);
+      }
+      return;
+    }
 
     if (href === '#portfolio') {
       const target = $(this).attr("data-anchor");
@@ -245,11 +254,16 @@ jQuery(function ($) {
   const $window = $(window);
   const $upBtn  = $(".up-btn");
   $upBtn.on('click', () => {
-    if ($upBtn[0].classList.contains('hidden')) return;
+    if ($upBtn[0].classList.contains('hidden'))
+      return;
+
     $('html, body').animate({
         scrollTop: $("#header").offset().top,
       },
-      'slow');
+      'slow', function() {
+        // On done
+        $upBtn.blur();
+      });
   });
 
   function CalcUpBtn() {
@@ -322,5 +336,20 @@ jQuery(function ($) {
       toastr.success('Votre message a bien été envoyé ! :)');
     });
   });
+
+  function getAge(dateString) {
+    var today = new Date();
+    var birthDate = new Date(dateString);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
+  }
+
+  $("#age").text(getAge("1995/12/15"));
+
+  $("#year").text(new Date().getFullYear().toString());
 
 });
