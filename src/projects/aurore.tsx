@@ -19,7 +19,7 @@ const auroreProject: ProjectData = {
               intrigue travaillées aux joueuses/joueurs.</>,
           media: {
             type: "video",
-            src: "https://www.youtube.com/embed/701FiZdJOJc",
+            src: "https://www.youtube.com/watch?v=701FiZdJOJc",
           },
         },
       ],

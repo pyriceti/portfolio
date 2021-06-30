@@ -4,9 +4,9 @@ interface ProjectDataContent {
   title: string,
   content:
     {
-      p: ReactElement<any, any>,
+      p?: ReactElement<any, any>,
       media?: {
-        type: "image" | "video",
+        type: "image" | "video" | "audio",
         src: string
       }
     }[],
@@ -23,5 +23,5 @@ export interface ProjectData {
     surname: string,
     roles: string
   }[],
-  externalLinks: any[],
+  externalLinks?: ReactElement<any, any>[],
 }

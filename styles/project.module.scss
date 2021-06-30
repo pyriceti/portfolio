@@ -35,7 +35,7 @@
   margin-top: .5rem;
   padding-bottom: 56.25%; // 16:9 (100 * 9 / 16), for an aspect ratio of 1:1 change to this value to 100%
 
-  > iframe {
+  > div {
     position: absolute;
     top: 0;
     left: 0;
@@ -47,6 +47,12 @@
 .imageWrapper {
   position: relative;
   margin-top: .5rem;
+  cursor: zoom-in;
 
   > .sideImg {}
+}
+
+.audioWrapper {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }

@@ -18,9 +18,11 @@
     "react-dom": "^17.0.2",
     "react-gsap": "^3.2.1",
     "react-intersection-observer": "^8.32.0",
+    "react-player": "^2.9.0",
     "react-waypoint": "^10.1.0",
     "sass": "^1.32.12",
-    "shufflejs": "^5.4.1"
+    "shufflejs": "^5.4.1",
+    "simple-react-lightbox": "^3.6.6"
   },
   "devDependencies": {
     "@svgr/cli": "^5.5.0",

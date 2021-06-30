@@ -8,12 +8,38 @@ import utilStyles                  from "../../styles/utils.module.scss";
 import ThinSP                      from "../util/thinsp";
 import { transparentGifPix }       from "../../util";
 import { ProjectData }             from "../../src/projects";
+import { SRLWrapper }              from "simple-react-lightbox";
+import ReactPlayer                 from "react-player/lazy";
 
 interface ProjectProps extends HTMLProps<HTMLElement> {
   projectData: ProjectData,
 }
 
 const Project: React.FC<ProjectProps> = ({ projectData }) => {
+
+  const srlOptions = {
+    settings: {
+      disableWheelControls: true,
+      disablePanzoom: true,
+      autoplaySpeed: 0,
+      hideControlsAfter: 1000,
+    },
+    buttons: {
+      showAutoplayButton: false,
+      showCloseButton: true,
+      showDownloadButton: false,
+      showFullscreenButton: false,
+      showNextButton: false,
+      showPrevButton: false,
+      showThumbnailsButton: false,
+    },
+    caption: {
+      showCaption: false,
+    },
+    thumbnails: {
+      showThumbnails: false,
+    },
+  };
 
   return (
     <Layout>
@@ -49,36 +75,47 @@ const Project: React.FC<ProjectProps> = ({ projectData }) => {
                   <h2 className="default-h2 fw-normal mt-4">{c.title}</h2>
                   {c.content.map((b, j) =>
                     <Row key={j}>
-                      <Col>
+                      {b.p !== undefined &&
+                      <Col xs={12} md={b.media !== undefined ? 6 : 12}>
                         <p>
                           {b.p}
                         </p>
                       </Col>
+                      }
                       {b.media !== undefined &&
-                      <Col>
+                      <Col xs={12} md={b.p !== undefined ? 6 : 12}>
                         {b.media.type === "video" &&
                         <div className={projectStyles.videoWrapper}>
-                          <iframe
+                          <ReactPlayer
+                            url={b.media.src}
                             width="100%" height="100%"
-                            src={b.media.src}
-                            frameBorder="0" allowFullScreen
-                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture">
-                          </iframe>
+                            config={{ youtube: { playerVars: { controls: 2 } }}}
+                          />
                         </div>
                         }
                         {b.media.type === "image" &&
                         <div className={projectStyles.imageWrapper}>
-                          <Image
-                            width={1600}
-                            height={900}
-                            src={b.media.src}
-                            alt={`Illustration de ${projectData.title}`}
-                            layout="intrinsic"
-                            placeholder="blur"
-                            blurDataURL={transparentGifPix}
-                            quality={100}
-                            className={`${projectStyles.sideImg}`}
-                          />
+                          <SRLWrapper options={srlOptions}>
+                            <Image
+                              width={1600}
+                              height={900}
+                              src={b.media.src}
+                              alt={`Illustration de ${projectData.title}`}
+                              layout="intrinsic"
+                              placeholder="blur"
+                              blurDataURL={transparentGifPix}
+                              quality={100}
+                              className={`${projectStyles.sideImg}`}
+                            />
+                          </SRLWrapper>
+                        </div>
+                        }
+                        {b.media.type === "audio" &&
+                        <div className={projectStyles.audioWrapper}>
+                          <ReactPlayer
+                            width="100%"
+                            height="300px"
+                            url={b.media.src}/>
                         </div>
                         }
                       </Col>
@@ -93,9 +130,20 @@ const Project: React.FC<ProjectProps> = ({ projectData }) => {
                   <li
                     key={i}><span
                     className={`${projectStyles.creditName} bold`}>{c.name} {c.surname.toUpperCase()}<ThinSP/>:</span> {c.roles}
-                  </li>)
-                }
+                  </li>,
+                )}
               </ul>
+
+              {projectData.externalLinks !== undefined &&
+              <>
+                <h2 className="default-h2 fw-normal mt-4">Liens utiles</h2>
+                <ul>
+                  {projectData.externalLinks.map((l, i) =>
+                    <li key={i}>{l}</li>,
+                  )}
+                </ul>
+              </>
+              }
             </Col>
           </Row>
         </Container>

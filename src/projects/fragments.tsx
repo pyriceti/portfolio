@@ -18,7 +18,7 @@ const fragmentsProject: ProjectData = {
               de réaliser un <span className="it">walking simulator</span>.</>,
           media: {
             type: "video",
-            src: "https://www.youtube.com/embed/SuBtDq6JNJo",
+            src: "https://www.youtube.com/watch?v=SuBtDq6JNJo&",
           },
         },
       ],
@@ -66,6 +66,12 @@ const fragmentsProject: ProjectData = {
     {
       title: "Composition",
       content: [
+        {
+          media: {
+            type: "audio",
+            src: "https://soundcloud.com/user-128757034/sets/fragments-original-soundtrack",
+          },
+        },
         {
           p: <>J’ai composé l’ensemble de la bande originale de Fragments à l’aide d’Ableton et de VST gratuits. Il
             s’agissait d’un challenge intéressant, par rapport à la l’écriture d’une musique interactive qui <span
@@ -139,7 +145,11 @@ const fragmentsProject: ProjectData = {
       roles: "game designer, sound designer, programmer",
     },
   ],
-  externalLinks: [],
+  externalLinks: [
+    <>Le jeu est disponible en ligne sur <a href="https://pyriceti.itch.io/fragments" target="_blank"
+                                            rel="noopener">itch.io</a>. Attention, il est conseillé d’avoir une carte
+      graphique dédiée pour que le jeu soit stable.</>,
+  ],
 };
 
 export default fragmentsProject;
