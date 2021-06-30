@@ -1,0 +1,29 @@
+@use "../styles/colors";
+
+.container {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.backToTop {
+  position: fixed;
+  bottom: 36px;
+  right: 36px;
+  cursor: pointer;
+  transform-origin: center bottom;
+
+  path {
+    transition: all .150s ease-in-out;
+  }
+
+  &:hover {
+    path:nth-child(1) {
+      fill: colors.$secondary;
+      stroke: colors.$secondary;;
+    }
+    path:nth-child(2) {
+      fill: colors.$almost-white;
+    }
+  }
+}

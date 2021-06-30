@@ -1,0 +1,65 @@
+@use "../../styles/mixins";
+@use "../../styles/colors";
+
+.globalFooter {
+  color: colors.$almost-white;
+}
+
+.footerTop {
+  @include mixins.bg-image;
+
+  .footerTopContainer {
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+  }
+}
+
+.globalFooter :global(.external-url-container) {
+  border-bottom: 1px solid transparent;
+}
+
+.externalLink {
+  color: colors.$almost-white;
+  display: inline-block;
+  @include mixins.link-hover-dark;
+}
+
+.externalLinkImg {
+  height: 24px;
+  width: 30px;
+  margin-right: 6px;
+  filter: invert(100%);
+
+  &:hover {
+    filter: invert(39%) sepia(97%) saturate(528%) hue-rotate(317deg) brightness(91%) contrast(88%);
+  }
+}
+
+.personalInfoList {
+  padding-left: 0;
+  list-style-type: none;
+}
+
+.personalInfoItem {
+  border-bottom: 1px solid #eee;
+}
+
+.personalInfoLabel {
+  display: inline-block;
+  width: 100px;
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    width: 56px;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    width: 64px;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    width: 88px;
+  }
+}

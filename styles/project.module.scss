@@ -1,0 +1,52 @@
+@use "../styles/mixins";
+@use "../styles/colors";
+
+.projectContainer {
+
+}
+
+.projectHeader {
+  @include mixins.bg-image;
+  color: colors.$almost-white;
+}
+
+.projectOverlay {
+  padding-top: 40px;
+  padding-bottom: 20px;
+  background: rgba(0,0,0,.5) 0 0;
+}
+
+.projectMetadata {
+  color: rgb(180, 180, 180);
+  margin-bottom: 0;
+}
+
+.projectContentContainer {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
+
+.creditName {
+  color: colors.$light-black;
+}
+
+.videoWrapper {
+  position: relative;
+  margin-top: .5rem;
+  padding-bottom: 56.25%; // 16:9 (100 * 9 / 16), for an aspect ratio of 1:1 change to this value to 100%
+
+  > iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.imageWrapper {
+  position: relative;
+  margin-top: .5rem;
+
+  > .sideImg {}
+}

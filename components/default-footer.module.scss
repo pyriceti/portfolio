@@ -1,0 +1,10 @@
+@use "../styles/colors";
+
+.footerBottom {
+  background-color: colors.$almost-white;
+}
+
+.copyright {
+  text-align: center;
+  color: #555;
+}

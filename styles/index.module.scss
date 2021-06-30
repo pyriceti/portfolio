@@ -1,0 +1,397 @@
+@use "../styles/colors";
+@use "../styles/mixins";
+
+@mixin home-cta {
+  font-size: 1rem;
+  padding: .5rem 2rem;
+  border-radius: 0.2rem;
+
+  &:focus {
+    box-shadow: none;
+  }
+}
+
+.downloadResumeBtn {
+  @include home-cta;
+  @include mixins.btn-secondary-hover-bg;
+}
+
+.banner {
+  @include mixins.bg-image;
+  color: colors.$almost-white;
+}
+
+.bannerOverlay {
+  background: rgba(0, 0, 0, .5) 0 0;
+}
+
+.bannerCta {
+  @include home-cta;
+  @include mixins.btn-secondary-hover-bg;
+}
+
+.about {
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.aboutProfilePicContainer {
+  max-width: min(158px, 100%);
+  max-height: min(158px, 100%);
+}
+
+.wisdomQuote {
+  font-size: 1.25rem;
+  line-height: 135%;
+
+  //& > footer:global(.blockquote-footer)::after {
+  //  content: '';
+  //  display: block;
+  //  border-bottom: 2px solid colors.$primary;
+  //  padding-top: .5rem;
+  //  width: 60%;
+  //  max-width: 400px;
+  //  margin: auto;
+  //}
+}
+
+.personalQuote {
+  font-size: 1rem;
+  border-left: .25rem solid colors.$primary;
+}
+
+.aboutLinkContainer {
+  & > img {
+    display: inline-block;
+    vertical-align: middle;
+    width: 18px;
+    height: 18px;
+    margin-right: 6px;
+  }
+
+  & > a {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 28px;
+    height: 28px;
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      line-height: inherit;
+      height: auto;
+    }
+  }
+}
+
+.portfolio {
+  padding-bottom: 100px;
+}
+
+.portfolioTop {
+  @include mixins.bg-image;
+}
+
+.portfolioOverlay {
+  padding-top: 60px;
+  padding-bottom: 20px;
+  background: rgba(0,0,0,.5) 0 0;
+}
+
+.portfolioFilterBtn {
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: colors.$primary;
+  background-color: colors.$almost-white;
+
+  &:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+  }
+
+  &:hover,&:active, &:focus {
+    background-color: colors.$secondary;
+  }
+}
+
+.portfolioFilterBtnActive {
+  color: colors.$almost-white;
+  background-color: colors.$secondary;
+}
+
+:global(.card).portfolioCard {
+  cursor: pointer;
+  border: none;
+  border-radius: 0.25rem;
+  padding: 2px;
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    padding: 4px;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    padding: 8px;
+  }
+
+  .portfolioCardImg {
+    border: none;
+    border-radius: 0.25rem;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    transition: all 150ms ease-in-out;
+  }
+
+  .portfolioCardOverlay {
+    border-radius: 0;
+    padding: 2px;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      padding: 4px;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      padding: 8px;
+    }
+  }
+
+  .portfolioCardTitle {
+    color: colors.$almost-black;
+    padding: .75rem .25rem;
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, .75);
+    transition: all 200ms ease-in-out;
+  }
+
+  .portfolioCardGoToIcon {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+
+  &:hover {
+    .portfolioCardTitle {
+      color: colors.$almost-white;
+      background-color: colors.$primary;
+    }
+
+    .portfolioCardImg {
+      filter: brightness(33%) !important;
+    }
+  }
+}
+
+
+.resumeSection {
+  :global(.resume-dark-text) {
+    color: colors.$light-black;
+  }
+
+  .proBarContainer {
+    $pro-bar-height: 42px;
+    $pro-bar-height-md: 30px;
+
+    border: 2px solid colors.$primary;
+
+    :global(.pro-bar) {
+      height: $pro-bar-height;
+      background-color: colors.$primary;
+
+      // Medium devices (tablets, 768px and up)
+      @media (min-width: 768px) {
+        height: $pro-bar-height-md;
+      }
+    }
+
+    :global(.label) {
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: .75rem;
+
+      color: colors.$almost-white;
+
+      // Small devices (landscape phones, 576px and up)
+      @media (min-width: 576px) {
+        font-size: .8rem;
+      }
+
+      // Medium devices (tablets, 768px and up)
+      @media (min-width: 768px) {
+        font-size: 1rem;
+      }
+
+      :global(.value) {
+        font-weight: 400;
+        display: block;
+        color: transparentize(colors.$almost-white, 0.2);
+
+        // Medium devices (tablets, 768px and up)
+        @media (min-width: 768px) {
+          display: inline;
+        }
+      }
+    }
+  }
+}
+
+.skillSectionContainer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: colors.$bg-light-gray;
+}
+
+.experienceSectionContainer {
+  background-color: colors.$almost-white;
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+  :global(.illus-container) {
+    width: 192px;
+    margin-top: 5px;
+    margin-right: 12px;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      width: 128px;
+      margin-top: 6px;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      width: 170px;
+    }
+  }
+
+  :global(.illus) {}
+
+  :global(.xpDetailContainer) {
+    margin-top: 0;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      margin-top: 20px;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      margin-top: 40px;
+    }
+
+    :global(.place) {
+      font-size: 1.1rem;
+      font-family: 'Raleway', sans-serif;
+    }
+
+    :global(.xpDetail) {
+      display: none;
+    }
+  }
+}
+
+.xpTimelineSvg {
+  transform-origin: right top;
+  width: fit-content;
+  height: fit-content;
+  max-width: 100%;
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    width: 110px;
+  }
+
+  // X-Large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    width: 120px;
+  }
+
+  :global(.xp-timeline_svg__date-node), :global(.xp-timeline_svg__current-node) {
+    cursor: pointer;
+  }
+}
+
+.studiesTimelineSvg {
+  transform-origin: right top;
+  width: fit-content;
+  height: fit-content;
+  max-width: 100%;
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    width: 110px;
+  }
+
+  // X-Large devices (large desktops, 1200px and up)
+  @media (min-width: 1200px) {
+    width: 120px;
+  }
+
+  :global(.studies-timeline_svg__date-node), :global(.studies-timeline_svg__current-node) {
+    cursor: pointer;
+  }
+}
+
+.contentSep {
+  width: 30%;
+  height: 0;
+  margin-top: 2rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 2px solid colors.$primary;
+}
+
+.studiesSectionContainer {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: colors.$bg-light-gray;
+
+  :global(.school) {
+    font-size: 1.1rem;
+    font-family: 'Raleway', sans-serif;
+  }
+
+  :global(.desc) {
+
+  }
+
+  :global(.illus-container) {
+    width: 192px;
+    margin-top: 5px;
+    margin-right: 12px;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      width: 128px;
+      margin-top: 6px;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      width: 170px;
+    }
+  }
+
+  :global(.illus) {}
+
+  :global(.studiesDetailContainer) {
+    margin-top: 0;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      margin-top: 20px;
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      margin-top: 40px;
+    }
+
+    :global(.studiesDetail) {
+      display: none;
+    }
+  }
+}

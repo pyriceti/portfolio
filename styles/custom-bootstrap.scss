@@ -1,0 +1,87 @@
+@use "colors";
+
+// 1. Include functions first (so you can manipulate colors, SVGs, calc, etc)
+@import "~bootstrap/scss/functions";
+
+// 2. Include any default variable overrides here
+
+//// Change the primary colour
+$primary: colors.$primary;
+$secondary: colors.$secondary;
+$danger: colors.$danger;
+
+// Create your own map
+$custom-colors: (
+        "accent": colors.$secondary,
+        "accent-light": colors.$accent-light,
+        "almost-black": colors.$almost-black,
+        "almost-white": colors.$almost-white,
+        "light-black": colors.$light-black
+);
+
+// Set the sans-serif font
+$font-family-sans-serif: 'Nunito Sans', sans-serif;
+
+// Set the heading font family
+$headings-font-family: 'Raleway', sans-serif;
+
+// Make headings bolder!
+//$headings-font-weight: 700;
+
+// Thicken up our borders
+//$border-width: 3px;
+
+// 3. Include remainder of required Bootstrap stylesheets
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+@import "~bootstrap/scss/utilities";
+
+// Merge the theme colors maps
+$theme-colors: map-merge($theme-colors, $custom-colors);
+
+// 4. Include any optional Bootstrap components as you like
+
+// Layout & components
+@import "~bootstrap/scss/root";
+@import "~bootstrap/scss/reboot";
+@import "~bootstrap/scss/type";
+@import "~bootstrap/scss/images";
+@import "~bootstrap/scss/containers";
+@import "~bootstrap/scss/grid";
+// @import "~bootstrap/scss/tables";
+// @import "~bootstrap/scss/forms";
+@import "~bootstrap/scss/buttons";
+ @import "~bootstrap/scss/transitions";
+ @import "~bootstrap/scss/dropdown";
+ //@import "~bootstrap/scss/button-group";
+ @import "~bootstrap/scss/nav";
+ @import "~bootstrap/scss/navbar";
+ @import "~bootstrap/scss/card";
+ //@import "~bootstrap/scss/accordion";
+ //@import "~bootstrap/scss/breadcrumb";
+ //@import "~bootstrap/scss/pagination";
+ //@import "~bootstrap/scss/badge";
+ //@import "~bootstrap/scss/alert";
+ //@import "~bootstrap/scss/progress";
+ //@import "~bootstrap/scss/list-group";
+ @import "~bootstrap/scss/close";
+ //@import "~bootstrap/scss/toasts";
+ //@import "~bootstrap/scss/modal";
+ //@import "~bootstrap/scss/tooltip";
+// @import "~bootstrap/scss/popover";
+// @import "~bootstrap/scss/carousel";
+// @import "~bootstrap/scss/spinners";
+
+// Helpers
+@import "~bootstrap/scss/helpers";
+
+// Utilities
+@import "~bootstrap/scss/utilities/api";
+
+
+// 5. Add additional custom code here
+
+// Remove links default underline styling
+a {
+  text-decoration: none;
+}

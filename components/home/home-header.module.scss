@@ -1,0 +1,61 @@
+@use "../../styles/mixins";
+@use "../../styles/colors";
+@use "../default-header.module";
+
+.header {
+
+  //  position: fixed;
+  //  top: 0;
+  //  right: 0;
+  //  left: 0;
+  //  z-index: 1030;
+
+  //a {
+  //@include mixins.color-almost-white;
+  //}
+
+  //height: 56px;
+
+  // Small devices (landscape phones, 576px and up)
+  //@media (min-width: 576px) {
+  //  height: 64px;
+  //}
+}
+
+.navbarFixed {
+  &:global(.navbar-dark) :global(.navbar-nav) :global(.nav-link).navbarLink,
+  .navbarPortfolioContainer
+  {
+    .navbarLinkUnderline {
+      transition: all .200s ease-in-out;
+      position: absolute;
+      bottom: 4px;
+      width: 0;
+      height: 2px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: colors.$accent-color;
+      opacity: 0; // Needed to prevent weird artefacts on Chrome
+
+      // Large devices (desktops, 992px and up)
+      @media (min-width: 992px) {
+
+      }
+    }
+
+    &:global(.active) {
+      @include mixins.semi-bold;
+
+      .navbarLinkUnderline {
+        opacity: 1;
+        width: calc(100%);
+
+        // Large devices (desktops, 992px and up)
+        @media (min-width: 992px) {
+          width: calc(100% - 1rem);
+        }
+      }
+    }
+  }
+}
