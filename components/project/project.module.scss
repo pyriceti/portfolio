@@ -1,5 +1,5 @@
-@use "../styles/mixins";
-@use "../styles/colors";
+@use "../../styles/mixins";
+@use "../../styles/colors";
 
 .projectContainer {
 
@@ -24,6 +24,18 @@
 .projectContentContainer {
   padding-top: 40px;
   padding-bottom: 40px;
+
+  br {
+    display: block;
+    margin: 1rem 0;
+    line-height: 1rem;
+    content: " ";
+  }
+}
+
+.creditItem {
+  text-indent: -1rem;
+  padding-left: 1rem;
 }
 
 .creditName {
@@ -48,8 +60,6 @@
   position: relative;
   margin-top: .5rem;
   cursor: zoom-in;
-
-  > .sideImg {}
 }
 
 .audioWrapper {

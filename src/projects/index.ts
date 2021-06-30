@@ -2,6 +2,7 @@ import { ReactElement } from "react";
 
 interface ProjectDataContent {
   title: string,
+  isSubTitle?: boolean,
   content:
     {
       p?: ReactElement<any, any>,
@@ -12,16 +13,22 @@ interface ProjectDataContent {
     }[],
 }
 
+interface CreditEntry {
+  name: string,
+  surname: string,
+  roles: string
+}
+
 export interface ProjectData {
   title: string,
   date: string,
   cat: string,
   roles: string,
   content: ProjectDataContent[],
-  credits: {
-    name: string,
-    surname: string,
-    roles: string
+  credits?: CreditEntry[],
+  creditsComplex?: {
+    title: string,
+    credits: CreditEntry[],
   }[],
-  externalLinks?: ReactElement<any, any>[],
+  externalLinks: ReactElement<any, any>[],
 }

@@ -3,7 +3,7 @@ import React, { HTMLProps }        from "react";
 import Head                        from "next/head";
 import Image                       from "next/image";
 import Layout, { siteTitlePrefix } from "../layout";
-import projectStyles               from "../../styles/project.module.scss";
+import projectStyles               from "./project.module.scss";
 import utilStyles                  from "../../styles/utils.module.scss";
 import ThinSP                      from "../util/thinsp";
 import { transparentGifPix }       from "../../util";
@@ -72,7 +72,12 @@ const Project: React.FC<ProjectProps> = ({ projectData }) => {
             <Col lg={10} className="offset-lg-1">
               {projectData.content.map((c, i) =>
                 <React.Fragment key={i}>
+                  {c.isSubTitle === true &&
+                  <h3 className="mt-3 fw-normal">{c.title}</h3>
+                  }
+                  {c.isSubTitle !== true &&
                   <h2 className="default-h2 fw-normal mt-4">{c.title}</h2>
+                  }
                   {c.content.map((b, j) =>
                     <Row key={j}>
                       {b.p !== undefined &&
@@ -105,7 +110,7 @@ const Project: React.FC<ProjectProps> = ({ projectData }) => {
                               placeholder="blur"
                               blurDataURL={transparentGifPix}
                               quality={100}
-                              className={`${projectStyles.sideImg}`}
+                              objectFit="contain"
                             />
                           </SRLWrapper>
                         </div>
@@ -124,17 +129,37 @@ const Project: React.FC<ProjectProps> = ({ projectData }) => {
                   )}
                 </React.Fragment>,
               )}
-              <h2 className="default-h2 fw-normal mt-5">Crédits</h2>
+              <h2 className="default-h2 fw-normal mt-4">Crédits</h2>
+
+              {projectData.credits !== undefined &&
               <ul className="list-unstyled">
                 {projectData.credits.map((c, i) =>
                   <li
-                    key={i}><span
+                    key={i}
+                    className={projectStyles.creditItem}><span
                     className={`${projectStyles.creditName} bold`}>{c.name} {c.surname.toUpperCase()}<ThinSP/>:</span> {c.roles}
                   </li>,
                 )}
               </ul>
+              }
 
-              {projectData.externalLinks !== undefined &&
+              {projectData.creditsComplex !== undefined &&
+              projectData.creditsComplex.map((c, i) =>
+                <React.Fragment key={i}>
+                  <h3 className="h4 fw-normal">{c.title}</h3>
+                  <ul className="list-unstyled">
+                    {c.credits.map((e, j) =>
+                      <li
+                        key={j}
+                        className={projectStyles.creditItem}><span
+                        className={`${projectStyles.creditName} bold`}>{e.name} {e.surname.toUpperCase()}<ThinSP/>:</span> {e.roles}
+                      </li>,
+                    )}
+                  </ul>
+                </React.Fragment>)
+              }
+
+              {projectData.externalLinks.length > 0 &&
               <>
                 <h2 className="default-h2 fw-normal mt-4">Liens utiles</h2>
                 <ul>

@@ -65,6 +65,7 @@ const fragmentsProject: ProjectData = {
     },
     {
       title: "Composition",
+      isSubTitle: true,
       content: [
         {
           media: {
@@ -85,6 +86,7 @@ const fragmentsProject: ProjectData = {
     },
     {
       title: "Enregistrement & Mixage",
+      isSubTitle: true,
       content: [
         {
           p: <>Nous avons fait appel à une comédienne professionnelle pour obtenir les voix de Lauren et de son frère
@@ -100,6 +102,7 @@ const fragmentsProject: ProjectData = {
     },
     {
       title: "Intégration",
+      isSubTitle: true,
       content: [
         {
           p: <>Nous avons fait appel à un étudiant en sound design pour m’épauler dans mon travail : Matthieu. Ce

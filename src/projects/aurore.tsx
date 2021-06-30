@@ -76,6 +76,7 @@ const auroreProject: ProjectData = {
     },
     {
       title: "Sound design",
+      isSubTitle: true,
       content: [
         {
           p: <>Pour ce projet, il n’y a pas eu de musique à composer. En revanche, mon but était de caractériser

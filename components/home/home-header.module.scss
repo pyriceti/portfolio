@@ -29,7 +29,7 @@
     .navbarLinkUnderline {
       transition: all .200s ease-in-out;
       position: absolute;
-      bottom: 4px;
+      bottom: calc(100% - 36px);
       width: 0;
       height: 2px;
       left: 0;
@@ -40,7 +40,7 @@
 
       // Large devices (desktops, 992px and up)
       @media (min-width: 992px) {
-
+        bottom: 4px;
       }
     }
 

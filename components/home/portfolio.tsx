@@ -94,7 +94,7 @@ const GoToProjectElement = forwardRef<any, HTMLProps<any>>((props, ref) =>
 
 interface ProjectCardElementProps {
   project: PortfolioProject,
-  onClick: MouseEventHandler<HTMLElement>,
+  onClick?: MouseEventHandler<HTMLElement>,
 }
 
 const ProjectCardElement = forwardRef<any, ProjectCardElementProps>(({ project, onClick }, ref) => {
@@ -224,7 +224,7 @@ const Portfolio = forwardRef<HTMLElement, PortfolioProps>(
             <Row ref={projectsContainerRef}>
               {portfolioProjects.map((p, i) =>
                 <Link href={`/projects/${p.id}`} key={i}>
-                  <ProjectCardElement onClick={() => console.log(p.id)} project={p}/>
+                  <ProjectCardElement project={p}/>
                 </Link>,
               )}
             </Row>
