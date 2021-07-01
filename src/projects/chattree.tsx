@@ -5,7 +5,7 @@ const chatTreeProject: ProjectData = {
   title: "ChatTree",
   date: "2017 (9 mois)",
   cat: "Web",
-  roles: "Stack MEAN (MongoDB, Express.js, Angular 2+, Node.js), Android, Java",
+  techno: "Stack MEAN (MongoDB, Express.js, Angular 2+, Node.js), Android, Java",
   content: [
     {
       title: "Présentation",
@@ -34,7 +34,7 @@ const chatTreeProject: ProjectData = {
             entre amis.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/web/chattree/creation_thread.png",
+            src: "/images/portfolio/web/chattree/creation_thread.jpg",
           },
         },
         {
@@ -45,7 +45,7 @@ const chatTreeProject: ProjectData = {
             threads qui en apporte un aperçu global clair et concis.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/web/chattree/discussion_thread.png",
+            src: "/images/portfolio/web/chattree/discussion_thread.jpg",
           },
         },
       ],
@@ -81,7 +81,7 @@ const chatTreeProject: ProjectData = {
             développeur.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/web/chattree/architecture.png",
+            src: "/images/portfolio/web/chattree/architecture.jpg",
           },
         },
         {

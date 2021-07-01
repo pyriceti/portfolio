@@ -1,3 +1,4 @@
+import { NextPage }          from "next";
 import Link                  from "next/link";
 import Head                  from "next/head";
 import React                 from "react";
@@ -5,7 +6,7 @@ import Layout, { siteTitle } from "../components/layout";
 import { Container }         from "react-bootstrap";
 import ThinSP                from "../components/util/thinsp";
 
-const Custom500: React.FC<React.HTMLProps<HTMLElement>> = () => {
+const Custom500: NextPage = () => {
   return (
     <Layout>
       <Head>

@@ -33,7 +33,7 @@ const dynamoProject: ProjectData = {
             sa chambre.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/games/dynamo/1.png",
+            src: "/images/portfolio/games/dynamo/1.jpg",
           },
         },
         {
@@ -43,7 +43,7 @@ const dynamoProject: ProjectData = {
             au plus vite sous peine d’être à nouveau plongé dans l’obscurité totale.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/games/dynamo/2.png",
+            src: "/images/portfolio/games/dynamo/2.jpg",
           },
         },
       ]
@@ -56,7 +56,7 @@ const dynamoProject: ProjectData = {
             cependant assumé deux autres rôles dans ce projet : le level design et le sound design.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/games/dynamo/3.png",
+            src: "/images/portfolio/games/dynamo/3.jpg",
           },
         },
       ]
@@ -73,7 +73,7 @@ const dynamoProject: ProjectData = {
             de l’orbe.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/games/dynamo/LD.png",
+            src: "/images/portfolio/games/dynamo/LD.jpg",
           },
         },
       ]
@@ -89,7 +89,7 @@ const dynamoProject: ProjectData = {
             gratuites, puis intégrés après correction (normalisation, etc.).</>,
           media: {
             type: "image",
-            src: "/images/portfolio/games/dynamo/4.png",
+            src: "/images/portfolio/games/dynamo/4.jpg",
           },
         },
       ]
@@ -104,7 +104,7 @@ const dynamoProject: ProjectData = {
             angoissant que Dynamo est resté plongé dans l’obscurité trop longtemps.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/games/dynamo/Audio.png",
+            src: "/images/portfolio/games/dynamo/Audio.jpg",
           },
         },
       ]

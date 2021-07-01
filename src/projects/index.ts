@@ -23,7 +23,8 @@ export interface ProjectData {
   title: string,
   date: string,
   cat: string,
-  roles: string,
+  techno?: string,
+  roles?: string,
   content: ProjectDataContent[],
   credits?: CreditEntry[],
   creditsComplex?: {

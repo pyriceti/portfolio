@@ -28,7 +28,8 @@ const auroreProject: ProjectData = {
       title: "Concept",
       content: [
         {
-          p: <>À l’origine du concept, nous souhaitions attribuer un rôle véritablement actif au «<ThinSP/>copilote<ThinSP/>»,
+          p: <>À l’origine du concept, nous souhaitions attribuer un rôle véritablement actif au
+            «<ThinSP/>copilote<ThinSP/>»,
             soit la personne qui regarde quelqu’un jouer sans être forcément elle-même joueuse (ami, compagnon/compagne,
             etc.). De là est né un projet hybride entre deux média<ThinSP/>: un jeu vidéo et un livre non connectés
             numériquement (sans QR code, sans augmentation, etc). L’ensemble du game design repose en effet sur
@@ -52,7 +53,7 @@ const auroreProject: ProjectData = {
             src: "/images/portfolio/games/aurore/aurore2.jpg",
           },
         },
-      ]
+      ],
     },
     {
       title: "Rôle & responsabilités",
@@ -72,7 +73,7 @@ const auroreProject: ProjectData = {
             src: "/images/portfolio/games/aurore/aurore3.jpg",
           },
         },
-      ]
+      ],
     },
     {
       title: "Sound design",
@@ -93,8 +94,8 @@ const auroreProject: ProjectData = {
             src: "/images/portfolio/games/aurore/aurore4.jpg",
           },
         },
-      ]
-    }
+      ],
+    },
   ],
   credits: [
     {

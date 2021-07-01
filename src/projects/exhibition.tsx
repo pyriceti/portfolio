@@ -19,7 +19,7 @@ const exhibitionProject: ProjectData = {
               un musée.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/games/exhibition/menu.png",
+            src: "/images/portfolio/games/exhibition/menu.jpg",
           },
         },
       ],
@@ -35,7 +35,7 @@ const exhibitionProject: ProjectData = {
             que l’architecture du centre exprime notamment dans sa gestion des «<ThinSP/>flux<ThinSP/>»).</>,
           media: {
             type: "image",
-            src: "/images/portfolio/games/exhibition/game.png",
+            src: "/images/portfolio/games/exhibition/game.jpg",
           },
         },
         {
@@ -67,7 +67,7 @@ const exhibitionProject: ProjectData = {
             des mots, dès que le joueur reste suffisamment longtemps à côté d’un guide en train de parler.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/games/exhibition/unity.png",
+            src: "/images/portfolio/games/exhibition/unity.jpg",
           },
         },
       ]

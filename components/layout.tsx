@@ -55,8 +55,6 @@ const Layout = ({ children, header, footer }) => {
   return (
     <div className={layoutStyles.container}>
       <Head>
-        <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
-        <link rel="alternate icon" href="/favicon.png"/>
         <meta name="description" content="Portfolio de Baptiste Perraud, développeur Unity 3D & web"/>
         <meta name="og:title" content={siteTitle}/>
         <title>{siteTitle}</title>

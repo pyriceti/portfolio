@@ -54,13 +54,22 @@ const Project: React.FC<ProjectProps> = ({ projectData }) => {
               <Row>
                 <Col lg={10} className="offset-lg-1">
                   <h1 className={`${utilStyles.textAlmostWhite} h3 text-uppercase`}>{projectData.title}</h1>
-                  <p className={`${projectStyles.projectMetadata} small semi-bold`}>Date de
-                    réalisation<ThinSP/>: {projectData.date}</p>
-                  <p
-                    className={`${projectStyles.projectMetadata} small semi-bold`}>Catégorie<ThinSP/>: {projectData.cat}
+                  <p className={`${projectStyles.projectMetadata} small semi-bold`}>
+                    Date de réalisation<ThinSP/>: {projectData.date}
                   </p>
-                  <p className={`${projectStyles.projectMetadata} small semi-bold`}>Rôle<ThinSP/>: {projectData.roles}
+                  <p className={`${projectStyles.projectMetadata} small semi-bold`}>
+                    Catégorie<ThinSP/>: {projectData.cat}
                   </p>
+                  {projectData.roles !== undefined &&
+                  <p className={`${projectStyles.projectMetadata} small semi-bold`}>
+                    Rôles<ThinSP/>: {projectData.roles}
+                  </p>
+                  }
+                  {projectData.techno !== undefined &&
+                  <p className={`${projectStyles.projectMetadata} small semi-bold`}>
+                    Technologies<ThinSP/>: {projectData.techno}
+                  </p>
+                  }
                 </Col>
               </Row>
             </Container>

@@ -18,7 +18,7 @@ const musicHelperProject: ProjectData = {
               mobiliser la génération procédurale sonore pour concevoir un outil d’aide à la composition musicale.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/other/musichelper/musichelper1.png",
+            src: "/images/portfolio/other/musichelper/musichelper1.jpg",
           },
         },
       ],

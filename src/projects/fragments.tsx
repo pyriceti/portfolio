@@ -33,7 +33,7 @@ const fragmentsProject: ProjectData = {
             sa vie.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/games/fragments/1.png",
+            src: "/images/portfolio/games/fragments/1.jpg",
           },
         },
         {
@@ -44,7 +44,7 @@ const fragmentsProject: ProjectData = {
             servent de support à la narration.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/games/fragments/2.png",
+            src: "/images/portfolio/games/fragments/2.jpg",
           },
         },
       ]
@@ -58,7 +58,7 @@ const fragmentsProject: ProjectData = {
             de <span className="bold">Sound Designer</span> et de <span className="bold">Composer</span>.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/games/fragments/3.png",
+            src: "/images/portfolio/games/fragments/3.jpg",
           },
         },
       ]
@@ -79,7 +79,7 @@ const fragmentsProject: ProjectData = {
               className="bold">s’adapte</span> aux actions du joueur.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/games/fragments/Ableton.png",
+            src: "/images/portfolio/games/fragments/Ableton.jpg",
           },
         },
       ]
@@ -95,7 +95,7 @@ const fragmentsProject: ProjectData = {
             etc.).</>,
           media: {
             type: "image",
-          src: "/images/portfolio/games/fragments/Audacity.png",
+          src: "/images/portfolio/games/fragments/Audacity.jpg",
           },
         },
       ]
@@ -111,7 +111,7 @@ const fragmentsProject: ProjectData = {
             et équilibrer les sorties pour obtenir un résultat convainquant.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/games/fragments/Wwise.png",
+            src: "/images/portfolio/games/fragments/Wwise.jpg",
           },
         },
         {
@@ -120,7 +120,7 @@ const fragmentsProject: ProjectData = {
             moteurs pour que les sons se déclenchent au bon moment, en fonction de l’action du joueur.</>,
           media: {
             type: "image",
-            src: "/images/portfolio/games/fragments/Rider.png",
+            src: "/images/portfolio/games/fragments/Rider.jpg",
           },
         },
       ]
