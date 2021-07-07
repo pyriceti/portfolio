@@ -86,7 +86,7 @@ const studiesItems = [
   },
   {
     date: "2013",
-    diploma: "Baccalauréat S SVT",
+    diploma: "Baccalauréat S SVT spé math (mention TB)",
     school: "Lycée Samuel Beckett",
     url: "http://www.sbeckett.fr/",
     dateRange: ["2010", "2013"],
@@ -130,7 +130,7 @@ const Studies: React.FC<StudiesProps> = () => {
       <Container>
         <Row>
           <Col lg={8} className="offset-lg-2">
-            <h2 className="fw-normal">Études</h2>
+            <h3 className={`${homeStyles.homeH3} text-primary fw-normal`}>Études</h3>
 
             <p>Après un Baccalauréat S, j’ai intégré l’UTC (Université de Technologie de Compiègne) en 2013 afin de
               réaliser un parcours en ingénierie informatique à partir d’un cursus innovant :{" "}<a target="_blank"
@@ -149,14 +149,10 @@ const Studies: React.FC<StudiesProps> = () => {
                                                                 href="https://www.upian.com/fr/project/faq-arte"
                                                                 rel="noopener">FAQ</a>. Intitulée «<ThinSP/>Toucher un
               public jeune sur un contenu à enjeux sociaux diffusé sur une plateforme populaire<ThinSP/>: le cas du
-              programme Arte - FAQ sur Snapchat.<ThinSP/>», le but de cette thèse a été de porter la réflexion
-              suivante<ThinSP/>: «<ThinSP/>comment le programme Arte - FAQ peut-il parvenir à trouver sa cible jeune sur
+              programme Arte – FAQ sur Snapchat.<ThinSP/>», le but de cette thèse a été de porter la réflexion
+              suivante<ThinSP/>: «<ThinSP/>comment le programme Arte – FAQ peut-il parvenir à trouver sa cible jeune sur
               Snapchat, lorsque les autres shows sur la plateforme relèvent souvent de
-              l’entertainment<ThinSP/>?<ThinSP/>» En étudiant la plateforme, son usage par les jeunes et le programme
-              FAQ, j’ai pu poser et démontrer l’hypothèse suivante<ThinSP/>: «<ThinSP/>le succès d’une édition du
-              programme – et par extension du programme lui-même – se mesure à la manière dont le regard éditorial de
-              l’équipe de production sur un sujet donné répond également aux attentes de la cible déterminées par son
-              usage et ses habitudes de consommation sur Snapchat.<ThinSP/>»</p>
+              l’entertainment<ThinSP/>?<ThinSP/>»</p>
 
             <div className={homeStyles.contentSep}/>
 

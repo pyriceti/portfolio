@@ -80,7 +80,7 @@ export const tlInit = (currNode: gsap.TweenTarget, { cssPrefix, rootSvgSelector:
  */
 const tlStartingRotation = (elem: gsap.TweenTarget) =>
   gsap.to(elem, {
-    duration: .300,
+    duration: .150,
     rotate: 210,
     ease: "power1.easeInOut",
   });
@@ -94,12 +94,12 @@ const tlStartingBump = (elem: gsap.TweenTarget) => {
   return gsap.timeline()
     .to(elem, {
       scale: 1.5,
-      duration: .300,
+      duration: .150,
       ease: "power1.easeOut",
     })
     .to(elem, {
       scale: .5,
-      duration: .150,
+      duration: .100,
       ease: "power1.easeIn",
     });
 };
@@ -116,7 +116,7 @@ const tlMoveToDateNode = (elem: gsap.TweenTarget, date: string, { dates, maxNode
   const stepY = maxNodeYPos / (dates.length - 1);
   const target = stepY * dates.indexOf(date);
   return gsap.to(elem, {
-    duration: .400,
+    duration: .200,
     y: target,
     ease: "power1.easeInOut",
   });
@@ -129,7 +129,7 @@ const tlMoveToDateNode = (elem: gsap.TweenTarget, date: string, { dates, maxNode
  * @param elem
  */
 const tlEndingRotation = (elem: gsap.TweenTarget) => gsap.to(elem, {
-  duration: .300,
+duration: .150,
   rotate: 0,
   ease: "power1.easeInOut",
 });
@@ -144,12 +144,12 @@ const tlEndingBump = (elem: gsap.TweenTarget) => {
   return gsap.timeline()
     .to(elem, {
       scale: 1.3,
-      duration: .200,
+      duration: .100,
       ease: "power1.easeIn",
     })
     .to(elem, {
       scale: defaultScale,
-      duration: .300,
+      duration: .150,
       ease: "power1.easeOut",
     });
 };
@@ -168,7 +168,7 @@ export const tlToDateNodeFullTl = (currNode: gsap.TweenTarget, date: string, set
     .add(tlStartingBump(currNode), "0")
     .add(tlMoveToDateNode(currNode, date, settings), "postStartingRotation")
     .add(tlHandleDateNodes(date, settings), "postStartingRotation")
-    .addLabel("endingRotation", ".500")
+    .addLabel("endingRotation", ".250")
     .add(tlEndingRotation(currNode), "endingRotation")
     .add(tlEndingBump(currNode), "endingRotation")
     .add(tlLineColorAccentInOut(settings), "0")

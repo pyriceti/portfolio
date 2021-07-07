@@ -120,6 +120,7 @@ const auroreProject: ProjectData = {
     },
   ],
   externalLinks: [],
+  bgImg: "/images/portfolio/games/aurore/aurore1.jpg",
 };
 
 export default auroreProject;

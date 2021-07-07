@@ -84,7 +84,7 @@ const xpItems = [
     imgSrc: `${xpImgPathPrefix}gambling.jpg`,
     imgAlt: "Gambling illustration",
     contents:
-      <>J’ai intégré l’équipe de DreamCentury E. pendant 6 mois riches d’apprentissages. Ce premier stage long m’a
+      <>J’ai intégré l’équipe de DreamCentury Entertainment pendant 6 mois riches d’apprentissages. Ce premier stage long m’a
         inculqué la rigueur professionnelle dans l’écriture de code fonctionnel, stable et adaptatif, dans un cadre de
         travail semi-agile. J’ai ainsi pu assumer la responsabilité du développement de plusieurs modules, chacun posant
         son lot de défis en terme d’interactions utilisateur et de contraintes techniques (e.g. dépendances à des
@@ -134,12 +134,11 @@ const Experience: React.FC<ExperienceProps> = () => {
       <Container>
         <Row>
           <Col lg={8} className="offset-lg-2">
-            <h2 className="fw-normal">Expérience</h2>
+            <h3 className={`${homeStyles.homeH3} text-primary fw-normal`}>Expérience</h3>
             <p>Je me suis très tôt intéressé aux technologies web, travaillant principalement avec la stack
               WAMP/LAMP sur des petits projets personnels. Par la suite, j’ai eu la chance de travailler pour
               plusieurs clients en tant que freelance, ainsi que de réaliser plusieurs stages dans des contextes
-              techniques divers, jusqu’à me spécialiser aujourd’hui en développement sous Unity 3D. Ces riches
-              expériences m’ont permis de professionaliser mon savoir-faire actuel.</p>
+              techniques divers, jusqu’à me spécialiser aujourd’hui en développement sous Unity 3D.</p>
 
             <div className={homeStyles.contentSep} />
 

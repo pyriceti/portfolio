@@ -1,0 +1,126 @@
+@use "../styles/colors";
+@use "../styles/mixins";
+
+.header {
+
+  //  position: fixed;
+  //  top: 0;
+  //  right: 0;
+  //  left: 0;
+  //  z-index: 1030;
+
+  //a {
+  //@include mixins.color-almost-white;
+  //}
+
+  //height: 56px;
+
+  // Small devices (landscape phones, 576px and up)
+  //@media (min-width: 576px) {
+  //  height: 64px;
+  //}
+}
+
+.navbarFixed {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+
+  //  height: 56px;
+  //
+  //  // Small devices (landscape phones, 576px and up)
+  //  @media (min-width: 576px) {
+  //    height: 64px;
+  //  }
+
+  &:global(.navbar-dark) :global(.navbar-nav) :global(.nav-link).navbarLink,
+  .navbarPortfolioContainer
+  {
+    position: relative;
+    width: fit-content;
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+      width: auto;
+    }
+  }
+
+  :global(.navbar-brand) {
+    transition: all 200ms ease;
+
+    &:hover {
+      color: colors.$accent-light;
+    }
+  }
+
+
+  :global(.collapsing) {
+    height: 0;
+    overflow: hidden;
+    transition: height .250s ease-out;
+  }
+
+  &:global(.navbar-dark) :global(.navbar-nav) :global(.nav-link).navbarLink,
+  .navbarPortfolioContainer
+  {
+    .navbarLinkUnderline {
+      transition: all .200s ease-in-out;
+      position: absolute;
+      bottom: calc(100% - 36px);
+      width: 0;
+      height: 2px;
+      left: 0;
+      right: 0;
+      margin: auto;
+      background-color: colors.$accent-color;
+      opacity: 0; // Needed to prevent weird artefacts on Chrome
+
+      // Large devices (desktops, 992px and up)
+      @media (min-width: 992px) {
+        bottom: 4px;
+      }
+    }
+
+    &:global(.active) {
+      @include mixins.semi-bold;
+
+      .navbarLinkUnderline {
+        opacity: 1;
+        width: calc(100%);
+
+        // Large devices (desktops, 992px and up)
+        @media (min-width: 992px) {
+          width: calc(100% - 1rem);
+        }
+      }
+    }
+  }
+}
+
+.navbarToggle {
+  outline: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+
+  &:focus, &:active {
+    outline: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+  }
+
+  &:hover {
+    > .navbarMenuIcon > g {
+      //stroke: colors.$accent-light;
+    }
+  }
+
+  > .navbarMenuIcon {
+    max-width: 24px;
+    max-height: 24px;
+
+    > g {
+      transition: all 200ms ease;
+    }
+  }
+}

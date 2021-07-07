@@ -107,6 +107,7 @@ const iciProject: ProjectData = {
     },
   ],
   externalLinks: [],
+  bgImg: "/images/portfolio/games/ici/4.jpg",
 };
 
 export default iciProject;

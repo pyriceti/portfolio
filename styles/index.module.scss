@@ -3,11 +3,31 @@
 
 @mixin home-cta {
   font-size: 1rem;
-  padding: .5rem 2rem;
+  padding: .5rem 1.5rem;
   border-radius: 0.2rem;
 
   &:focus {
     box-shadow: none;
+  }
+}
+
+.homeH3 {
+  text-transform: uppercase;
+  font-size: 2rem;
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    font-size: 2rem;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    font-size: 2.5rem;
+  }
+
+  // Large devices (desktops, 992px and up)
+  @media (min-width: 992px) {
+    font-size: 2.75rem;
   }
 }
 
@@ -25,14 +45,42 @@
   background: rgba(0, 0, 0, .5) 0 0;
 }
 
+.bannerInfo {
+  font-size: 1.1rem;
+}
+
 .bannerCta {
   @include home-cta;
   @include mixins.btn-secondary-hover-bg;
 }
 
 .about {
-  padding-top: 80px;
-  padding-bottom: 80px;
+  @include mixins.home-anchor-offset;
+
+  .aboutContainer {
+    padding-top: 40px;
+    padding-bottom: 40px;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      padding-top: 80px;
+      padding-bottom: 80px;
+    }
+
+    .aboutLeftCol {
+      // Large devices (desktops, 992px and up)
+      @media (min-width: 992px) {
+        max-width: 160px;
+      }
+    }
+
+    .aboutRightCol {
+      // Large devices (desktops, 992px and up)
+      @media (min-width: 992px) {
+        width: calc(100% - 160px);
+      }
+    }
+  }
 }
 
 .aboutProfilePicContainer {
@@ -62,7 +110,8 @@
 
 .aboutLinkContainer {
   & > img {
-    display: inline-block;
+    //display: inline-block;
+    display: none;
     vertical-align: middle;
     width: 18px;
     height: 18px;
@@ -84,7 +133,18 @@
 }
 
 .portfolio {
-  padding-bottom: 100px;
+  padding-bottom: 30px;
+  @include mixins.home-anchor-offset;
+
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    padding-bottom: 60px;
+  }
+
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: 768px) {
+    padding-bottom: 100px;
+  }
 }
 
 .portfolioTop {
@@ -94,7 +154,7 @@
 .portfolioOverlay {
   padding-top: 60px;
   padding-bottom: 20px;
-  background: rgba(0,0,0,.5) 0 0;
+  @include mixins.bg-overlay;
 }
 
 .portfolioFilterBtn {
@@ -103,6 +163,7 @@
   box-shadow: none;
   color: colors.$primary;
   background-color: colors.$almost-white;
+  padding-top: 0.45rem;
 
   &:focus {
     border: none;
@@ -123,8 +184,7 @@
 :global(.card).portfolioCard {
   cursor: pointer;
   border: none;
-  border-radius: 0.25rem;
-  padding: 2px;
+  padding: 2px 8px;
 
   // Small devices (landscape phones, 576px and up)
   @media (min-width: 576px) {
@@ -136,77 +196,168 @@
     padding: 8px;
   }
 
-  .portfolioCardImg {
-    border: none;
+  .portfolioCardContents {
     border-radius: 0.25rem;
-    object-fit: cover;
-    object-position: center;
-    height: 100%;
-    transition: all 150ms ease-in-out;
+    background-color: colors.$bg-light-gray;
+    transition: background-color 200ms ease-out;
   }
 
-  .portfolioCardOverlay {
-    border-radius: 0;
-    padding: 2px;
+  .portfolioCardImgWrapper {
+    position: relative;
+    min-width: 120px;
+    width: 120px;
+    min-height: 90px;
+    height: 90px;
 
     // Small devices (landscape phones, 576px and up)
     @media (min-width: 576px) {
-      padding: 4px;
+      width: 100%;
+      height: calc(.75 * (270px - 8px));
     }
 
     // Medium devices (tablets, 768px and up)
     @media (min-width: 768px) {
-      padding: 8px;
+      height: calc(.75 * (240px - 16px));
+    }
+
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+      height: calc(.75 * (319.98px - 16px));
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+      height: calc(.75 * (253.33px - 16px));
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) {
+      height: calc(.75 * (293.33px - 16px)); // Twice the padding
+    }
+  }
+
+  .portfolioCardImg {
+    border: none;
+    border-radius: 0.25rem 0 0 0.25rem;
+    object-fit: cover;
+    object-position: center;
+    height: 100%;
+    transition: all 150ms ease-in-out;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      border-radius: 0.25rem 0.25rem 0 0;
+    }
+  }
+
+  .portfolioCardInfo {
+    padding: 8px 16px;
+    font-size: 1rem;
+    width: calc(100% - 120px);
+    color: colors.$almost-black;
+    transition: color 200ms ease-in-out, background-color 200ms ease-in-out;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      font-size: .9rem;
+      width: auto;
+      height: calc(.25 * (270px - 8px));
+    }
+
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      height: calc(.25 * (240px - 16px));
+    }
+    // Large devices (desktops, 992px and up)
+    @media (min-width: 992px) {
+      height: calc(.25 * (319.98px - 16px));
+    }
+
+    // X-Large devices (large desktops, 1200px and up)
+    @media (min-width: 1200px) {
+      height: calc(.25 * (253.33px - 16px));
+      font-size: .95rem;
+    }
+
+    // XX-Large devices (larger desktops, 1400px and up)
+    @media (min-width: 1400px) {
+      height: calc(.25 * (293.33px - 16px));
+      font-size: 1rem;
     }
   }
 
   .portfolioCardTitle {
-    color: colors.$almost-black;
-    padding: .75rem .25rem;
-    font-size: 1rem;
-    background-color: rgba(255, 255, 255, .75);
-    transition: all 200ms ease-in-out;
+    font-size: 1em;
+    line-height: 1.5;
+
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      line-height: 110%;
+    }
+  }
+
+  .portfolioCardSubTitle {
+    line-height: 125%;
   }
 
   .portfolioCardGoToIcon {
     position: absolute;
     transform: translate(-50%, -50%);
     top: 50%;
-    left: 50%;
+    right: 0;
+    height: 20px;
   }
 
   &:hover {
-    .portfolioCardTitle {
-      color: colors.$almost-white;
-      background-color: colors.$primary;
-    }
+    // Small devices (landscape phones, 576px and up)
+    @media (min-width: 576px) {
+      .portfolioCardInfo {
+        color: colors.$almost-white;
+      }
 
-    .portfolioCardImg {
-      filter: brightness(33%) !important;
+      .portfolioCardContents {
+        background-color: colors.$primary;
+      }
     }
   }
 }
 
 
 .resumeSection {
+  @include mixins.home-anchor-offset;
+
   :global(.resume-dark-text) {
     color: colors.$light-black;
+  }
+
+  .resumeHeader {
+    @include mixins.bg-image;
+
+    .resumeHeaderOverlay {
+      padding-top: 60px;
+      padding-bottom: 20px;
+      @include mixins.bg-overlay;
+    }
   }
 
   .proBarContainer {
     $pro-bar-height: 42px;
     $pro-bar-height-md: 30px;
+    height: $pro-bar-height;
 
     border: 2px solid colors.$primary;
 
-    :global(.pro-bar) {
-      height: $pro-bar-height;
-      background-color: colors.$primary;
+    // Medium devices (tablets, 768px and up)
+    @media (min-width: 768px) {
+      height: $pro-bar-height-md;
+    }
 
-      // Medium devices (tablets, 768px and up)
-      @media (min-width: 768px) {
-        height: $pro-bar-height-md;
-      }
+    :global(.pro-bar) {
+      background-color: colors.$primary;
+      top: -2px;
+      position: absolute;
+      height: inherit;
+      left: -2px;
     }
 
     :global(.label) {
@@ -298,7 +449,7 @@
   transform-origin: right top;
   width: fit-content;
   height: fit-content;
-  max-width: 100%;
+  max-width: min(110px, 100%);
 
   // Small devices (landscape phones, 576px and up)
   @media (min-width: 576px) {
@@ -319,7 +470,7 @@
   transform-origin: right top;
   width: fit-content;
   height: fit-content;
-  max-width: 100%;
+  max-width: min(110px, 100%);
 
   // Small devices (landscape phones, 576px and up)
   @media (min-width: 576px) {

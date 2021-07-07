@@ -1,21 +1,24 @@
-import { Col, Container, Row }     from "react-bootstrap";
-import React, { HTMLProps }        from "react";
-import Head                        from "next/head";
-import Image                       from "next/image";
-import Layout, { siteTitlePrefix } from "../layout";
-import projectStyles               from "./project.module.scss";
-import utilStyles                  from "../../styles/utils.module.scss";
-import ThinSP                      from "../util/thinsp";
-import { transparentGifPix }       from "../../util";
-import { ProjectData }             from "../../src/projects";
-import { SRLWrapper }              from "simple-react-lightbox";
-import ReactPlayer                 from "react-player/lazy";
+import React                           from "react";
+import Head                            from "next/head";
+import Image                           from "next/image";
+import { useRouter }                   from "next/router";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import Layout, { siteTitlePrefix }     from "../layout";
+import projectStyles                   from "./project.module.scss";
+import utilStyles                      from "../../styles/utils.module.scss";
+import ThinSP                          from "../util/thinsp";
+import { transparentGifPix }           from "../../util";
+import { ProjectData }                 from "../../src/projects";
+import { SRLWrapper }                  from "simple-react-lightbox";
+import ReactPlayer                     from "react-player/lazy";
+import { GoToIcon }                    from "../svg";
 
-interface ProjectProps extends HTMLProps<HTMLElement> {
+type ProjectProps = {
   projectData: ProjectData,
 }
 
-const Project: React.FC<ProjectProps> = ({ projectData }) => {
+const Project = ({ projectData }: ProjectProps): JSX.Element => {
+  const router = useRouter();
 
   const srlOptions = {
     settings: {
@@ -32,6 +35,8 @@ const Project: React.FC<ProjectProps> = ({ projectData }) => {
       showNextButton: false,
       showPrevButton: false,
       showThumbnailsButton: false,
+      iconPadding: '10px',
+      size: '52px',
     },
     caption: {
       showCaption: false,
@@ -41,6 +46,8 @@ const Project: React.FC<ProjectProps> = ({ projectData }) => {
     },
   };
 
+  const onBackToPortfolioBtnClick = () => router.back();
+
   return (
     <Layout>
       <Head>
@@ -48,12 +55,24 @@ const Project: React.FC<ProjectProps> = ({ projectData }) => {
       </Head>
 
       <section className={projectStyles.projectContainer}>
-        <div className={projectStyles.projectHeader}>
-          <div className={projectStyles.projectOverlay}>
+        <Container as="nav" className={`${projectStyles.backToPortfolioContainer} py-3`}>
+          <Row>
+            <Col lg={10} className="offset-lg-1">
+              <Button
+                onClick={onBackToPortfolioBtnClick}
+                className={`${projectStyles.backToPortfolioBtn} ms-lg-2 d-flex align-items-center`}
+                size="lg" variant="primary"
+              ><GoToIcon className={`${projectStyles.backToPortfolioIcon} me-1`}/>Revenir au portfolio</Button>
+            </Col>
+          </Row>
+        </Container>
+
+        <header className={projectStyles.projectHeader}>
+          <div className={`${projectStyles.projectOverlay} pt-5 pb-4`}>
             <Container>
               <Row>
                 <Col lg={10} className="offset-lg-1">
-                  <h1 className={`${utilStyles.textAlmostWhite} h3 text-uppercase`}>{projectData.title}</h1>
+                  <h1 className={`${utilStyles.textAlmostWhite}`}>{projectData.title}</h1>
                   <p className={`${projectStyles.projectMetadata} small semi-bold`}>
                     Date de réalisation<ThinSP/>: {projectData.date}
                   </p>
@@ -74,7 +93,7 @@ const Project: React.FC<ProjectProps> = ({ projectData }) => {
               </Row>
             </Container>
           </div>
-        </div>
+        </header>
 
         <Container className={projectStyles.projectContentContainer}>
           <Row>
@@ -182,6 +201,22 @@ const Project: React.FC<ProjectProps> = ({ projectData }) => {
           </Row>
         </Container>
       </section>
+
+      <style jsx>{`
+        header {
+          background-image: url(${projectData.bgImg ?? "/images/svg/bgFresco.svg"});
+          background-position: ${projectData.bgImg ? "center" : "top"};
+          background-repeat: ${projectData.bgImg ? "no-repeat" : "repeat"};
+          background-size: ${projectData.bgImg ? "cover" : "auto"};
+          background-color: ${projectData.bgImg ? "transparent" : "#1b0c0d"};
+          box-shadow: ${projectData.bgImg ? "none" : "inset 0 0 4px 4px #1b0c0d"};
+        }
+        
+        header > div {
+          background: rgba(0,0,0,${projectData.bgImg ? (projectData.bgImgOverlay ?? ".66") : ".5"}) 0 0;
+          backdrop-filter: ${projectData.bgImg ? "blur(2px)" : "none"};
+        }
+      `}</style>
     </Layout>
   );
 };

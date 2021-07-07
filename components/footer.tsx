@@ -1,8 +1,11 @@
-import defaultFooterStyles  from "./default-footer.module.scss";
-import { Container } from "react-bootstrap";
-import React         from "react";
+import defaultFooterStyles from "./footer.module.scss";
+import { Container }       from "react-bootstrap";
+import React               from "react";
 
-const DefaultFooter: React.FC<React.HTMLProps<HTMLElement>> = (props) => {
+interface FooterProps {
+}
+
+const Footer = (_: FooterProps): JSX.Element => {
 
   return (
     <div className={`${defaultFooterStyles.footerBottom} footer-bottom py-4`}>
@@ -14,4 +17,4 @@ const DefaultFooter: React.FC<React.HTMLProps<HTMLElement>> = (props) => {
   );
 };
 
-export default DefaultFooter;
+export default Footer;

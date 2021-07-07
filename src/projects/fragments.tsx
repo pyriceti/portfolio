@@ -153,6 +153,7 @@ const fragmentsProject: ProjectData = {
                                             rel="noopener">itch.io</a>. Attention, il est conseillé d’avoir une carte
       graphique dédiée pour que le jeu soit stable.</>,
   ],
+  bgImg: "/images/portfolio/games/fragments/1.jpg",
 };
 
 export default fragmentsProject;

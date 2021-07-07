@@ -2,7 +2,7 @@ import { ProjectData } from "./index";
 import ThinSP          from "../../components/util/thinsp";
 
 const cartoenmProject: ProjectData = {
-  title: "Carto-enm",
+  title: "Carto-ENM",
   date: "2016 – 2017 (8 mois)",
   cat: "Web",
   techno: "Stack WAMP (Windows, Apache Server, MySQL, PHP), VB/VBA, Python",
@@ -111,6 +111,7 @@ const cartoenmProject: ProjectData = {
     <>La plateforme est actuellement disponible <a href="https://ics.utc.fr/cartoenm/" target="_blank"
                                                    rel="noopener">ici</a>.</>,
   ],
+  bgImg: "/images/portfolio/web/cartoenm/main.jpg",
 };
 
 export default cartoenmProject;

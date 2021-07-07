@@ -1,16 +1,16 @@
 import Image                                                                            from "next/image";
 import Link                                                                             from "next/link";
 import homeStyles
-                                                                                        from "../../styles/index.module.scss";
-import { Button, Card, Col, Container, Row }                                            from "react-bootstrap";
+                                                      from "../../styles/index.module.scss";
+import { Button, Card, Col, Container, Row, Spinner } from "react-bootstrap";
 import utilStyles
-                                                                                        from "../../styles/utils.module.scss";
+                                                      from "../../styles/utils.module.scss";
 import React, { forwardRef, HTMLProps, MouseEventHandler, useEffect, useRef, useState } from "react";
 import Shuffle                                                                          from "shufflejs";
 import { GoToIcon }                                                                     from "../svg";
 import { PlayState, Tween }                                                             from "react-gsap";
 import { transparentGifPix }                                                            from "../../util";
-
+import { useMediaQuery }                                                                from "../../hooks/use-media-query";
 const portfolioFilters = [
   {
     id: "all",
@@ -30,129 +30,182 @@ const portfolioFilters = [
   },
 ];
 
-interface PortfolioProject {
+type PortfolioProject = {
   id: string,
   cat: string,
-  label: string,
+  title: string,
+  subTitle: string,
 }
 
 const portfolioProjects: PortfolioProject[] = [
   {
     id: "aurore",
     cat: "games",
-    label: "Ce carnet appartient à Aurore",
+    title: "Ce carnet appartient à Aurore",
+    subTitle: "Jeu vidéo transmédia",
   },
   {
     id: "fragments",
     cat: "games",
-    label: "Fragments",
+    title: "Fragments",
+    subTitle: "Jeu vidéo narratif",
   },
   {
     id: "musichelper",
     cat: "other",
-    label: "Music Helper",
+    title: "Music Helper",
+    subTitle: "Expérimentation en génération procédurale musicale",
   },
   {
     id: "dynamo",
     cat: "games",
-    label: "Dynamo",
+    title: "Dynamo",
+    subTitle: "Jeu vidéo horrifique",
   },
   {
     id: "exhibition",
     cat: "games",
-    label: "The Exhibition",
+    title: "The Exhibition",
+    subTitle: "Jeu vidéo d’infiltration",
   },
   {
     id: "2116",
     cat: "other",
-    label: "2116",
+    title: "2116",
+    subTitle: "Jeu de plateau",
   },
   {
     id: "chattree",
     cat: "web",
-    label: "ChatTree",
+    title: "ChatTree",
+    subTitle: "Application de messagerie instantanée",
   },
   {
     id: "cartoenm",
     cat: "web",
-    label: "CartoENM",
+    title: "CartoENM",
+    subTitle: "Application web juridique",
   },
   {
     id: "chaudron",
     cat: "games",
-    label: "Chaudron magique",
+    title: "Chaudron magique",
+    subTitle: "Jeu vidéo narratif",
   },
   {
     id: "ici",
     cat: "games",
-    label: "IcI",
+    title: "IcI",
+    subTitle: "Jeu vidéo contemplatif",
   },
 ];
 
 const GoToProjectElement = forwardRef<any, HTMLProps<any>>((props, ref) =>
   <GoToIcon forwardedRef={ref} {...props} />);
 
-interface ProjectCardElementProps {
+type ProjectCardElementProps = {
   project: PortfolioProject,
   onClick?: MouseEventHandler<HTMLElement>,
 }
 
 const ProjectCardElement = forwardRef<any, ProjectCardElementProps>(({ project, onClick }, ref) => {
   const p = project;
-
   const [isHovered, setIsHovered] = useState(false);
 
   return <Card
     ref={ref} as="a"
     onClick={onClick}
     onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}
-    className={`${homeStyles.portfolioCard} portfolio-project col-6 col-md-4 col-xl-3`}
+    className={`${homeStyles.portfolioCard} portfolio-project col-12 col-sm-6 col-xl-4 mb-1 mb-sm-0`}
     data-groups={p.cat}
   >
-    <Image
-      width={280}
-      height={280}
-      src={`/images/portfolio/${p.cat}/${p.id}.jpg`}
-      alt={`Image de ${p.label}`}
-      layout="intrinsic"
-      placeholder="blur"
-      blurDataURL={transparentGifPix}
-      quality={100}
-      className={`${homeStyles.portfolioCardImg} card-img`}
-    />
-    <Card.ImgOverlay
-      className={`${homeStyles.portfolioCardOverlay} d-flex flex-column justify-content-end`}>
-      <Card.Title className={`${homeStyles.portfolioCardTitle} m-0 text-center`}>
-        {p.label}
-      </Card.Title>
-    </Card.ImgOverlay>
+      <div className={`${homeStyles.portfolioCardContents} d-flex d-sm-block`}>
+        <div className={homeStyles.portfolioCardImgWrapper}>
+          <Image
+            width={360}
+            height={270}
+            layout="intrinsic"
+            src={`/images/portfolio/${p.cat}/${p.id}.jpg`}
+            alt={`Image de ${p.title}`}
+            placeholder="blur"
+            blurDataURL={transparentGifPix}
+            quality={100}
+            className={`${homeStyles.portfolioCardImg} card-img`}
+            objectFit="cover"
+          />
+        </div>
 
-    <Tween
-      playState={isHovered ? PlayState.restart : PlayState.restartReverse}
-      from={{ opacity: 0, visibility: "hidden", x: -12 }}
-      to={{ opacity: 1, visibility: "visible", x: 0 }}
-      ease="power2.inOut" duration={.300}>
-      <GoToProjectElement className={homeStyles.portfolioCardGoToIcon}/>
-    </Tween>
+        <Tween
+          playState={isHovered ? PlayState.restart : PlayState.restartReverse}
+          from={{ paddingRight: "8px" }}
+          to={{ paddingRight: "24px" }}
+          ease="power2.Out" duration={.200}>
+          <div
+            className={`${homeStyles.portfolioCardInfo} text-start text-sm-center
+          d-flex flex-column justify-content-center position-relative`}>
+            <p className={`${homeStyles.portfolioCardTitle} mb-0 bold`}>{p.title}</p>
+            <p className={`${homeStyles.portfolioCardSubTitle} mb-0 small`}>{p.subTitle}</p>
+            <Tween
+              playState={isHovered ? PlayState.restart : PlayState.restartReverse}
+              from={{ opacity: 0, visibility: "hidden", x: -16 }}
+              to={{ opacity: 1, visibility: "visible", x: -12 }}
+              ease="power2.Out" duration={.250}>
+              <GoToProjectElement className={homeStyles.portfolioCardGoToIcon}/>
+            </Tween>
+          </div>
+        </Tween>
+      </div>
   </Card>;
 });
 
-interface PortfolioProps extends HTMLProps<HTMLElement> {
+type PortfolioRef = HTMLElement;
+type PortfolioProps = {
+  initItemCountMobile?: number,
   currFilter: number,
   onFilterClick: (filter: number) => void,
 }
 
-const Portfolio = forwardRef<HTMLElement, PortfolioProps>(
-  ({ currFilter, onFilterClick }, ref) => {
+const Portfolio = forwardRef<PortfolioRef, PortfolioProps>(
+  ({ initItemCountMobile = 4, currFilter, onFilterClick }, ref) => {
 
-    const [projectsShuffle, setProjectsShuffle] = useState(null);
+    const [loadedProjects, setLoadedProjects] = useState<PortfolioProject[]>([]);
+    const [isProjectsAllLoaded, setIsProjectsAllLoaded] = useState<boolean>(false);
+    const [projectsShuffle, setProjectsShuffle] = useState<Shuffle | null>(null);
+    const [isLoadingAllProjects, setIsLoadingAllProjects] = useState<boolean>(false);
 
     const projectsContainerRef = useRef(null);
+
+    // Media query (mobile) effect
+    const isMobile = useMediaQuery('(max-width: 575px)');
+
+    // Detect change on isMobile
+    useEffect(() => {
+      if (isMobile === undefined)
+        return;
+
+      if (!isMobile) {
+        setLoadedProjects([...portfolioProjects]);
+        setIsProjectsAllLoaded(true);
+      } else {
+        if (window.sessionStorage.getItem("all-projects-loaded") === "true")
+        {
+          setLoadedProjects([...portfolioProjects]);
+          setIsProjectsAllLoaded(true);
+        }
+        else
+          setLoadedProjects(portfolioProjects.slice(0, initItemCountMobile));
+      }
+
+      setTimeout(() => {
+        if (projectsShuffle)
+          projectsShuffle.update();
+      }, 300);
+    }, [isMobile]);
 
     // Init useEffect
     useEffect(() => {
       const newProjectsShuffle = new Shuffle(projectsContainerRef.current, {
-        itemSelector: ".portfolio-project",
+        // itemSelector: ".portfolio-project",
         delimiter: "|",
         speed: 400,
       });
@@ -193,6 +246,21 @@ const Portfolio = forwardRef<HTMLElement, PortfolioProps>(
      */
     const handlePortfolioFilterClick = (i: number) => onFilterClick(i);
 
+    const onSeeMoreBtnClick = () => {
+      setIsLoadingAllProjects(true);
+      window.sessionStorage.setItem("all-projects-loaded", "true");
+
+      setTimeout(() => {
+        setLoadedProjects([...portfolioProjects]);
+      }, 400);
+
+      setTimeout(() => {
+        projectsShuffle.resetItems();
+        setIsLoadingAllProjects(false);
+        setIsProjectsAllLoaded(true);
+      }, 600);
+    };
+
     return (
       <section id="portfolio" className={homeStyles.portfolio} ref={ref}>
         {/* PORTFOLIO TOP */}
@@ -218,15 +286,44 @@ const Portfolio = forwardRef<HTMLElement, PortfolioProps>(
             </Container>
           </div>
         </div>
+
         {/* PORTFOLIO BOTTOM */}
         <div className="pt-2 pt-sm-3 pt-md-5">
           <Container>
-            <Row ref={projectsContainerRef}>
-              {portfolioProjects.map((p, i) =>
-                <Link href={`/projects/${p.id}`} key={i}>
-                  <ProjectCardElement project={p}/>
-                </Link>,
-              )}
+            <Row>
+              <Col md={8} className="offset-md-2">
+                <Row ref={projectsContainerRef}>
+                  {isMobile !== undefined &&
+                  loadedProjects.map((p, i) =>
+                    <Link href={`/projects/${p.id}`} key={i}>
+                      <ProjectCardElement project={p}/>
+                    </Link>,
+                  )
+                  }
+                </Row>
+                {isMobile === true && !isProjectsAllLoaded &&
+                <Button
+                  variant="outline-primary"
+                  className="mt-2 d-block m-auto"
+                  onClick={onSeeMoreBtnClick}
+                  disabled={isLoadingAllProjects}
+                >
+                  {isLoadingAllProjects &&
+                  <>
+                    <Spinner
+                      as="span"
+                      animation="border"
+                      size="sm"
+                      role="status"
+                      aria-hidden="true"
+                    />
+                    <span className="visually-hidden">Loading…</span>
+                  </>
+                  }
+                  {!isLoadingAllProjects && "Voir plus"}
+                </Button>
+                }
+              </Col>
             </Row>
           </Container>
         </div>

@@ -49,13 +49,13 @@ export const tlDetailInit = ({ detailSelector, defaultDate }: TimelineDetailSett
 export const tlDetailIn = (date: string, { detailSelector }: TimelineDetailSettings) => {
   const elem = `${detailSelector}.d${date}`;
   return gsap.timeline()
-    .to(elem, { duration: 0, delay: .300, display: "block" })
+    .to(elem, { duration: 0, delay: .200, display: "block" })
     .fromTo(elem, {
-      duration: .300,
+      duration: .200,
       height: 0,
       scaleX: eduDetailMinScaleX,
       x: -32,
-      ease: "power2.inOut",
+      ease: "power3.Out",
 
     }, {
       scaleX: 1,
@@ -75,7 +75,7 @@ export const tlDetailOut = (date: string, { detailSelector }: TimelineDetailSett
   const elems = `${detailSelector}:not(.d${date})`;
   return gsap.timeline()
     .to(elems, {
-      duration: .200,
+      duration: .150,
       height: 0,
       opacity: 0,
       x: 32,

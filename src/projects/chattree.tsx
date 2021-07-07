@@ -153,6 +153,7 @@ const chatTreeProject: ProjectData = {
     },
   ],
   externalLinks: [],
+  bgImg: "/images/portfolio/web/chattree/creation_thread.jpg",
 };
 
 export default chatTreeProject;

@@ -112,6 +112,8 @@ const the2116Project: ProjectData = {
   externalLinks: [
     <>Les règles du jeu sont disponibles <a href="/files/2116-rules.pdf" download>ici</a></>
   ],
+  bgImg: "/images/portfolio/other/2116/board.jpg",
+  bgImgOverlay: .75,
 };
 
 export default the2116Project;

@@ -116,6 +116,7 @@ const exhibitionProject: ProjectData = {
     <>Le jeu est disponible en ligne sur <a href="https://pyriceti.itch.io/the-exhibition" target="_blank"
                                             rel="noopener">itch.io</a>.</>,
   ],
+  bgImg: "/images/portfolio/games/exhibition/menu.jpg",
 };
 
 export default exhibitionProject;

@@ -1,10 +1,10 @@
 import Link                          from "next/link";
-import headerStyles                  from "./home-header.module.scss";
-import { Nav, Navbar, NavDropdown }  from "react-bootstrap";
-import PropTypes                     from "prop-types";
+import { useRouter }                 from "next/router";
+import headerStyles                  from "./header.module.scss";
+import { Nav, Navbar }               from "react-bootstrap";
 import React, { Dispatch, useState } from "react";
-import { MenuIcon }                  from "../svg";
-import withToggleState               from "../HOC/with-toggle-state";
+import { MenuIcon }                  from "./svg";
+import withToggleState               from "./HOC/with-toggle-state";
 import gsap                          from "gsap";
 
 
@@ -41,12 +41,22 @@ const homeSections = [
 
 const MenuIconElement = withToggleState((props: any) => <MenuIcon{...props}/>);
 
-const HomeHeader = ({ activeSection, onLinkClick, onPortfolioFilterClick }) => {
+interface HeaderProps {
+  isHomePage: boolean,
+  activeSection?: number,
+  onLinkClick?: (sectionIdx: number, href: string) => void,
+  // onPortfolioFilterClick: (filterIdx: number) => void,
+}
 
-  const [isMenuIconOn, setIsMenuIconOn] = useState(false);
+const Header: React.FC<HeaderProps> = ({ isHomePage, activeSection = 0, onLinkClick }) => {
+  const router = useRouter();
+
+  const [isExpanded, setIsExpanded] = useState(false);
   const [lastMenuTl, setLastMenuTl]: [gsap.core.Timeline, Dispatch<gsap.core.Timeline>] = useState(null);
 
-  const handleMenuToggle = (newState: boolean) => setIsMenuIconOn(newState);
+  const onToggleClick = () => {
+    setIsExpanded(oldVal => !oldVal);
+  };
 
   const handleOnMenuIconStateChange = (newState: boolean) => {
     const groupSel = `svg.${headerStyles.navbarMenuIcon} > g`;
@@ -60,65 +70,77 @@ const HomeHeader = ({ activeSection, onLinkClick, onPortfolioFilterClick }) => {
     // => to "close" icon
     if (newState) {
       const newTl = gsap.timeline({ defaults: { duration: .300, ease: "power2.out" } })
-        .to(getLineSel(3), { attr: { d: "m0 24h0" }, duration: .150 }, 0) // Middle line
-        .to(getLineSel(1), { attr: { d: "M 1.5860216,8.9388951 46.446222,39.061105" }, }, ">") // Top line
-        .to(getLineSel(2), { attr: { d: "M 1.5860216,39.061105 46.446222,8.9388951" }, }, "<") // Bottom line
+        .to(getLineSel(3), { attr: { d: "m0 18h0" }, duration: .150 }, 0) // Middle line
+        .to(getLineSel(1), { attr: { d: "M 2.121,2.1213203 33.879,33.879" }, }, ">") // Top line
+        .to(getLineSel(2), { attr: { d: "M 2.1210107,33.879011 33.879,2.121" }, }, "<") // Bottom line
       ;
       setLastMenuTl(newTl);
     }
     // => to "burger" icon
     else {
       const newTl = gsap.timeline({ defaults: { duration: .300 } })
-        .to(getLineSel(1), { attr: { d: "M 0,9 48,9" }, }, 0) // Top line
-        .to(getLineSel(2), { attr: { d: "M 0,39 48,39" }, }, 0) // Bottom line
-        .to(getLineSel(3), { attr: { d: "m0 24h30" }, duration: .150 }, ">") // Middle line
+        .to(getLineSel(1), { attr: { d: "M 0,3 36,3" }, }, 0) // Top line
+        .to(getLineSel(2), { attr: { d: "M 0,33 36,33" }, }, 0) // Bottom line
+        .to(getLineSel(3), { attr: { d: "m0 18h22.5" }, duration: .150 }, ">") // Middle line
       ;
       setLastMenuTl(newTl);
     }
   }
 
   const handleLinkClick = (sectionIdx, href) => {
-    history.pushState({}, "", `#${href}`);
+    if (!isHomePage) {
+      router.push(`/#${href}`);
+      return;
+    }
+
+    // TODO: when available, prevent the scroll/jump animation so gsap can do it
+    // See https://github.com/vercel/next.js/discussions/13804
+    router.replace(`#${href}`, undefined, { scroll: false, shallow: true });
+
+    setIsExpanded(false);
+    handleOnMenuIconStateChange(false);
+
     if (onLinkClick)
       onLinkClick(sectionIdx, href);
-  }
+  };
 
-  const handlePortfolioFilterClick = filterIdx => {
+/*  const handlePortfolioFilterClick = filterIdx => {
     if (onPortfolioFilterClick)
       onPortfolioFilterClick(filterIdx);
-  }
+  }*/
 
   return (
     <Navbar
       className={`${headerStyles.navbarFixed} `} bg="primary" variant="dark" expand="lg" fixed="top"
       role="banner"
-      onToggle={handleMenuToggle}
+      expanded={isExpanded}
     >
       <Link href="/"><a className="navbar-brand">Baptiste Perraud</a></Link>
       <Navbar.Toggle
         className={headerStyles.navbarToggle}
         aria-controls="basic-navbar-nav"
+        onClick={onToggleClick}
       >
         <MenuIconElement
           className={headerStyles.navbarMenuIcon}
-          isOn={isMenuIconOn}
+          isOn={isExpanded}
           onStateChange={handleOnMenuIconStateChange}
         />
       </Navbar.Toggle>
       <Navbar.Collapse id="basic-navbar-nav" className="justify-content-end">
         <Nav>
           {homeSections.map((s, i) => {
-            if (s.href !== "portfolio")
+/*            if (s.href !== "portfolio")*/
               return (
                 <Nav.Link
                   onClick={() => handleLinkClick(i, s.href)} key={i}
-                  className={`${headerStyles.navbarLink} ${activeSection === i ? "active" : ""} text-uppercase`}>
+                  className={`${headerStyles.navbarLink} ${isHomePage && activeSection === i ? "active" : ""} text-uppercase mx-1`}>
                   {s.text}
                   <div className={headerStyles.navbarLinkUnderline}/>
                 </Nav.Link>
               );
 
-            return (
+/*            return (
               <div className={`${headerStyles.navbarPortfolioContainer} ${activeSection === i ? "active" : ""}`}
                    key={i}>
                 <NavDropdown
@@ -132,7 +154,7 @@ const HomeHeader = ({ activeSection, onLinkClick, onPortfolioFilterClick }) => {
                 </NavDropdown>
                 <div className={headerStyles.navbarLinkUnderline}/>
               </div>
-            );
+            );*/
             }
           )}
         </Nav>
@@ -141,14 +163,4 @@ const HomeHeader = ({ activeSection, onLinkClick, onPortfolioFilterClick }) => {
   )
 }
 
-HomeHeader.propTypes  = {
-  activeSection: PropTypes.number.isRequired,
-  onLinkClick: PropTypes.func,
-  onPortfolioFilterClick: PropTypes.func,
-};
-
-HomeHeader.defaultProps = {
-  activeSection: 0,
-};
-
-export default HomeHeader;
+export default Header;

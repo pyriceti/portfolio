@@ -136,6 +136,8 @@ const dynamoProject: ProjectData = {
     <>Le jeu est disponible en ligne sur <a href="https://alabamaben.itch.io/dynamo" target="_blank"
                                             rel="noopener">itch.io</a>.</>,
   ],
+  bgImg: "/images/portfolio/games/dynamo/4.jpg",
+  bgImgOverlay: 0,
 };
 
 export default dynamoProject;

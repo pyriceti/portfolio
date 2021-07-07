@@ -1,8 +1,8 @@
-import homeStyles                                          from "../../styles/index.module.scss";
-import { Col, Container, Row }                             from "react-bootstrap";
-import React from "react";
-import { SectionHandle }    from "../svg";
-import { Reveal, Tween }    from "react-gsap";
+import homeStyles              from "../../styles/index.module.scss";
+import { Col, Container, Row } from "react-bootstrap";
+import React                   from "react";
+import { Reveal, Tween }       from "react-gsap";
+import ThinSP                  from "../util/thinsp";
 
 const resumeSkillBars = [
   {
@@ -23,7 +23,7 @@ const resumeSkillBars = [
       {
         id:    "ux",
         label: "UX design",
-        value: null,
+        value: "Prototyping, Wireframes",
         progress: .7,
       },
       {
@@ -57,8 +57,8 @@ const resumeSkillBars = [
       },
       {
         id:    "devOther",
-        label: "Android, AngularJS, Java, C++, C#, jQuery",
-        value: null,
+        label: null,
+        value: "Android, AngularJS, Java, C++, C#, jQuery",
         progress: .7,
       },
     ],
@@ -68,20 +68,20 @@ const resumeSkillBars = [
     skills: [
       {
         id:    "scrum",
-        label: "Méthodes agiles (type SCRUM)",
-        value: null,
+        label: null,
+        value: "Méthodes agiles (type SCRUM)",
         progress: 1,
       },
       {
         id:    "integrations",
-        label: "Intégrations Slack, Gantt, SWOT",
-        value: null,
+        label: null,
+        value: "Intégrations Slack, Gantt, SWOT",
         progress: .9,
       },
       {
         id:    "boards",
-        label: "Trello, Teamwork",
-        value: null,
+        label: null,
+        value: "Trello, Teamwork",
         progress: .8,
       },
     ],
@@ -95,18 +95,14 @@ const Skills: React.FC<SkillsProps> = () => {
 
   return (
     <section className={`${homeStyles.skillSectionContainer} position-relative`}>
-      <SectionHandle className="section-handle gray" />
-      <SectionHandle className="section-handle-reverse gray" />
       <Container id="skills">
         <Row>
           <Col lg={8} className="offset-lg-2">
-            <h2 className="text-primary fw-normal">Compétences</h2>
+            <h3 className={`${homeStyles.homeH3} text-primary fw-normal`}>Compétences</h3>
             <p className="resume-dark-text">
-              Mes études et expériences professionnelles m’ont permis d’acquérir des compétences variées
-              permettant de m’adapter à un certain nombre de contextes. Plus que les compétences évoquées
-              ci-dessous, j’ai surtout appris à m’organiser, à faire des recherches pour éviter de réinventer la
-              roue et à m’adapter à un contexte mouvant à court terme (en start-up notamment). En soi, à faire en
-              sorte de toujours <em>apprendre à apprendre</em>.
+              En dehors des compétences évoquées ci-dessous, j’ai appris à m’organiser, à faire des recherches pour
+              éviter de réinventer la roue et à m’adapter à un contexte mouvant à court terme. En soi, à faire en sorte
+              de toujours <em>apprendre à apprendre</em>.
             </p>
 
             {/* SKILLS BARS */}
@@ -114,7 +110,7 @@ const Skills: React.FC<SkillsProps> = () => {
               <Row>
                 {resumeSkillBars.map((cat, catIdx) =>
                   <Col xs={12} key={catIdx}>
-                    <h3 className="almost-black mb-3">{cat.label}</h3>
+                    <h4 className="almost-black mb-3">{cat.label}</h4>
                     <div className="skill-bars">
                       {cat.skills.map((skill, skillIdx) =>
                         <Reveal key={skillIdx}>
@@ -122,16 +118,15 @@ const Skills: React.FC<SkillsProps> = () => {
                                className={`${homeStyles.proBarContainer} pro-bar-container position-relative mb-4`}>
                             <Tween from={{ width: 0 }} ease="power2.inOut" duration={1}
                                    delay={1 - skill.progress}>
-                              <div className="pro-bar" style={{ width: `${skill.progress * 100}%` }}/>
+                              <div className="pro-bar" style={{ width: `calc(${skill.progress * 100}% + 4px)` }}/>
                             </Tween>
                             <Tween from={{ x: -4, opacity: 0 }} ease="power2.inOut" duration={.5}
                                    delay={.3}>
                                   <span className="label semi-bold position-absolute ps-1"
-                                        style={{ width: `${skill.progress * 100}%` }}>
-                                  {`${skill.label}${skill.value ? "\u00A0: " : ""}`}
-                                    {skill.value &&
-                                    <span className="value">{skill.value}</span>
-                                    }
+                                        style={{ width: `calc(${skill.progress * 100}% + 4px)` }}>
+                                    {skill.label && skill.label}
+                                    {skill.label && skill.value && <><ThinSP/>: </>}
+                                    {skill.value && <span className="value">{skill.value}</span>}
                                   </span>
                             </Tween>
                           </div>

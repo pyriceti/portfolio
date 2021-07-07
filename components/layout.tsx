@@ -4,9 +4,9 @@ import { BackToTop }                                                            
 import React, { forwardRef, HTMLProps, useCallback, useEffect, useRef, useState } from "react";
 import { PlayState, Tween }                                                       from "react-gsap";
 import gsap                                                                       from "gsap";
-import { ScrollToPlugin }                                                         from "gsap/dist/ScrollToPlugin";
-import DefaultFooter                                                              from "./default-footer";
-import DefaultHeader                                                              from "./default-header";
+import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
+import Footer             from "./footer";
+import Header             from "./header";
 
 gsap.registerPlugin(ScrollToPlugin);
 
@@ -16,7 +16,16 @@ export const siteTitle = `${siteTitlePrefix}Développeur Unity 3D & web`;
 const BackToTopElement = forwardRef<HTMLElement, HTMLProps<HTMLElement>>((props, ref) =>
   <BackToTop forwardedRef={ref} {...props} />);
 
-const Layout = ({ children, header, footer }) => {
+interface LayoutProps {
+  header?: JSX.Element,
+  footer?: JSX.Element,
+}
+
+const Layout: React.FC<LayoutProps> = ({
+                                         children,
+                                         header = <Header isHomePage={false}/>,
+                                         footer = <Footer/>,
+                                       }) => {
 
   const backToTopRef = useRef(null);
 
@@ -44,13 +53,18 @@ const Layout = ({ children, header, footer }) => {
   }, [isBackToTopVisible]);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
-    }
+      window.removeEventListener("scroll", handleScroll);
+    };
   }, [handleScroll]);
 
-  const scrollToTop = () => gsap.to(window, { duration: 1, scrollTo: 0, ease: "power2.inOut" });
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+    // TODO: when available, prevent the scroll/jump animation so gsap can do it
+    // See https://github.com/vercel/next.js/discussions/13804
+    // gsap.to(window, { duration: 1, scrollTo: 0, ease: "power2.inOut" });
+  };
 
   return (
     <div className={layoutStyles.container}>
@@ -79,9 +93,4 @@ const Layout = ({ children, header, footer }) => {
   );
 };
 
-Layout.defaultProps = {
-  header: <DefaultHeader/>,
-  footer: <DefaultFooter/>,
-};
-
-export default Layout
+export default Layout;

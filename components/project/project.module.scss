@@ -1,8 +1,28 @@
 @use "../../styles/mixins";
 @use "../../styles/colors";
 
-.projectContainer {
 
+
+.projectContainer {
+  .backToPortfolioContainer {
+    .backToPortfolioBtn {
+      font-size: 1rem;
+      padding: .5rem 1rem;
+      border-radius: 0.2rem;
+
+      &:focus {
+        box-shadow: none;
+      }
+
+      @include mixins.btn-secondary-hover-bg;
+    }
+
+    .backToPortfolioIcon {
+      height: 1rem;
+      padding: 2px 0;
+      transform: scaleX(-1);
+    }
+  }
 }
 
 .projectHeader {
@@ -11,9 +31,7 @@
 }
 
 .projectOverlay {
-  padding-top: 40px;
-  padding-bottom: 20px;
-  background: rgba(0,0,0,.5) 0 0;
+  @include mixins.bg-overlay;
 }
 
 .projectMetadata {

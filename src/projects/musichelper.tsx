@@ -62,6 +62,7 @@ const musicHelperProject: ProjectData = {
     <>L’outil est disponible en ligne sur <a href="https://pyriceti.itch.io/musichelper" target="_blank"
                                              rel="noopener">itch.io</a>.</>,
   ],
+  bgImg: "/images/portfolio/other/musichelper/musichelper1.jpg",
 };
 
 export default musicHelperProject;

@@ -4,7 +4,8 @@
 
 html, body, :root {
   overflow-x: hidden;
-  scroll-behavior: auto; // To prevent gsap conflicts
+  //scroll-behavior: auto; // To prevent gsap conflicts, restore when HomePage.handleLinkClick scrolls w/ gsap
+  scroll-behavior: smooth;
 }
 
 .section-container-padding {
@@ -30,7 +31,7 @@ html, body, :root {
 
 h2:not(.no-uppercase):not(.default-h2) {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 2.5rem;
 
   // Small devices (landscape phones, 576px and up)
   @media (min-width: 576px) {

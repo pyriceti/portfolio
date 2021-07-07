@@ -139,6 +139,8 @@ const chaudronProject: ProjectData = {
     <>Le jeu est disponible en ligne sur <a href="https://pyriceti.itch.io/chaudron-magique" target="_blank"
                                             rel="noopener">itch.io</a>.</>,
   ],
+  bgImg: "/images/portfolio/games/chaudron/game2.jpg",
+  bgImgOverlay: .7,
 };
 
 export default chaudronProject;

@@ -32,4 +32,6 @@ export interface ProjectData {
     credits: CreditEntry[],
   }[],
   externalLinks: ReactElement<any, any>[],
+  bgImg?: string,
+  bgImgOverlay?: number,
 }

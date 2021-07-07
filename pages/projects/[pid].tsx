@@ -1,5 +1,5 @@
 import { GetStaticPaths, GetStaticProps, NextPage } from "next";
-import React, { useState, useEffect }               from "react";
+import React, { useState, useEffect, useRef }       from "react";
 import { useRouter }                                from "next/router";
 import gsap                                         from "gsap";
 import Project                                      from "../../components/project/project";
@@ -19,6 +19,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 
 const ProjectPage: NextPage = () => {
   const router = useRouter();
+  const isMounted = useRef(false);
   const [isReady, setIsReady] = useState<number>(0);
   const [projectData, setProjectData] = useState<ProjectData>(null);
 
@@ -38,21 +39,30 @@ const ProjectPage: NextPage = () => {
         opacity: 0,
         display: "none",
         duration: .600,
-        onComplete: setIsReady,
-        onCompleteParams: [2],
+        onComplete: () => {
+          if (isMounted.current)
+            setIsReady(2);
+        },
       }, .1)
     ;
 
   };
 
   useEffect(() => {
+    isMounted.current = true;
     const load = async () => {
       const projectData = (await import((`../../src/projects/${router.query.pid}`))).default;
+      if (!isMounted.current)
+        return;
       setProjectData(projectData);
       removePreloaderAndUpdateComp();
     };
 
     load();
+
+    return () => {
+      isMounted.current = false;
+    }
   }, []);
 
   return (

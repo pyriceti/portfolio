@@ -3,6 +3,8 @@
 
 .globalFooter {
   color: colors.$almost-white;
+
+  @include mixins.home-anchor-offset;
 }
 
 .footerTop {
