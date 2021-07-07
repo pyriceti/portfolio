@@ -46,7 +46,7 @@ const Project = ({ projectData }: ProjectProps): JSX.Element => {
     },
   };
 
-  const onBackToPortfolioBtnClick = () => router.back();
+  const onBackToPortfolioBtnClick = () => router.push(`/#portfolio`);
 
   return (
     <Layout>
