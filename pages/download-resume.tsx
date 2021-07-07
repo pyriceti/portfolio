@@ -3,13 +3,17 @@ import React                            from "react";
 import { componentToPDFBuffer }         from "../util";
 import { ResumeLayout }                 from "../components/resume";
 import pdf                              from "html-pdf";
+import { tmpdir }                       from "os";
 
 export const getServerSideProps: GetServerSideProps = async ({ req, res, query }) => {
   const exportPDF = true;
   const isServer = !!req;
 
   const pdfOptions: pdf.CreateOptions = {
-    phantomPath: (await import("phantomjs")).path,
+    // phantomPath: "../node_modules/phantomjs-prebuilt/bin/phantomjs",
+    phantomPath: (await import("phantomjs-prebuilt")).path,
+    // phantomPath: path.resolve("./node_modules/phantomjs-prebuilt/bin/phantomjs"),
+    directory: tmpdir(),
     format: "A4",
     orientation: "portrait",
     border: "10mm",
