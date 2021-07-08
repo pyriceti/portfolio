@@ -1,5 +1,4 @@
 import resumeLayoutStyles from "./resume-layout.module.scss";
-
 type ResumeLayoutProps = {};
 
 const ResumeLayout = (_: ResumeLayoutProps): JSX.Element => {
@@ -8,17 +7,13 @@ const ResumeLayout = (_: ResumeLayoutProps): JSX.Element => {
     <head>
       <meta charSet="utf8"/>
       <link rel="stylesheet" href="http://localhost:3000/styles/resume.css"/>
+      {/*<link rel="stylesheet" href="file://styles/resume.css"/>*/}
     </head>
     <body>
     <div className={resumeLayoutStyles.resumeLayoutGlobalContainer}>
-      TEST
+      TEST HELLO world?!
     </div>
     </body>
-    <style jsx>{`
-      html, body {
-        background-color: red
-      }
-    `}</style>
     </html>
   );
 };

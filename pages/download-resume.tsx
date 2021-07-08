@@ -10,13 +10,19 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res, query }
   const exportPDF = true;
   const isServer = !!req;
 
-  // process.env.FONTCONFIG_PATH = path.join(process.cwd(), "fonts");
+  process.env.FONTCONFIG_PATH = path.join(process.cwd(), "fonts");
   process.env.LD_LIBRARY_PATH = path.join(process.cwd(), "bins");
 
+  let basePath = process.cwd()
+  // if (process.env.NODE_ENV === 'production') {
+  //   basePath = path.join(process.cwd(), '.next/serverless/chunks')
+  // }
+
+  // path.resolve(basePath, 'fonts', 'fonts.conf')
+  // path.resolve(basePath, 'fonts', 'CircularStd-Book.otf');
+  // path.resolve(basePath, 'fonts', 'Raleway-Regular.ttf');
+
   const pdfOptions: pdf.CreateOptions = {
-    // phantomPath: "../node_modules/phantomjs-prebuilt/bin/phantomjs",
-    // phantomPath: (await import("phantomjs-prebuilt")).path,
-    // phantomPath: path.resolve("./node_modules/phantomjs-prebuilt/bin/phantomjs"),
     phantomPath: path.resolve(
       process.cwd(),
       "node_modules/phantomjs-prebuilt/lib/phantom/bin/phantomjs"
