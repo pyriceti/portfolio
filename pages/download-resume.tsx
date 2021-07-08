@@ -10,7 +10,7 @@ export const getServerSideProps: GetServerSideProps = async ({ req, res, query }
   const exportPDF = true;
   const isServer = !!req;
 
-  process.env.FONTCONFIG_PATH = path.join(process.cwd(), "fonts");
+  // process.env.FONTCONFIG_PATH = path.join(process.cwd(), "fonts");
   process.env.LD_LIBRARY_PATH = path.join(process.cwd(), "bins");
 
   const pdfOptions: pdf.CreateOptions = {
