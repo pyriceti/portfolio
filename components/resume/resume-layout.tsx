@@ -6,8 +6,7 @@ const ResumeLayout = (_: ResumeLayoutProps): JSX.Element => {
     <html>
     <head>
       <meta charSet="utf8"/>
-      <link rel="stylesheet" href="http://localhost:3000/styles/resume.css"/>
-      {/*<link rel="stylesheet" href="file://styles/resume.css"/>*/}
+      {/*<link rel="stylesheet" href="http://localhost:3000/styles/resume.css"/>*/}
     </head>
     <body>
     <div className={resumeLayoutStyles.resumeLayoutGlobalContainer}>
