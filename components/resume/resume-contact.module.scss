@@ -1,0 +1,24 @@
+.contactSection {
+  //height: 6.4cm;
+}
+
+.contactList {
+  list-style: none;
+  font-size: 14px;
+  padding-left: 0;
+
+  a {
+    color: inherit;
+  }
+
+  > li {
+    margin-bottom: .17cm;
+    display: flex;
+    align-items: center;
+
+    > svg {
+      height: 0.7cm;
+      margin-right: .2cm;
+    }
+  }
+}

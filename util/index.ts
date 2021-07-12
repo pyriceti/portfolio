@@ -11,5 +11,3 @@ export const jumpToSection = (href: string) => gsap.to(window, {
 
 // noinspection SpellCheckingInspection
 export const transparentGifPix: string = "data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==";
-
-export { default as componentToPDFBuffer } from "./component-to-pdf-buffer";

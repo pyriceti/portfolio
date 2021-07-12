@@ -1,5 +1,5 @@
-import React                           from "react";
 import Image                           from "next/image";
+import React                           from "react";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import homeStyles                      from "../../styles/index.module.scss";
 import ThinSP                          from "../util/thinsp";
@@ -63,11 +63,9 @@ const About = (_: AboutProps): JSX.Element => {
                     valeur <em className="bold">pédagogique</em><ThinSP/>?</p>
                 </blockquote>
 
-                <Button
-                  as="a"
-                  className={`${homeStyles.downloadResumeBtn} text-uppercase d-inline-block ms-lg-2`}
-                  size="lg" variant="primary"
-                  href="/files/Baptiste_Perraud_CV.pdf" download="Baptiste_PERRAUD_CV">Télécharger mon CV</Button>
+                <Button as="a" target="_blank" href={"/download-resume"}
+                        className={`${homeStyles.downloadResumeBtn} text-uppercase d-inline-block ms-lg-2`} size="lg"
+                        variant="primary">Télécharger mon CV</Button>
               </Col>
             </Row>
           </Col>

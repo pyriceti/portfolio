@@ -1,11 +1,16 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
-import React                                      from "react";
+import Document, { Html, Head, Main, NextScript, DocumentContext } from "next/document";
+import React                                                       from "react";
 
-class MyDocument extends Document {
+class MyDocument extends Document<any> {
+  static async getInitialProps(ctx: DocumentContext) {
+    const initialProps = await Document.getInitialProps(ctx);
+    return { ...initialProps, pathname: ctx.pathname };
+  }
+
   render() {
     // noinspection HtmlRequiredTitleElement
     return (
-      <Html lang="fr">
+      <Html lang="fr" className={this.props.pathname === "/download-resume" ? "html-resume" : "html"}>
         <Head>
           <link rel="icon" type="image/svg+xml" href="/favicon.svg"/>
           <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png"/>
@@ -15,7 +20,7 @@ class MyDocument extends Document {
           <link rel="alternate icon" href="/favicon.ico"/>
           <link rel="manifest" href="/site.webmanifest"/>
           <link
-            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Raleway:wght@400;500&display=swap"
+            href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Raleway:wght@400;500;600&display=swap"
             rel="stylesheet"/>
         </Head>
         <body>

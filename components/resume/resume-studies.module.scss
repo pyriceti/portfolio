@@ -1,0 +1,89 @@
+@use "../../styles/colors";
+
+.studiesSection {
+  break-before: page;
+  //break-inside: avoid-page;
+  //break-after: page;
+  position: relative;
+  padding-top: .26cm;
+
+  @media print {
+    //height: 297mm;
+    padding-bottom: 2cm;
+  }
+}
+
+.studiesTimeline {
+  position: absolute;
+  top: 1.2cm;
+  left: 1.49cm;
+}
+
+.studiesList {
+  padding-left: 2.12cm;
+  list-style: none;
+
+  > li {
+    //break-inside: avoid-page;
+    margin-bottom: .7cm;
+
+    &:not(:nth-child(1)){
+      margin-top: .7cm;
+    }
+
+    @media print {
+      margin-bottom: 0;
+      margin-top: 0;
+      padding-top: 0;
+
+      &:not(:nth-child(1)) {
+        padding-top: .7cm;
+        margin-bottom: 0;
+        margin-top: 0;
+      }
+
+      //&:last-of-type {
+      //  padding-bottom: 1cm;
+      //  //height: 148.5mm;
+      //  height: 297mm;
+      //}
+    }
+  }
+
+  h3 {
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: .08cm;
+    color: colors.$primary;
+
+    .studiesItemIcon {
+      position: absolute;
+      left: -0.81cm;
+      top: 0;
+    }
+  }
+
+  .studiesItemSection {
+    position: relative;
+  }
+
+  .studiesItemDate {
+    position: absolute;
+    text-align: right;
+    top: -0.56cm;
+    left: -2.1cm;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    color: #441517;
+    font-size: 14px;
+    width: 1.2cm;
+  }
+
+  .studiesItemPlace {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+  }
+}

@@ -1,0 +1,24 @@
+.langSection {
+  //height: 6cm;
+}
+
+.langList {
+  font-size: 14px;
+  list-style: none;
+  padding-left: 0;
+
+  > li {
+    display: flex;
+    margin-bottom: .25cm;
+
+    > .langTitle {
+      width: 1.7cm;
+      font-weight: 600;
+    }
+
+    > ul {
+      list-style: none;
+      padding-left: 0;
+    }
+  }
+}

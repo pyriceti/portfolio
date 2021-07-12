@@ -1,0 +1,39 @@
+.skillsSection {
+  //height: 6.2cm;
+}
+
+.skillsList {
+  font-size: 14px;
+  list-style: none;
+  padding-left: 0;
+
+  > li {
+    display: flex;
+    margin-bottom: .25cm;
+
+    > .skillIcon {
+      width: 1.7cm;
+      font-weight: 600;
+    }
+
+    > ul {
+      width: 100%;
+      list-style: none;
+      padding-left: 0;
+      padding-top: .08cm;
+
+      > li {
+        line-height: 1;
+
+        &:not(:nth-child(1)) {
+          font-size: 12px;
+        }
+
+        &:nth-child(1) {
+          font-weight: 600;
+          margin-bottom: .08cm;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,71 @@
+@use "../../styles/colors";
+
+.xpSection {
+  position: relative;
+  padding-top: .26cm;
+}
+
+.xpTimeline {
+  position: absolute;
+  top: 1.2cm;
+  left: 1.49cm;
+}
+
+.xpList {
+  padding-left: 2.12cm;
+  list-style:none;
+
+  h3 {
+    position: relative;
+    font-family: 'Raleway', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: colors.$primary;
+
+    .xpItemIcon {
+      position: absolute;
+      left: -0.81cm;
+      top: 0;
+    }
+  }
+
+  .xpItemSection {
+    position: relative;
+    margin-bottom: .7cm;
+  }
+
+  .xpItemDate {
+    position: absolute;
+    text-align: right;
+    top: -0.67cm;
+    left: -2.1cm;
+    font-family: "Raleway", sans-serif;
+    font-weight: 600;
+    color: #441517;
+    font-size: 14px;
+    width: 1.2cm;
+  }
+
+  .xpItemPlace {
+    font-family: 'Raleway', sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: .08cm;
+  }
+
+  .xpItemDesc {
+    font-size: 14px;
+    line-height: 130%;
+    margin-bottom: .1cm;
+  }
+
+  ul.xpItemDetailList {
+    font-size: 12px;
+    padding-left: .4cm;
+    list-style: url("/images/svg/icon_li.svg");
+
+    .xpItemDetailItem {
+      font-weight: 700;
+    }
+  }
+}

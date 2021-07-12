@@ -1,0 +1,29 @@
+.hobbiesSection {
+  height: 6.5cm;
+}
+
+.hobbiesList {
+  font-size: 14px;
+  list-style: none;
+  padding-left: 0;
+
+  > li.hobbyItem {
+    font-weight: 600;
+    line-height: 130%;
+
+    ul.hobbyDesc {
+      margin-top: .1cm;
+      font-weight: 400;
+      font-size: 13px;
+      line-height: 120%;
+      padding-left: .6cm;
+      list-style: url("/images/svg/icon_li.svg");
+
+      li {
+        padding-left: .2cm;
+        margin-bottom: .15cm;
+      }
+    }
+  }
+}
+

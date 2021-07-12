@@ -13,3 +13,4 @@ export { default as SectionHandle }      from "./SectionHandle";
 export { default as BackToTop }          from "./BackToTop";
 export { default as GoToIcon }           from "./GoToIcon";
 export { default as FullScreenIcon }     from "./full-screen-icon";
+export { default as ResumeTimeline }     from "./resume-timeline";
