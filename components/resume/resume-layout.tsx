@@ -109,7 +109,7 @@ const ResumeLayout = ({ onPrintBtnClick, onDlPdfBtnClick, isPdfGenerating }: Res
             <Button
               disabled={isPdfGenerating}
               onClick={!isPdfGenerating ? onDlPdfBtnClick : null}
-              variant="dark">{isPdfGenerating ? "Génération en cours" : "Enregistrer au format PDF"}</Button>
+              variant="dark">{isPdfGenerating ? "Génération en cours…" : "Enregistrer au format PDF"}</Button>
           </div>
         </aside>
       </main>

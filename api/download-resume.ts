@@ -1,55 +1,69 @@
 import type { NextApiRequest, NextApiResponse } from "next";
+import chromium                                 from "chrome-aws-lambda";
+import playwright                               from "playwright-core";
 
-async function printPDF(referer: string) {
-  let chrome: any = {};
-  let puppeteer;
+async function printPDF(req: NextApiRequest) {
+  const isVercel = process.env.NODE_ENV !== "development" && process.env.AWS_LAMBDA_FUNCTION_VERSION;
 
-  // Running on the Vercel platform
-  if (process.env.AWS_LAMBDA_FUNCTION_VERSION) {
-    chrome = require("chrome-aws-lambda");
-    puppeteer = require("puppeteer-core");
-  }
-  // Running locally
-  else {
-    puppeteer = require("puppeteer");
-  }
+  // Start Playwright with the dynamic chrome-aws-lambda args
+  const browser = await playwright.chromium.launch({
+    args: chromium.args,
+    executablePath:
+      isVercel
+        ? await chromium.executablePath
+        : process.env.PW_CHROMIUM_PATH,
+    headless: isVercel ?
+      chromium.headless :
+      true,
+  });
 
-  try {
-    let browser;
+  // Create a page with the recommended Open Graph image size
+  const page = await browser.newPage({
+    isMobile: false,
+    ignoreHTTPSErrors: true,
+    viewport: {
+      width: 1920,
+      height: 1080,
+    },
+  });
 
-    // Running on the Vercel platform
-    if (process.env.AWS_LAMBDA_FUNCTION_VERSION) {
-      browser = await puppeteer.launch({
-        args: [...chrome.args, "--hide-scrollbars", "--disable-web-security"],
-        defaultViewport: chrome.defaultViewport,
-        executablePath: await chrome.executablePath,
-        headless: true,
-        ignoreHTTPSErrors: true,
-      });
-    }
-    // Running locally
-    else {
-      browser = await puppeteer.launch({ headless: true });
-    }
+  // Extract the url from the referer
+  const url: string = req.headers.referer as string;
 
-    const page = await browser.newPage();
-    await page.goto(referer, { waitUntil: "networkidle0" });
-    const pdf = await page.pdf({ format: "a4" });
-    await browser.close();
-    return pdf;
+  // await page.emulateMedia({ media: "print" });
 
-  } catch (err) {
-    console.error(err);
-    return null;
-  }
+  await page.goto(url);
+
+  const data = await page.pdf({
+    format: "A4",
+    margin: {
+      top: 0,
+      right: 0,
+      left: 0,
+      bottom: 0,
+    },
+    landscape: false,
+    displayHeaderFooter: false,
+  });
+
+
+  await browser.close();
+  return data;
 }
 
 export default async (req: NextApiRequest, res: NextApiResponse) => {
-  const pdf = await printPDF(req.headers.referer);
+  const pdf = await printPDF(req);
   if (pdf === null)
     return res.status(500).end();
 
-  res.setHeader("Content-Type", "application/pdf");
+  // Set the s-maxage property to cache at the CDN layer, and max-age for the client browser cache
+  res.setHeader(
+    "Cache-Control",
+    "s-maxage=31536000, max-age=31536000, stale-while-revalidate",
+  );
+  res.setHeader("Content-Type", "image/jpeg");
   res.setHeader("Content-Length", pdf.length);
-  res.status(200).send(pdf);
+  res.end(pdf);
+
+  // res.status(200).send(pdf);
 }
