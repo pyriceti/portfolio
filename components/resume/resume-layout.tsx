@@ -99,7 +99,7 @@ const ResumeLayout = (_: ResumeLayoutProps): JSX.Element => {
           <ResumeStudies/>
         </div>
         <aside className={resumeLayoutStyles.infoAside}>Vous pouvez imprimer le CV ou bien l’enregistrer en tant que
-          fichier PDF <ThinSP/>:
+          fichier PDF.
           <div>
             <Button variant="dark" onClick={() => window.print()}>Imprimer</Button>
             <Button as="a" variant="dark" href="/files/Baptiste_PERRAUD_CV.pdf" download={true}>
