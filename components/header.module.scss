@@ -32,6 +32,14 @@
   //    height: 64px;
   //  }
 
+  &:global(.navbar-dark) :global(.navbar-nav) :global(.nav-link).navbarLink {
+    color: rgba(255, 255, 255, 0.75);
+
+    &:hover {
+      color: colors.$almost-white;
+    }
+  }
+
   &:global(.navbar-dark) :global(.navbar-nav) :global(.nav-link).navbarLink,
   .navbarPortfolioContainer
   {

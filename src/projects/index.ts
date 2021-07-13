@@ -7,7 +7,7 @@ interface ProjectDataContent {
     {
       p?: ReactElement<any, any>,
       media?: {
-        type: "image" | "video" | "audio",
+        type: "image" | "video" | "audio" | "embedded_video",
         src: string
       }
     }[],

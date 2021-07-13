@@ -39,6 +39,12 @@ type PortfolioProject = {
 
 const portfolioProjects: PortfolioProject[] = [
   {
+    id: "unmaze",
+    cat: "games",
+    title: "Unmaze",
+    subTitle: "Jeu narratif mobile",
+  },
+  {
     id: "aurore",
     cat: "games",
     title: "Ce carnet appartient à Aurore",

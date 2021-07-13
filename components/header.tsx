@@ -133,6 +133,7 @@ const Header: React.FC<HeaderProps> = ({ isHomePage, activeSection = 0, onLinkCl
 /*            if (s.href !== "portfolio")*/
               return (
                 <Nav.Link
+                  href={`/#${s.href}`}
                   onClick={() => handleLinkClick(i, s.href)} key={i}
                   className={`${headerStyles.navbarLink} ${isHomePage && activeSection === i ? "active" : ""} text-uppercase mx-1`}>
                   {s.text}

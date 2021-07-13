@@ -1,6 +1,10 @@
 {
   "projects": [
     {
+      "title": "Unmaze",
+      "pid": "unmaze"
+    },
+    {
       "title": "Ce Carnet appartient à Aurore",
       "pid": "aurore"
     },

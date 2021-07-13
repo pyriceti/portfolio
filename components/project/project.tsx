@@ -126,6 +126,15 @@ const Project = ({ projectData }: ProjectProps): JSX.Element => {
                           />
                         </div>
                         }
+                        {b.media.type === "embedded_video" &&
+                        <div className={projectStyles.videoWrapper}>
+                          <ReactPlayer
+                            url={b.media.src}
+                            width="100%" height="100%"
+                            volume={0} muted={true} playing={true} loop={true}
+                          />
+                        </div>
+                        }
                         {b.media.type === "image" &&
                         <div className={projectStyles.imageWrapper}>
                           <SRLWrapper options={srlOptions}>

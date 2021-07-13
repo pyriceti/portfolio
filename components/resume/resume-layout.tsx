@@ -1,9 +1,9 @@
 import Head                                                                                     from "next/head";
 import React                                                                                    from "react";
 import resumeLayoutStyles
-                                                                                                from "./resume-layout.module.scss";
-import { siteTitle }                                                                            from "../layout";
-import ThinSP                                                                                   from "../util/thinsp";
+                                      from "./resume-layout.module.scss";
+import { siteTitle, siteTitlePrefix } from "../layout";
+import ThinSP                         from "../util/thinsp";
 import { ResumeContact, ResumeLanguages, ResumeSkills, ResumeHobbies, ResumeXp, ResumeStudies } from "./index";
 
 type ResumeLayoutProps = {};
@@ -15,7 +15,7 @@ const ResumeLayout = (_: ResumeLayoutProps): JSX.Element => {
       <Head>
         <meta name="description" content="Portfolio de Baptiste Perraud, développeur Unity 3D & web"/>
         <meta name="og:title" content={siteTitle}/>
-        <title>{siteTitle}</title>
+        <title>{`${siteTitlePrefix}CV`}</title>
       </Head>
       <main className={resumeLayoutStyles.main}>
         <svg
