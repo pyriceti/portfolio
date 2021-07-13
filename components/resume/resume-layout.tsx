@@ -7,13 +7,9 @@ import ThinSP                                                                   
 import { ResumeContact, ResumeLanguages, ResumeSkills, ResumeHobbies, ResumeXp, ResumeStudies } from "./index";
 import { Button }                                                                               from "react-bootstrap";
 
-type ResumeLayoutProps = {
-  onPrintBtnClick?: () => void,
-  onDlPdfBtnClick?: () => void,
-  isPdfGenerating: boolean,
-};
+type ResumeLayoutProps = {};
 
-const ResumeLayout = ({ onPrintBtnClick, onDlPdfBtnClick, isPdfGenerating }: ResumeLayoutProps): JSX.Element => {
+const ResumeLayout = (_: ResumeLayoutProps): JSX.Element => {
   // const ribbonLineHeight = 4.1;
   return (
     <>
@@ -105,11 +101,10 @@ const ResumeLayout = ({ onPrintBtnClick, onDlPdfBtnClick, isPdfGenerating }: Res
         <aside className={resumeLayoutStyles.infoAside}>Vous pouvez imprimer le CV ou bien l’enregistrer en tant que
           fichier PDF <ThinSP/>:
           <div>
-            <Button variant="dark" onClick={onPrintBtnClick}>Imprimer</Button>
-            <Button
-              disabled={isPdfGenerating}
-              onClick={!isPdfGenerating ? onDlPdfBtnClick : null}
-              variant="dark">{isPdfGenerating ? "Génération en cours…" : "Enregistrer au format PDF"}</Button>
+            <Button variant="dark" onClick={() => window.print()}>Imprimer</Button>
+            <Button as="a" variant="dark" href="/files/Baptiste_PERRAUD_CV.pdf" download={true}>
+              Enregistrer au format PDF
+            </Button>
           </div>
         </aside>
       </main>

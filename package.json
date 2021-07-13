@@ -7,6 +7,7 @@
     "build": "next build",
     "start": "next start",
     "build:svg": "svgr src/svg/ -d components/svgr --typescript --memo",
+    "build:cv": "node scripts/generate-cv-pdf.js",
     "export": "next build && next export"
   },
   "dependencies": {
