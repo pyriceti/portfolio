@@ -1,14 +1,19 @@
 import Head                                                                                     from "next/head";
 import React                                                                                    from "react";
 import resumeLayoutStyles
-                                      from "./resume-layout.module.scss";
-import { siteTitle, siteTitlePrefix } from "../layout";
-import ThinSP                         from "../util/thinsp";
+                                                                                                from "./resume-layout.module.scss";
+import { siteTitle, siteTitlePrefix }                                                           from "../layout";
+import ThinSP                                                                                   from "../util/thinsp";
 import { ResumeContact, ResumeLanguages, ResumeSkills, ResumeHobbies, ResumeXp, ResumeStudies } from "./index";
+import { Button }                                                                               from "react-bootstrap";
 
-type ResumeLayoutProps = {};
+type ResumeLayoutProps = {
+  onPrintBtnClick?: () => void,
+  onDlPdfBtnClick?: () => void,
+  isPdfGenerating: boolean,
+};
 
-const ResumeLayout = (_: ResumeLayoutProps): JSX.Element => {
+const ResumeLayout = ({ onPrintBtnClick, onDlPdfBtnClick, isPdfGenerating }: ResumeLayoutProps): JSX.Element => {
   // const ribbonLineHeight = 4.1;
   return (
     <>
@@ -26,14 +31,14 @@ const ResumeLayout = (_: ResumeLayoutProps): JSX.Element => {
             fill="none" stroke="#8e2621" strokeWidth=".352777"/>
         </svg>
         {/*<div className={resumeLayoutStyles.ribbonLineContainer} style={{ height: `${ribbonLineHeight}cm` }}>*/}
-{/*          <svg
+        {/*          <svg
             className={resumeLayoutStyles.ribbonLine}
             width="210mm" height="297mm" viewBox="0 0 210 297" xmlns="http://www.w3.org/2000/svg">
             <path d="m70 297v-297" fill="none" stroke="#8e2621" strokeWidth=".352777"/>
           </svg>*/}
         {/*</div>*/}
         <div className={resumeLayoutStyles.leftCol}>
-          <img className={resumeLayoutStyles.profileImg} alt="Profile image" src="/images/profile-img.jpg" />
+          <img className={resumeLayoutStyles.profileImg} alt="Profile image" src="/images/profile-img.jpg"/>
           <ResumeContact/>
           <ResumeLanguages/>
           <ResumeSkills/>
@@ -97,6 +102,16 @@ const ResumeLayout = (_: ResumeLayoutProps): JSX.Element => {
           <ResumeXp/>
           <ResumeStudies/>
         </div>
+        <aside className={resumeLayoutStyles.infoAside}>Vous pouvez imprimer le CV ou bien l’enregistrer en tant que
+          fichier PDF <ThinSP/>:
+          <div>
+            <Button variant="dark" onClick={onPrintBtnClick}>Imprimer</Button>
+            <Button
+              disabled={isPdfGenerating}
+              onClick={!isPdfGenerating ? onDlPdfBtnClick : null}
+              variant="dark">{isPdfGenerating ? "Génération en cours" : "Enregistrer au format PDF"}</Button>
+          </div>
+        </aside>
       </main>
     </>
   );

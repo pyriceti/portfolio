@@ -34,7 +34,7 @@
   .leftCol {
     display: block;
     vertical-align: top;
-    width: 35%;
+    width: calc(.35 * 210mm);
     //height: 297mm;
     background-color: colors.$primary;
     padding: .5cm;
@@ -85,7 +85,7 @@
     display: block;
     vertical-align: top;
     position: relative;
-    width: 65%;
+    width: calc(.65 * 210mm);
     //background-color: rgba(196, 255, 190, 0.2);
     padding: .5cm .5cm .5cm .7cm;
     color: colors.$almost-black;
@@ -171,6 +171,27 @@
           font-size: 28px;
           font-weight: 600;
         }
+      }
+    }
+  }
+
+  .infoAside {
+    position: fixed;
+    top: 24px;
+    left: calc(210mm + 24px);
+    padding: 12px;
+    border-radius: 4px;
+    background-color: colors.$almost-white;
+
+    @media print {
+      display: none;
+    }
+
+    > div {
+
+      > button {
+        margin-top: 8px;
+        margin-right: 8px;
       }
     }
   }
