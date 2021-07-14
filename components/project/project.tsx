@@ -55,7 +55,7 @@ const Project = ({ projectData }: ProjectProps): JSX.Element => {
       </Head>
 
       <section className={projectStyles.projectContainer}>
-        <Container as="nav" className={`${projectStyles.backToPortfolioContainer} py-3`}>
+{/*        <Container as="nav" className={`${projectStyles.backToPortfolioContainer} py-3`}>
           <Row>
             <Col lg={10} className="offset-lg-1">
               <Button
@@ -65,13 +65,22 @@ const Project = ({ projectData }: ProjectProps): JSX.Element => {
               ><GoToIcon className={`${projectStyles.backToPortfolioIcon} me-1`}/>Revenir au portfolio</Button>
             </Col>
           </Row>
-        </Container>
+        </Container>*/}
 
         <header className={projectStyles.projectHeader}>
-          <div className={`${projectStyles.projectOverlay} pt-5 pb-4`}>
+          <div className={`${projectStyles.projectOverlay} pt-4 pb-4`}>
             <Container>
               <Row>
                 <Col lg={10} className="offset-lg-1">
+
+                  <nav className={`${projectStyles.backToPortfolioContainer} mb-1`}>
+                    <Button
+                      onClick={onBackToPortfolioBtnClick}
+                      className={`${projectStyles.backToPortfolioBtn} mb-4 d-flex align-items-center`}
+                      size="sm" variant="outline-light"
+                    ><GoToIcon className={`${projectStyles.backToPortfolioIcon} me-1`}/>Revenir au portfolio</Button>
+                  </nav>
+
                   <h1 className={`${utilStyles.textAlmostWhite}`}>{projectData.title}</h1>
                   <p className={`${projectStyles.projectMetadata} small semi-bold`}>
                     Date de réalisation<ThinSP/>: {projectData.date}

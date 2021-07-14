@@ -6,19 +6,25 @@
 .projectContainer {
   .backToPortfolioContainer {
     .backToPortfolioBtn {
-      font-size: 1rem;
-      padding: .5rem 1rem;
-      border-radius: 0.2rem;
+      //font-size: 1rem;
+      //padding: .5rem 1rem;
+      //border-radius: 0.2rem;
 
       &:focus {
         box-shadow: none;
       }
 
-      @include mixins.btn-secondary-hover-bg;
+      //@include mixins.btn-secondary-hover-bg;
+      &:hover {
+        .backToPortfolioIcon path {
+          fill: colors.$almost-black;
+        }
+      }
     }
 
     .backToPortfolioIcon {
-      height: 1rem;
+      height: 0.875rem;
+      //height: 1rem;
       padding: 2px 0;
       transform: scaleX(-1);
     }

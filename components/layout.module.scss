@@ -8,22 +8,32 @@
 
 .backToTop {
   position: fixed;
-  bottom: 36px;
-  right: 36px;
+  bottom: 20px;
+  right: 20px;
+  width: calc(.75 * 60px);
+  height: calc(.75 * 69.282px);
   cursor: pointer;
   transform-origin: center bottom;
 
-  path {
-    transition: all .150s ease-in-out;
+  // Small devices (landscape phones, 576px and up)
+  @media (min-width: 576px) {
+    bottom: 36px;
+    right: 36px;
+    width: 60px;
+    height: 69.282px;
+
+    &:hover {
+      path:nth-child(1) {
+        fill: colors.$secondary;
+        stroke: colors.$secondary;;
+      }
+      path:nth-child(2) {
+        fill: colors.$almost-white;
+      }
+    }
   }
 
-  &:hover {
-    path:nth-child(1) {
-      fill: colors.$secondary;
-      stroke: colors.$secondary;;
-    }
-    path:nth-child(2) {
-      fill: colors.$almost-white;
-    }
+  path {
+    transition: all .150s ease-in-out;
   }
 }
