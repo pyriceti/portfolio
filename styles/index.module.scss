@@ -36,6 +36,12 @@
   @include mixins.btn-secondary-hover-bg;
 }
 
+.downloadResumeSkillsSectionBtn {
+  &:focus {
+    box-shadow: none;
+  }
+}
+
 .banner {
   @include mixins.bg-image;
   color: colors.$almost-white;
@@ -181,7 +187,7 @@
   background-color: colors.$secondary;
 }
 
-:global(.card).portfolioCard {
+:global(a).portfolioCard {
   cursor: pointer;
   border: none;
   padding: 2px 8px;
@@ -392,7 +398,7 @@
 }
 
 .skillSectionContainer {
-  padding-top: 60px;
+  padding-top: 30px;
   padding-bottom: 60px;
   background-color: colors.$bg-light-gray;
 }

@@ -1,16 +1,16 @@
 import Image                                                                            from "next/image";
 import Link                                                                             from "next/link";
-import homeStyles
-                                                      from "../../styles/index.module.scss";
-import { Button, Card, Col, Container, Row, Spinner } from "react-bootstrap";
-import utilStyles
-                                                      from "../../styles/utils.module.scss";
 import React, { forwardRef, HTMLProps, MouseEventHandler, useEffect, useRef, useState } from "react";
+import { Button, Col, Container, Row, Spinner }                                         from "react-bootstrap";
+import { PlayState, Tween }                                                             from "react-gsap";
 import Shuffle                                                                          from "shufflejs";
 import { GoToIcon }                                                                     from "../svg";
-import { PlayState, Tween }                                                             from "react-gsap";
 import { transparentGifPix }                                                            from "../../util";
 import { useMediaQuery }                                                                from "../../hooks/use-media-query";
+
+import homeStyles from "../../styles/index.module.scss";
+import utilStyles from "../../styles/utils.module.scss";
+
 const portfolioFilters = [
   {
     id: "all",
@@ -118,8 +118,9 @@ const ProjectCardElement = forwardRef<any, ProjectCardElementProps>(({ project, 
   const p = project;
   const [isHovered, setIsHovered] = useState(false);
 
-  return <Card
-    ref={ref} as="a"
+  return <Link href={`/projects/${p.id}`}>
+    <a
+    ref={ref}
     onClick={onClick}
     onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}
     className={`${homeStyles.portfolioCard} portfolio-project col-12 col-sm-6 col-xl-4 mb-1 mb-sm-0`}
@@ -161,7 +162,8 @@ const ProjectCardElement = forwardRef<any, ProjectCardElementProps>(({ project, 
           </div>
         </Tween>
       </div>
-  </Card>;
+    </a>
+  </Link>;
 });
 
 type PortfolioRef = HTMLElement;
@@ -301,9 +303,7 @@ const Portfolio = forwardRef<PortfolioRef, PortfolioProps>(
                 <Row ref={projectsContainerRef}>
                   {isMobile !== undefined &&
                   loadedProjects.map((p, i) =>
-                    <Link href={`/projects/${p.id}`} key={i}>
-                      <ProjectCardElement project={p}/>
-                    </Link>,
+                      <ProjectCardElement project={p} key={i}/>,
                   )
                   }
                 </Row>

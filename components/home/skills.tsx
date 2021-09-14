@@ -1,8 +1,8 @@
-import homeStyles              from "../../styles/index.module.scss";
-import { Col, Container, Row } from "react-bootstrap";
-import React                   from "react";
-import { Reveal, Tween }       from "react-gsap";
-import ThinSP                  from "../util/thinsp";
+import homeStyles                      from "../../styles/index.module.scss";
+import { Button, Col, Container, Row } from "react-bootstrap";
+import React                           from "react";
+import { Reveal, Tween }               from "react-gsap";
+import ThinSP                          from "../util/thinsp";
 
 const resumeSkillBars = [
   {
@@ -98,6 +98,11 @@ const Skills: React.FC<SkillsProps> = () => {
       <Container id="skills">
         <Row>
           <Col lg={8} className="offset-lg-2">
+
+            <Button as="a" target="_blank" href={"/download-resume"}
+                    className={`${homeStyles.downloadResumeSkillsSectionBtn} text-uppercase d-inline-block mb-4`}
+                    size="sm" variant="outline-primary">Télécharger mon CV</Button>
+
             <h3 className={`${homeStyles.homeH3} text-primary fw-normal`}>Compétences</h3>
             <p className="resume-dark-text">
               En dehors des compétences évoquées ci-dessous, j’ai appris à m’organiser, à faire des recherches pour
