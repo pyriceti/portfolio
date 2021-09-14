@@ -1,10 +1,10 @@
-import homeStyles                                          from "../../styles/index.module.scss";
-import { Col, Container, Row }                             from "react-bootstrap";
+import homeStyles                             from "../../styles/index.module.scss";
+import { Col, Container, Row }                from "react-bootstrap";
 import React, { useEffect, useRef, useState } from "react";
 import { SectionHandle }                      from "../svg";
 import {
   tlDetailInit,
-  TimelineDetailSettings
+  TimelineDetailSettings,
 }                                             from "../../animations/timeline-detail";
 import ThinSP                                 from "../util/thinsp";
 import Timeline                               from "./timeline";
