@@ -6,7 +6,7 @@ import { ResumeTimeline } from "../svg";
 
 type XpItem = {
   job: string,
-  place: string,
+  placeAndDate: string,
   desc: string,
   date: string,
   detail: {
@@ -17,8 +17,25 @@ type XpItem = {
 
 const xpItems: XpItem[] = [
   {
+    job: "Enseignant Unity 3D (gameplay programming)",
+    placeAndDate: "SAE Institute – Paris (6 mois)",
+    desc: "Cours et TP donnés aux élèves en Games Programming, 2e année.",
+    date: "2020",
+    detail: [
+      {
+        title: "Teaching",
+      },
+      {
+        title: "C#, Advanced Unity 3D programming",
+      },
+      {
+        title: "Gameplay Programming",
+      },
+    ],
+  },
+  {
     job: "Développeur intégrateur Unity 3D",
-    place: "Upian – Paris",
+    placeAndDate: "Upian – Paris (2 ans)",
     desc: "Développement & intégration Unity 3D pour la production du projet Unmaze.",
     date: "2019",
     detail: [
@@ -38,7 +55,7 @@ const xpItems: XpItem[] = [
   },
   {
     job: "Stagiaire ingénieur web full stack",
-    place: "Playbots – Paris",
+    placeAndDate: "Playbots – Paris (6 mois)",
     desc: "Conception & amélioration de la plateforme SaaS de création de bots et du plugin de bot embarqué.",
     date: "2018",
     detail: [
@@ -62,7 +79,7 @@ const xpItems: XpItem[] = [
   },
   {
     job: "Développeur web backend PHP/SQL",
-    place: "ENM, mandaté par l’UTC – Paris & Compiègne",
+    placeAndDate: "ENM, mandaté par l’UTC – Paris & Compiègne (1 an)",
     desc: "Conception d’une base de données interactive pour la recherche d’articles de lois liés à la gestion des successions dans les pays signataires du Règlement.",
     date: "2017",
     detail: [
@@ -78,7 +95,7 @@ const xpItems: XpItem[] = [
   },
   {
     job: "Stagiaire développeur web PHP/SQL",
-    place: "DreamCentury Entertainment – Paris",
+    placeAndDate: "DreamCentury Entertainment – Paris (6 mois)",
     desc: "Refonte du site MadWin sur les modules de paramétrage du profil, d’amitiés numériques, du fil d’actualité & notifications et des murs sociaux.",
     date: "2016",
     detail: [
@@ -104,7 +121,7 @@ const ResumeXp = (_: ResumeXpProps): JSX.Element => {
   return (
     <section className={`${resumeXpStyles.xpSection} ${resumeLayoutStyles.rightColSection}`}>
       <h2 className="default-h2"><span>E</span>xpérience professionnelle</h2>
-      <ResumeTimeline height={150.88976} className={resumeXpStyles.xpTimeline} color={"#8e2621"}/>
+      <ResumeTimeline height={190} className={resumeXpStyles.xpTimeline} color={"#8e2621"}/>
       <ul className={resumeXpStyles.xpList}>
         {xpItems.map((xi, i) =>
           <li key={i}>
@@ -119,7 +136,7 @@ const ResumeXp = (_: ResumeXpProps): JSX.Element => {
             </h3>
             <section className={resumeXpStyles.xpItemSection}>
               <span className={resumeXpStyles.xpItemDate}>{xi.date}</span>
-              <p className={resumeXpStyles.xpItemPlace}>{xi.place}</p>
+              <p className={resumeXpStyles.xpItemPlace}>{xi.placeAndDate}</p>
               <p className={resumeXpStyles.xpItemDesc}>{xi.desc}</p>
               {xi.detail.length > 0 &&
               <ul className={resumeXpStyles.xpItemDetailList}>
