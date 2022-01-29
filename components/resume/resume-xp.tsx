@@ -1,8 +1,8 @@
-import React              from "react";
-import resumeLayoutStyles from "./resume-layout.module.scss";
-import resumeXpStyles     from "./resume-xp.module.scss";
-import ThinSP             from "../util/thinsp";
-import { ResumeTimeline } from "../svg";
+import React, { useEffect, useState } from "react";
+import resumeLayoutStyles             from "./resume-layout.module.scss";
+import resumeXpStyles                 from "./resume-xp.module.scss";
+import ThinSP                         from "../util/thinsp";
+import { ResumeTimeline }             from "../svg";
 
 type XpItem = {
   job: string,
@@ -16,6 +16,20 @@ type XpItem = {
 }
 
 const xpItems: XpItem[] = [
+  {
+    job: "Gameplay & Tools Programmeur",
+    placeAndDate: "Tactical Adventures – Paris (auj.)",
+    desc: "Développement Unity 3D en gameplay & tools sur le jeu Solasta: Crown of the Magister.",
+    date: "2021",
+    detail: [
+      {
+        title: "Gameplay",
+      },
+      {
+        title: "Tools",
+      },
+    ],
+  },
   {
     job: "Enseignant Unity 3D (gameplay programming)",
     placeAndDate: "SAE Institute – Paris (6 mois)",
@@ -115,13 +129,29 @@ const xpItems: XpItem[] = [
   },
 ];
 
-type ResumeXpProps = {};
+type ResumeXpProps = {
+  shouldStartPrint: boolean
+};
 
-const ResumeXp = (_: ResumeXpProps): JSX.Element => {
+const ScreenTimelineHeight = 235;
+const PrintTimelineHeight = 260;
+
+const ResumeXp = ({ shouldStartPrint }: ResumeXpProps): JSX.Element => {
+  const [curTimelineHeight, setCurTimelineHeight] = useState(ScreenTimelineHeight);
+
+  useEffect(() => {
+    if (shouldStartPrint) {
+      setCurTimelineHeight(PrintTimelineHeight);
+      setTimeout(window.print, 0); // Delay to next frame to allow a re-render before printing
+    } else {
+      setCurTimelineHeight(ScreenTimelineHeight);
+    }
+  }, [shouldStartPrint]);
+
   return (
     <section className={`${resumeXpStyles.xpSection} ${resumeLayoutStyles.rightColSection}`}>
       <h2 className="default-h2"><span>E</span>xpérience professionnelle</h2>
-      <ResumeTimeline height={190} className={resumeXpStyles.xpTimeline} color={"#8e2621"}/>
+      <ResumeTimeline height={curTimelineHeight} className={resumeXpStyles.xpTimeline} color={"#8e2621"}/>
       <ul className={resumeXpStyles.xpList}>
         {xpItems.map((xi, i) =>
           <li key={i}>

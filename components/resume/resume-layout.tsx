@@ -1,16 +1,31 @@
 import Head                                                                                     from "next/head";
-import React                                                                                    from "react";
-import resumeLayoutStyles
-                                                                                                from "./resume-layout.module.scss";
+import React, { useState, useEffect }                                                           from "react";
 import { siteTitle, siteTitlePrefix }                                                           from "../layout";
 import ThinSP                                                                                   from "../util/thinsp";
 import { ResumeContact, ResumeLanguages, ResumeSkills, ResumeHobbies, ResumeXp, ResumeStudies } from "./index";
 import { Button }                                                                               from "react-bootstrap";
+import resumeLayoutStyles                                                                       from "./resume-layout.module.scss";
 
 type ResumeLayoutProps = {};
 
 const ResumeLayout = (_: ResumeLayoutProps): JSX.Element => {
   // const ribbonLineHeight = 4.1;
+
+  const [shouldStartPrint, setShouldStartPrint] = useState(false);
+
+  useEffect(() => {
+    const onMediaPrintChanged = e => {
+      // Reset after print/cancel
+      if (!e.matches) {
+        setShouldStartPrint(false);
+      }
+    };
+
+    window.matchMedia("print").addEventListener("change", onMediaPrintChanged);
+  }, []);
+
+  const onPrintClick = () => setShouldStartPrint(true);
+
   return (
     <>
       <Head>
@@ -95,13 +110,13 @@ const ResumeLayout = (_: ResumeLayoutProps): JSX.Element => {
               Gershom Scholem
             </figcaption>
           </figure>
-          <ResumeXp/>
+          <ResumeXp shouldStartPrint={shouldStartPrint}/>
           <ResumeStudies/>
         </div>
         <aside className={resumeLayoutStyles.infoAside}>Vous pouvez imprimer le CV ou bien l’enregistrer en tant que
           fichier PDF.
           <div>
-            <Button variant="dark" onClick={() => window.print()}>Imprimer</Button>
+            <Button variant="dark" onClick={onPrintClick}>Imprimer</Button>
             <Button as="a" variant="dark" href="/files/Baptiste_PERRAUD_CV.pdf" download={true}>
               Enregistrer au format PDF
             </Button>

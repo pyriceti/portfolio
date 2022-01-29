@@ -15,6 +15,14 @@
   padding-left: 2.12cm;
   list-style:none;
 
+  > li {
+    break-inside: avoid-page;
+
+    &:not(:first-child) {
+      padding-top: .7cm;
+    }
+  }
+
   h3 {
     position: relative;
     font-family: 'Raleway', sans-serif;
@@ -31,7 +39,6 @@
 
   .xpItemSection {
     position: relative;
-    margin-bottom: .7cm;
   }
 
   .xpItemDate {
@@ -41,7 +48,7 @@
     left: -2.1cm;
     font-family: "Raleway", sans-serif;
     font-weight: 600;
-    color: #441517;
+    color: colors.$primary;
     font-size: 14px;
     width: 1.2cm;
   }
