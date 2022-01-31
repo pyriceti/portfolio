@@ -7,7 +7,7 @@ const hobbyItems = [
     desc: [],
   },
   {
-    hobby: "Jeux vidéo",
+    hobby: "Escalade",
     desc: [],
   },
   {

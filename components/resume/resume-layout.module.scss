@@ -129,7 +129,7 @@
     .headerName {
       font-family: 'Raleway', sans-serif;
       font-size: 32px;
-      margin: 0;
+      margin: .3cm 0 0;
     }
 
     .headerTitle {
@@ -177,11 +177,11 @@
 
   .infoAside {
     position: fixed;
-    top: 24px;
+    top: 12px;
     left: calc(210mm + 24px);
-    padding: 12px;
+    padding: 0;
     border-radius: 4px;
-    background-color: colors.$almost-white;
+    //background-color: colors.$almost-white;
 
     @media print {
       display: none;

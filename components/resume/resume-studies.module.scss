@@ -1,22 +1,31 @@
 @use "../../styles/colors";
 
+$base-top-padding: .26cm;
+$base-top-tl: 1.2cm;
+$added-top-height-print: .2cm;
+
 .studiesSection {
   //break-before: page;
-  //break-inside: avoid-page;
+  break-inside: avoid-page;
   //break-after: page;
   position: relative;
-  padding-top: .26cm;
+  padding-top: $base-top-padding;
 
   @media print {
     //height: 297mm;
     padding-bottom: 2cm;
+    padding-top: ($base-top-padding + $added-top-height-print);
   }
 }
 
 .studiesTimeline {
   position: absolute;
-  top: 1.2cm;
+  top: $base-top-tl;
   left: 1.49cm;
+
+  @media print {
+    top: ($base-top-tl + $added-top-height-print);
+  }
 }
 
 .studiesList {
@@ -25,10 +34,10 @@
 
   > li {
     //break-inside: avoid-page;
-    margin-bottom: .7cm;
+    margin-bottom: .6cm;
 
     &:not(:nth-child(1)){
-      margin-top: .7cm;
+      margin-top: .6cm;
     }
 
     @media print {
@@ -37,7 +46,7 @@
       padding-top: 0;
 
       &:not(:nth-child(1)) {
-        padding-top: .7cm;
+        padding-top: .6cm;
         margin-bottom: 0;
         margin-top: 0;
       }

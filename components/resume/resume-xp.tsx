@@ -21,51 +21,21 @@ const xpItems: XpItem[] = [
     placeAndDate: "Tactical Adventures – Paris (auj.)",
     desc: "Développement Unity 3D en gameplay & tools sur le jeu Solasta: Crown of the Magister.",
     date: "2021",
-    detail: [
-      {
-        title: "Gameplay",
-      },
-      {
-        title: "Tools",
-      },
-    ],
+    detail: [],
   },
   {
     job: "Enseignant Unity 3D (gameplay programming)",
     placeAndDate: "SAE Institute – Paris (6 mois)",
-    desc: "Cours et TP donnés aux élèves en Games Programming, 2e année.",
+    desc: "Cours et TP donnés aux élèves en Games Programming, 2e année: C#, gameplay & advanced Unity programming.",
     date: "2020",
-    detail: [
-      {
-        title: "Teaching",
-      },
-      {
-        title: "C#, Advanced Unity 3D programming",
-      },
-      {
-        title: "Gameplay Programming",
-      },
-    ],
+    detail: [],
   },
   {
     job: "Développeur intégrateur Unity 3D",
     placeAndDate: "Upian – Paris (2 ans)",
-    desc: "Développement & intégration Unity 3D pour la production du projet Unmaze.",
+    desc: "Développement & intégration Unity 3D pour la production du projet Unmaze : gameplay, intégration, tools & optimisation.",
     date: "2019",
-    detail: [
-      {
-        title: "Gameplay",
-      },
-      {
-        title: "Intégration",
-      },
-      {
-        title: "Tools",
-      },
-      {
-        title: "Optimisation",
-      },
-    ],
+    detail: [],
   },
   {
     job: "Stagiaire ingénieur web full stack",
@@ -133,8 +103,8 @@ type ResumeXpProps = {
   shouldStartPrint: boolean
 };
 
-const ScreenTimelineHeight = 235;
-const PrintTimelineHeight = 260;
+const ScreenTimelineHeight = 185;
+const PrintTimelineHeight = 185;
 
 const ResumeXp = ({ shouldStartPrint }: ResumeXpProps): JSX.Element => {
   const [curTimelineHeight, setCurTimelineHeight] = useState(ScreenTimelineHeight);

@@ -29,7 +29,7 @@ const ResumeLayout = (_: ResumeLayoutProps): JSX.Element => {
   return (
     <>
       <Head>
-        <meta name="description" content="Portfolio de Baptiste Perraud, développeur Unity 3D & web"/>
+        <meta name="description" content="Portfolio de Baptiste Perraud, ingénieur développeur Unity 3D & web"/>
         <meta name="og:title" content={siteTitle}/>
         <title>{`${siteTitlePrefix}CV`}</title>
       </Head>
@@ -100,7 +100,7 @@ const ResumeLayout = (_: ResumeLayoutProps): JSX.Element => {
             </li>
           </ul>
           <h1 className={resumeLayoutStyles.headerName}>Baptiste Perraud</h1>
-          <p className={resumeLayoutStyles.headerTitle}>Développeur Unity 3D</p>
+          <p className={resumeLayoutStyles.headerTitle}>Ingénieur Développeur Unity 3D</p>
           <figure>
             <blockquote className={resumeLayoutStyles.wisdomQuote}>
               <p className="mb-0">«<ThinSP/>Nous avons beau être intelligents, encore faut-il qu’on sache faire preuve
@@ -113,8 +113,7 @@ const ResumeLayout = (_: ResumeLayoutProps): JSX.Element => {
           <ResumeXp shouldStartPrint={shouldStartPrint}/>
           <ResumeStudies/>
         </div>
-        <aside className={resumeLayoutStyles.infoAside}>Vous pouvez imprimer le CV ou bien l’enregistrer en tant que
-          fichier PDF.
+        <aside className={resumeLayoutStyles.infoAside}>
           <div>
             <Button variant="dark" onClick={onPrintClick}>Imprimer</Button>
             <Button as="a" variant="dark" href="/files/Baptiste_PERRAUD_CV.pdf" download={true}>
