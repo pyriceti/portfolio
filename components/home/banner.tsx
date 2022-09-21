@@ -4,7 +4,6 @@ import { Button, Col, Container, Row } from "react-bootstrap";
 import homeStyles                      from "../../styles/index.module.scss";
 import utilStyles                      from "../../styles/utils.module.scss";
 import ThinSP                          from "../util/thinsp";
-// import { jumpToSection }               from "../../util";
 
 type ExperienceProps = {}
 
@@ -12,9 +11,6 @@ const Banner = (_: ExperienceProps): JSX.Element => {
   const router = useRouter();
 
   const handleContactMeBtnClick = () => {
-    // TODO: when available, prevent the scroll/jump animation so gsap can do it
-    // See https://github.com/vercel/next.js/discussions/13804
-    // jumpToSection("contact");
     router.replace(`#contact`, undefined, { scroll: false, shallow: true });
   };
 

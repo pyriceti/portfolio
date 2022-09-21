@@ -2,7 +2,6 @@ import React               from "react";
 import resumeLayoutStyles  from "./resume-layout.module.scss";
 import resumeStudiesStyles from "./resume-studies.module.scss";
 import { ResumeTimeline }  from "../svg";
-import resumeXpStyles      from "./resume-xp.module.scss";
 
 type studiesItem = {
   diploma: string,

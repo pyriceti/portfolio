@@ -1,21 +1,26 @@
-import homeStyles                             from "../../styles/index.module.scss";
-import { Col, Container, Row }                from "react-bootstrap";
-import React, { useEffect, useRef, useState } from "react";
-import { SectionHandle }                      from "../svg";
-import {
-  tlDetailInit,
-  TimelineDetailSettings,
-}                                             from "../../animations/timeline-detail";
-import ThinSP                                 from "../util/thinsp";
-import Timeline                               from "./timeline";
-import { TimelineSettings }                   from "../../animations/timeline";
-import TimelineDetail                         from "./timeline-detail";
-import Image                                  from "next/image";
-import { transparentGifPix }                  from "../../util";
+import homeStyles                  from "../../styles/index.module.scss";
+import { Col, Container, Row }     from "react-bootstrap";
+import React, { useRef, useState } from "react";
+import { SectionHandle }           from "../svg";
+import ThinSP                      from "../util/thinsp";
+import Timeline, { TimelineData }  from "./timeline";
+import TimelineDetail              from "./timeline-detail";
+import TimelineStudiesElemDetail   from "./timeline-studies-elem-detail";
 
-const studiesImgPathPrefix : string = "/images/education/";
+const studiesImgPathPrefix: string = "/images/education/";
 
-const studiesItems = [
+export interface StudiesItem {
+  date: string,
+  diploma: string,
+  school: string,
+  url: string,
+  dateRange: string[],
+  imgSrc: string,
+  imgAlt: string,
+  contents: JSX.Element,
+}
+
+const studiesItems: StudiesItem[] = [
   {
     date: "2019",
     diploma: "Mastère spécialisé IDE",
@@ -33,7 +38,7 @@ const studiesItems = [
         renforcer
         mes compétences en game design et pouvoir par la suite travailler dans ce domaine, à la croisée du ludique
         et de
-        la pédagogie.</>
+        la pédagogie.</>,
   },
   {
     date: "2018",
@@ -49,7 +54,7 @@ const studiesItems = [
         que
         j’ai travaillées tout au long de ce parcours, et qui aujourd’hui conditionnent ma manière de travailler,
         au sein
-        d’une équipe et sur des projets innovants et ambitieux.</>
+        d’une équipe et sur des projets innovants et ambitieux.</>,
   },
   {
     date: "2017",
@@ -66,7 +71,7 @@ const studiesItems = [
         permis de
         consolider certains projets personnels, de faire des rencontres inoubliables, et d’apprendre à travailler
         dans
-        un contexte interculturel.</>
+        un contexte interculturel.</>,
   },
   {
     date: "2016",
@@ -82,7 +87,7 @@ const studiesItems = [
         de mes 3 premières années post-bac. Il m’a permis d’acquérir un regard socio-technique neuf et critique
         sur
         divers systèmes actuels, et ainsi d’établir une méthodologie pluridisciplinaire rigoureuse en abordant une
-        problématique d’ingénierie.</>
+        problématique d’ingénierie.</>,
   },
   {
     date: "2013",
@@ -97,31 +102,26 @@ const studiesItems = [
         mon
         affinité pour le domaine. J’ai également choisi l’option arts plastiques, me permettant d’intégrer l’une
         de mes
-        passions dans mes études.</>
+        passions dans mes études.</>,
   },
 ];
 
 interface StudiesProps extends React.HTMLProps<HTMLElement> {
 }
 
-const Studies: React.FC<StudiesProps> = () => {
-  const tlSettings: TimelineSettings = {
-    rootSvgSelector: "svg.timeline.studies-timeline",
-    cssPrefix: "studies-timeline_svg__",
-    dates: ["2019", "2018", "2017", "2016", "2013"],
-    maxNodeYPos: 127,
-  }
-  const tlDetailSettings: TimelineDetailSettings = {
-    defaultDate: "2019",
-    detailSelector: "#education .studiesDetail",
-  }
+const timelineData: TimelineData = {
+  rootSvgSelector: "svg.timeline.studies-timeline",
+  cssPrefix: "studies-timeline_svg__",
+  dates: ["2019", "2018", "2017", "2016", "2013"],
+  maxNodeYPos: 127,
+};
 
+const Studies: React.FC<StudiesProps> = () => {
   const [curDate, setCurDate] = useState<string>("2019");
 
   const studiesTimelineRef = useRef(null);
 
-  useEffect(() => tlDetailInit(tlDetailSettings), []);
-
+  const getStudiesItemByDate: (date: string) => StudiesItem = (date: string) => studiesItems.find(si => si.date === date);
 
   return (
     <section id="education" className={`${homeStyles.studiesSectionContainer} position-relative`}>
@@ -161,40 +161,14 @@ const Studies: React.FC<StudiesProps> = () => {
                 <Timeline
                   className={`${homeStyles.studiesTimelineSvg} timeline studies-timeline`}
                   timelineTag={"studies"}
-                  settings={tlSettings}
+                  data={timelineData}
                   ref={studiesTimelineRef}
-                  onDateNodeClick={setCurDate}/>
+                  onDateNodeClick={setCurDate}
+                  curDate={curDate}/>
               </Col>
               <Col xs={8} md={9} className="studiesDetailContainer">
-                <TimelineDetail curDate={curDate} settings={tlDetailSettings}>
-                  {studiesItems.map(si =>
-                    <div key={si.date} className={`d${si.date} studiesDetail`}>
-                      <div className="illus-container float-none float-sm-start mb-1">
-                        <Image
-                          width={192}
-                          height={192}
-                          layout="intrinsic"
-                          quality={100}
-                          placeholder="blur"
-                          blurDataURL={transparentGifPix}
-                          className="illus"
-                          src={si.imgSrc}
-                          alt={si.imgAlt}
-                        />
-                      </div>
-                      <h3>{si.diploma}</h3>
-                      <a
-                        className="school d-block mb-2"
-                        href={si.url}
-                        target="_blank"
-                        rel="noopener"
-                      >
-                        {si.school} ({si.dateRange[0]}{si.dateRange.length === 2 && ` - ${si.dateRange[1]}`})
-                      </a>
-
-                      <p className="desc">{si.contents}</p>
-                    </div>
-                  )}
+                <TimelineDetail curDate={curDate}>
+                  <TimelineStudiesElemDetail studiesItem={getStudiesItemByDate(curDate)} curDate={curDate}/>
                 </TimelineDetail>
               </Col>
             </Row>
@@ -203,7 +177,7 @@ const Studies: React.FC<StudiesProps> = () => {
       </Container>
     </section>
   );
-}
+};
 
 
 export default Studies;

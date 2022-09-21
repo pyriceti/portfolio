@@ -1,7 +1,8 @@
 import homeStyles                      from "../../styles/index.module.scss";
 import { Button, Col, Container, Row } from "react-bootstrap";
 import React                           from "react";
-import { Reveal, Tween }               from "react-gsap";
+import { InView }                      from "react-intersection-observer";
+import { animated, config, Spring }    from "@react-spring/web";
 import ThinSP                          from "../util/thinsp";
 
 const resumeSkillBars = [
@@ -118,24 +119,36 @@ const Skills: React.FC<SkillsProps> = () => {
                     <h4 className="almost-black mb-3">{cat.label}</h4>
                     <div className="skill-bars">
                       {cat.skills.map((skill, skillIdx) =>
-                        <Reveal key={skillIdx}>
-                          <div data-pro-bar-id={skill.id} key={skillIdx}
-                               className={`${homeStyles.proBarContainer} pro-bar-container position-relative mb-4`}>
-                            <Tween from={{ width: 0 }} ease="power2.inOut" duration={1}
-                                   delay={1 - skill.progress}>
-                              <div className="pro-bar" style={{ width: `calc(${skill.progress * 100}% + 4px)` }}/>
-                            </Tween>
-                            <Tween from={{ x: -4, opacity: 0 }} ease="power2.inOut" duration={.5}
-                                   delay={.3}>
-                                  <span className="label semi-bold position-absolute ps-1"
-                                        style={{ width: `calc(${skill.progress * 100}% + 4px)` }}>
-                                    {skill.label && skill.label}
-                                    {skill.label && skill.value && <><ThinSP/>: </>}
-                                    {skill.value && <span className="value">{skill.value}</span>}
-                                  </span>
-                            </Tween>
-                          </div>
-                        </Reveal>,
+                        <InView key={skillIdx}
+                                triggerOnce
+                        >
+                          {({ inView, ref }) => <div
+                            ref={ref}
+                            data-pro-bar-id={skill.id}
+                            className={`${homeStyles.proBarContainer} pro-bar-container position-relative mb-4`}>
+                            <Spring delay={(1 - skill.progress) * 1000}
+                                    from={{ width: "0%" }}
+                                    to={{ width: inView ? `${skill.progress * 100}%` : "0%" }}
+                                    config={{ mass: 60, tension: 450, friction: 100, clamp: true }}>
+                              {(styles) => (
+                                <animated.div className="pro-bar" style={styles}/>
+                              )}
+                            </Spring>
+                            <Spring delay={300}
+                                    from={{ opacity: 0, x: -4 }}
+                                    to={{ opacity: inView ? 1 : 0, x: inView ? 0 : -4, transform: 'translateY(-50%)' }}
+                                    config={config.stiff}>
+                              {(styles) => (
+                                <animated.span className="label semi-bold position-absolute ps-1"
+                                      style={{ width: `${skill.progress * 100}%`, ...styles }}>
+                                {skill.label && skill.label}
+                                  {skill.label && skill.value && <><ThinSP/>: </>}
+                                  {skill.value && <span className="value">{skill.value}</span>}
+                              </animated.span>
+                              )}
+                            </Spring>
+                          </div>}
+                        </InView>,
                       )}
                     </div>
                   </Col>,

@@ -1,28 +1,21 @@
-import React                from "react";
-import { SvgTimelineProps } from "./index";
+import * as React from "react";
 
-const StudiesTimeline = React.memo((
-  { currentNodeRef, onDateNodeClick, onDateNodeHoverChanged, ...rest }: SvgTimelineProps) => {
+function SvgXpTimeline(props: React.SVGProps<SVGSVGElement>) {
   return (
     <svg
       width={156}
-      height={600}
-      viewBox="0 0 41.275 158.75"
+      height={720}
+      viewBox="0 0 41.275 190.5"
       xmlns="http://www.w3.org/2000/svg"
-      {...rest}
+      {...props}
     >
       <path
-        className="studies-timeline_svg__line"
-        d="M12.22 156.981l-3.055 1.769-3.055-1.769V1.77L9.165 0l3.056 1.769z"
+        className="xp-timeline_svg__line"
+        d="M12.22 188.731L9.166 190.5l-3.055-1.769V1.77L9.165 0l3.056 1.769z"
         fill="#441517"
       />
-      <g
-        onMouseEnter={() => onDateNodeHoverChanged("2019", true)}
-        onMouseLeave={() => onDateNodeHoverChanged("2019", false)}
-        onClick={() => onDateNodeClick("2019")}
-        className="studies-timeline_svg__date-node studies-timeline_svg__d2019">
+      <g className="xp-timeline_svg__date-node xp-timeline_svg__d2021">
         <path
-          className="studies-timeline_svg__outer-node"
           d="M18.33 15.875l-4.582 7.938H4.583L0 15.875l4.583-7.938h9.165z"
           fill="#441517"
         />
@@ -31,12 +24,12 @@ const StudiesTimeline = React.memo((
           fill="#fff"
         />
         <path
-          className="studies-timeline_svg__underline"
+          className="xp-timeline_svg__underline"
           fill="#441517"
           d="M22.854 20.373h18.421v.794H22.854z"
         />
         <text
-          className="studies-timeline_svg__date-label"
+          className="xp-timeline_svg__date-label"
           x={22.49}
           y={10.054}
           fontFamily="Raleway"
@@ -48,18 +41,13 @@ const StudiesTimeline = React.memo((
           transform="translate(0 7.938)"
         >
           <tspan x={22.49} y={10.054} fontWeight={500}>
-            {"2019"}
+            {"2021"}
           </tspan>
         </text>
       </g>
-      <g
-        onMouseEnter={() => onDateNodeHoverChanged("2018", true)}
-        onMouseLeave={() => onDateNodeHoverChanged("2018", false)}
-        onClick={() => onDateNodeClick("2018")}
-        className="studies-timeline_svg__date-node studies-timeline_svg__d2018">
+      <g className="xp-timeline_svg__date-node xp-timeline_svg__d2019">
         <path
-          className="studies-timeline_svg__outer-node"
-          d="M18.33 47.625l-4.582 7.938H4.583L0 47.625l4.583-7.937h9.165z"
+          d="M18.33 47.625l-4.582 7.937H4.583L0 47.625l4.583-7.938h9.165z"
           fill="#441517"
         />
         <path
@@ -67,12 +55,12 @@ const StudiesTimeline = React.memo((
           fill="#fff"
         />
         <path
-          className="studies-timeline_svg__underline"
+          className="xp-timeline_svg__underline"
           fill="#441517"
-          d="M22.854 52.123h18.421v.794H22.854z"
+          d="M22.854 52.122h18.421v.794H22.854z"
         />
         <text
-          className="studies-timeline_svg__date-label"
+          className="xp-timeline_svg__date-label"
           x={22.49}
           y={10.054}
           fontFamily="Raleway"
@@ -81,20 +69,15 @@ const StudiesTimeline = React.memo((
           style={{
             lineHeight: 1.25,
           }}
-          transform="translate(0 39.688)"
+          transform="translate(0 39.687)"
         >
           <tspan x={22.49} y={10.054} fontWeight={500}>
-            {"2018"}
+            {"2019"}
           </tspan>
         </text>
       </g>
-      <g
-        onMouseEnter={() => onDateNodeHoverChanged("2017", true)}
-        onMouseLeave={() => onDateNodeHoverChanged("2017", false)}
-        onClick={() => onDateNodeClick("2017")}
-        className="studies-timeline_svg__date-node studies-timeline_svg__d2017">
+      <g className="xp-timeline_svg__date-node xp-timeline_svg__d2018">
         <path
-          className="studies-timeline_svg__outer-node"
           d="M18.33 79.375l-4.582 7.938H4.583L0 79.375l4.583-7.937h9.165z"
           fill="#441517"
         />
@@ -103,12 +86,12 @@ const StudiesTimeline = React.memo((
           fill="#fff"
         />
         <path
-          className="studies-timeline_svg__underline"
+          className="xp-timeline_svg__underline"
           fill="#441517"
           d="M22.854 83.873h18.421v.794H22.854z"
         />
         <text
-          className="studies-timeline_svg__date-label"
+          className="xp-timeline_svg__date-label"
           x={22.49}
           y={10.054}
           fontFamily="Raleway"
@@ -120,17 +103,12 @@ const StudiesTimeline = React.memo((
           transform="translate(0 71.438)"
         >
           <tspan x={22.49} y={10.054} fontWeight={500}>
-            {"2017"}
+            {"2018"}
           </tspan>
         </text>
       </g>
-      <g
-        onMouseEnter={() => onDateNodeHoverChanged("2016", true)}
-        onMouseLeave={() => onDateNodeHoverChanged("2016", false)}
-        onClick={() => onDateNodeClick("2016")}
-        className="studies-timeline_svg__date-node studies-timeline_svg__d2016">
+      <g className="xp-timeline_svg__date-node xp-timeline_svg__d2017">
         <path
-          className="studies-timeline_svg__outer-node"
           d="M18.33 111.125l-4.582 7.938H4.583L0 111.125l4.583-7.937h9.165z"
           fill="#441517"
         />
@@ -139,12 +117,12 @@ const StudiesTimeline = React.memo((
           fill="#fff"
         />
         <path
-          className="studies-timeline_svg__underline"
+          className="xp-timeline_svg__underline"
           fill="#441517"
           d="M22.854 115.623h18.421v.794H22.854z"
         />
         <text
-          className="studies-timeline_svg__date-label"
+          className="xp-timeline_svg__date-label"
           x={22.49}
           y={10.054}
           fontFamily="Raleway"
@@ -156,17 +134,12 @@ const StudiesTimeline = React.memo((
           transform="translate(0 103.188)"
         >
           <tspan x={22.49} y={10.054} fontWeight={500}>
-            {"2016"}
+            {"2017"}
           </tspan>
         </text>
       </g>
-      <g
-        onMouseEnter={() => onDateNodeHoverChanged("2013", true)}
-        onMouseLeave={() => onDateNodeHoverChanged("2013", false)}
-        onClick={() => onDateNodeClick("2013")}
-        className="studies-timeline_svg__date-node studies-timeline_svg__d2013">
+      <g className="xp-timeline_svg__date-node xp-timeline_svg__d2016">
         <path
-          className="studies-timeline_svg__outer-node"
           d="M18.33 142.875l-4.582 7.938H4.583L0 142.875l4.583-7.938h9.165z"
           fill="#441517"
         />
@@ -175,12 +148,12 @@ const StudiesTimeline = React.memo((
           fill="#fff"
         />
         <path
-          className="studies-timeline_svg__underline"
+          className="xp-timeline_svg__underline"
           fill="#441517"
           d="M22.854 147.373h18.421v.794H22.854z"
         />
         <text
-          className="studies-timeline_svg__date-label"
+          className="xp-timeline_svg__date-label"
           x={22.49}
           y={10.054}
           fontFamily="Raleway"
@@ -192,18 +165,49 @@ const StudiesTimeline = React.memo((
           transform="translate(0 134.938)"
         >
           <tspan x={22.49} y={10.054} fontWeight={500}>
-            {"2013"}
+            {"2016"}
+          </tspan>
+        </text>
+      </g>
+      <g className="xp-timeline_svg__date-node xp-timeline_svg__d2015">
+        <path
+          d="M18.33 174.625l-4.582 7.938H4.583L0 174.625l4.583-7.938h9.165z"
+          fill="#441517"
+        />
+        <path
+          d="M15.276 174.625l-3.055 5.292H6.11l-3.056-5.292 3.055-5.292h6.11z"
+          fill="#fff"
+        />
+        <path
+          className="xp-timeline_svg__underline"
+          fill="#441517"
+          d="M22.854 179.123h18.421v.794H22.854z"
+        />
+        <text
+          className="xp-timeline_svg__date-label"
+          x={22.49}
+          y={10.054}
+          fontFamily="Raleway"
+          fontSize={8.467}
+          strokeWidth={0.265}
+          style={{
+            lineHeight: 1.25,
+          }}
+          transform="translate(0 166.688)"
+        >
+          <tspan x={22.49} y={10.054} fontWeight={500}>
+            {"2015"}
           </tspan>
         </text>
       </g>
       <path
-        ref={currentNodeRef}
-        className="studies-timeline_svg__current-node"
+        className="xp-timeline_svg__current-node"
         d="M15.276 15.875l-3.055 5.292H6.11l-3.056-5.292 3.055-5.292h6.11z"
         fill="#8e2621"
       />
     </svg>
   );
-});
+}
 
-export default StudiesTimeline;
+const MemoSvgXpTimeline = React.memo(SvgXpTimeline);
+export default MemoSvgXpTimeline;

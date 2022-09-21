@@ -1,12 +1,12 @@
-import Image                                                                            from "next/image";
-import Link                                                                             from "next/link";
-import React, { forwardRef, HTMLProps, MouseEventHandler, useEffect, useRef, useState } from "react";
-import { Button, Col, Container, Row, Spinner }                                         from "react-bootstrap";
-import { PlayState, Tween }                                                             from "react-gsap";
-import Shuffle                                                                          from "shufflejs";
-import { GoToIcon }                                                                     from "../svg";
-import { transparentGifPix }                                                            from "../../util";
-import { useMediaQuery }                                                                from "../../hooks/use-media-query";
+import Image                                                                 from "next/image";
+import Link                                                                  from "next/link";
+import React, { forwardRef, MouseEventHandler, useEffect, useRef, useState } from "react";
+import { Button, Col, Container, Row, Spinner }                              from "react-bootstrap";
+import { animated, config, useSpring }                                       from "@react-spring/web";
+import Shuffle                                                               from "shufflejs";
+import { GoToIcon }                                                          from "../svg";
+import { transparentGifPix }                                                 from "../../util";
+import { useMediaQuery }                                                     from "../../hooks/use-media-query";
 
 import homeStyles from "../../styles/index.module.scss";
 import utilStyles from "../../styles/utils.module.scss";
@@ -106,8 +106,10 @@ const portfolioProjects: PortfolioProject[] = [
   },
 ];
 
-const GoToProjectElement = forwardRef<any, HTMLProps<any>>((props, ref) =>
-  <GoToIcon forwardedRef={ref} {...props} />);
+// const GoToProjectElement = forwardRef<any, HTMLProps<any>>((props, ref) =>
+//   <GoToIcon forwardedRef={ref} {...props} />);
+
+const GoToProjectElement = (props) => <GoToIcon {...props} />;
 
 type ProjectCardElementProps = {
   project: PortfolioProject,
@@ -117,6 +119,24 @@ type ProjectCardElementProps = {
 const ProjectCardElement = forwardRef<any, ProjectCardElementProps>(({ project, onClick }, ref) => {
   const p = project;
   const [isHovered, setIsHovered] = useState(false);
+
+  const portfolioCardInfoStyles = useSpring({
+    to: { paddingRight: isHovered ? "24px" : "8px" },
+    config: config.gentle,
+  });
+
+  const goToProjectStyles = useSpring({
+    to: {
+      opacity: isHovered ? 1 : 0,
+      visibility: isHovered ? "visible" : "hidden",
+      x: isHovered ? -12 : -16,
+      transform: "translate(-50%, -50%)",
+      top: "50%",
+    },
+    config: config.gentle,
+  });
+
+  const AnimatedGoToProjectElement = animated(GoToProjectElement);
 
   return <Link href={`/projects/${p.id}`}>
     <a
@@ -141,26 +161,13 @@ const ProjectCardElement = forwardRef<any, ProjectCardElementProps>(({ project, 
             objectFit="cover"
           />
         </div>
-
-        <Tween
-          playState={isHovered ? PlayState.restart : PlayState.restartReverse}
-          from={{ paddingRight: "8px" }}
-          to={{ paddingRight: "24px" }}
-          ease="power2.Out" duration={.200}>
-          <div
-            className={`${homeStyles.portfolioCardInfo} text-start text-sm-center
-          d-flex flex-column justify-content-center position-relative`}>
-            <p className={`${homeStyles.portfolioCardTitle} mb-0 bold`}>{p.title}</p>
-            <p className={`${homeStyles.portfolioCardSubTitle} mb-0 small`}>{p.subTitle}</p>
-            <Tween
-              playState={isHovered ? PlayState.restart : PlayState.restartReverse}
-              from={{ opacity: 0, visibility: "hidden", x: -16 }}
-              to={{ opacity: 1, visibility: "visible", x: -12 }}
-              ease="power2.Out" duration={.250}>
-              <GoToProjectElement className={homeStyles.portfolioCardGoToIcon}/>
-            </Tween>
-          </div>
-        </Tween>
+        <animated.div
+          className={`${homeStyles.portfolioCardInfo} text-start text-sm-center d-flex flex-column justify-content-center position-relative`}
+          style={portfolioCardInfoStyles}>
+          <p className={`${homeStyles.portfolioCardTitle} mb-0 bold`}>{p.title}</p>
+          <p className={`${homeStyles.portfolioCardSubTitle} mb-0 small`}>{p.subTitle}</p>
+          <AnimatedGoToProjectElement className={homeStyles.portfolioCardGoToIcon} style={goToProjectStyles}/>
+        </animated.div>
       </div>
     </a>
   </Link>;

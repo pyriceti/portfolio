@@ -1,20 +1,25 @@
-import Image                                  from "next/image";
-import homeStyles                             from "../../styles/index.module.scss";
-import { Col, Container, Row }                from "react-bootstrap";
-import React, { useEffect, useRef, useState } from "react";
-import { SectionHandle }                      from "../svg";
-import {
-  tlDetailInit,
-  TimelineDetailSettings,
-}                                             from "../../animations/timeline-detail";
-import { TimelineSettings }                   from "../../animations/timeline";
-import Timeline                               from "./timeline";
-import TimelineDetail                         from "./timeline-detail";
-import { transparentGifPix }                  from "../../util";
+import homeStyles                  from "../../styles/index.module.scss";
+import { Col, Container, Row }     from "react-bootstrap";
+import React, { useRef, useState } from "react";
+import { SectionHandle }           from "../svg";
+import Timeline, { TimelineData }  from "./timeline";
+import TimelineDetail              from "./timeline-detail";
+import TimelineXpElemDetail        from "./timeline-xp-elem-detail";
 
-const xpImgPathPrefix : string = "/images/experience/";
+const xpImgPathPrefix: string = "/images/experience/";
 
-const xpItems = [
+export interface XpItem {
+  date: string,
+  job: string,
+  place: string,
+  url: string,
+  dateRange: string[],
+  imgSrc: string,
+  imgAlt: string,
+  contents: JSX.Element,
+}
+
+const xpItems: XpItem[] = [
   {
     date: "2021",
     job: "Développeur intégrateur Unity 3D",
@@ -30,7 +35,7 @@ const xpItems = [
         l’importance de l’optimisation pour un jeu développé pour mobiles. Enfin, le challenge
         technique et d’interaction, loin d’être absent, s’est incarné dans la difficulté à
         développer un gameplay convaincant autour de l’environnement lumineux du joueur/de la
-        joueuse.</>
+        joueuse.</>,
   },
   {
     date: "2019",
@@ -45,7 +50,7 @@ const xpItems = [
         Unmaze sous la tutelle d’<a href="http://www.andreberlemont.com/">André Berlemont</a>. J’ai ainsi accompagné
         l’équipe sur la mise en place d’une <span className="it">vertical slice</span>. Par ailleurs, j’ai eu la chance
         de pouvoir m’occuper du sound design et mixage des épisodes de la saison 1 de l’émission <a
-          href="https://www.upian.com/fr/project/faq-arte">FAQ</a> grâce à mes connaissances en la matière.</>
+          href="https://www.upian.com/fr/project/faq-arte">FAQ</a> grâce à mes connaissances en la matière.</>,
   },
   {
     date: "2018",
@@ -59,7 +64,7 @@ const xpItems = [
       <>Ce stage chez Playbots m’a permis de devenir complètement autonome avec la stack MEAN. J’ai eu l’occasion de
         travailler sur la plateforme de création/gestion de bots de l’entreprise, dans un contexte agile et avec de
         fortes responsabilités. J’ai également assumé avec enthousiasme la fonction d’UI/UX designer sur le projet,
-        faute d’expert dans l’équipe.</>
+        faute d’expert dans l’équipe.</>,
   },
   {
     date: "2017",
@@ -73,7 +78,7 @@ const xpItems = [
       <>Dans le cadre d’un job étudiant à l’UTC, j’ai conçu le système backend du projet CartoENM : extraction de
         données depuis feuilles de calcul, imports en BDD et construction de l’arbre de réponses lié à une requête
         utilisateur. Ce fut l’occasion de mettre en place une réflexion centrée utilisateur par rapport aux élèves de
-        l’ENM, commanditaire du projet.</>
+        l’ENM, commanditaire du projet.</>,
   },
   {
     date: "2016",
@@ -84,11 +89,12 @@ const xpItems = [
     imgSrc: `${xpImgPathPrefix}gambling.jpg`,
     imgAlt: "Gambling illustration",
     contents:
-      <>J’ai intégré l’équipe de DreamCentury Entertainment pendant 6 mois riches d’apprentissages. Ce premier stage long m’a
+      <>J’ai intégré l’équipe de DreamCentury Entertainment pendant 6 mois riches d’apprentissages. Ce premier stage
+        long m’a
         inculqué la rigueur professionnelle dans l’écriture de code fonctionnel, stable et adaptatif, dans un cadre de
         travail semi-agile. J’ai ainsi pu assumer la responsabilité du développement de plusieurs modules, chacun posant
         son lot de défis en terme d’interactions utilisateur et de contraintes techniques (e.g. dépendances à des
-        services externes).</>
+        services externes).</>,
   },
   {
     date: "2015",
@@ -102,35 +108,32 @@ const xpItems = [
       <>J’ai eu l’occasion de mettre à l’épreuve mes jeunes connaissances en web design dès 2014 avec plusieurs clients
         concrets, dont notamment Peripro fencing chez qui j’ai effectué un stage cours en été 2014. Ces expériences
         m’ont permis de prendre mes marques et de mieux comprendre certaines problématiques techniques pour trouver des
-        solutions <span className="it">ad hoc</span> à ces dernières.</>
+        solutions <span className="it">ad hoc</span> à ces dernières.</>,
   },
 ];
 
 interface ExperienceProps extends React.HTMLProps<HTMLElement> {
 }
 
+const timelineData: TimelineData = {
+  rootSvgSelector: "svg.timeline.xp-timeline",
+  cssPrefix: "xp-timeline_svg__",
+  dates: ["2021", "2019", "2018", "2017", "2016", "2015"],
+  maxNodeYPos: 158.75,
+};
+
 const Experience: React.FC<ExperienceProps> = () => {
-  const tlSettings: TimelineSettings = {
-    rootSvgSelector: "svg.timeline.xp-timeline",
-    cssPrefix: "xp-timeline_svg__",
-    dates: ["2021", "2019", "2018", "2017", "2016", "2015"],
-    maxNodeYPos: 158.75,
-  }
-  const tlDetailSettings: TimelineDetailSettings = {
-    defaultDate: "2021",
-    detailSelector: "#experience .xpDetail",
-  }
 
   const [curDate, setCurDate] = useState<string>("2021");
 
   const xpTimelineRef = useRef(null);
 
-  useEffect(() => tlDetailInit(tlDetailSettings), []);
+  const getXpItemByDate: (date: string) => XpItem = (date: string) => xpItems.find(xi => xi.date === date);
 
   return (
     <section id="experience" className={`${homeStyles.experienceSectionContainer} position-relative`}>
-      <SectionHandle className="section-handle white" />
-      <SectionHandle className="section-handle-reverse white" />
+      <SectionHandle className="section-handle white"/>
+      <SectionHandle className="section-handle-reverse white"/>
       <Container>
         <Row>
           <Col lg={8} className="offset-lg-2">
@@ -140,47 +143,21 @@ const Experience: React.FC<ExperienceProps> = () => {
               plusieurs clients en tant que freelance, ainsi que de réaliser plusieurs stages dans des contextes
               techniques divers, jusqu’à me spécialiser aujourd’hui en développement sous Unity 3D.</p>
 
-            <div className={homeStyles.contentSep} />
+            <div className={homeStyles.contentSep}/>
 
             <Row className="gx-md-5">
               <Col xs={4} md={3} className="d-flex flex-column align-items-end">
                 <Timeline
                   className={`${homeStyles.xpTimelineSvg} timeline xp-timeline`}
                   timelineTag={"experience"}
-                  settings={tlSettings}
+                  data={timelineData}
                   ref={xpTimelineRef}
-                  onDateNodeClick={setCurDate}/>
+                  onDateNodeClick={setCurDate}
+                  curDate={curDate}/>
               </Col>
               <Col xs={8} md={9} className="xpDetailContainer">
-                <TimelineDetail curDate={curDate} settings={tlDetailSettings}>
-                {xpItems.map(xi =>
-                  <div key={xi.date} className={`d${xi.date} xpDetail`}>
-                    <div className="illus-container float-none float-sm-start mb-1">
-                      <Image
-                        width={192}
-                        height={192}
-                        layout="intrinsic"
-                        quality={100}
-                        className="illus"
-                        src={xi.imgSrc}
-                        alt={xi.imgAlt}
-                        placeholder="blur"
-                        blurDataURL={transparentGifPix}
-                      />
-                    </div>
-                    <h3>{xi.job}</h3>
-                    <a
-                      className="place d-block mb-2"
-                      href={xi.url}
-                      target="_blank"
-                      rel="noopener"
-                    >
-                      {xi.place} ({xi.dateRange[0]}{xi.dateRange.length === 2 && ` - ${xi.dateRange[1]}`})
-                    </a>
-
-                    <p className="desc">{xi.contents}</p>
-                  </div>
-                )}
+                <TimelineDetail curDate={curDate}>
+                  <TimelineXpElemDetail xpItem={getXpItemByDate(curDate)} curDate={curDate}/>
                 </TimelineDetail>
               </Col>
             </Row>
@@ -189,7 +166,7 @@ const Experience: React.FC<ExperienceProps> = () => {
       </Container>
     </section>
   );
-}
+};
 
 
 export default Experience;

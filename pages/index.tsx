@@ -1,8 +1,6 @@
 import React                                        from "react";
 import Head                                         from "next/head";
 import Layout, { siteTitle }                        from "../components/layout";
-import gsap                                         from "gsap";
-import { ScrollToPlugin }                           from "gsap/dist/ScrollToPlugin";
 import PropTypes                                    from "prop-types";
 import { Waypoint }                                 from "react-waypoint";
 import { About, Banner, CV, HomeFooter, Portfolio } from "../components/home";
@@ -12,8 +10,6 @@ import Header                                       from "../components/header";
 interface WithRouterProps {
   router: NextRouter
 }
-
-gsap.registerPlugin(ScrollToPlugin);
 
 const FooterElement = props => {
   return (
@@ -85,14 +81,9 @@ class HomePage extends React.Component<HomePageProps, HomePageState> {
 
   setActiveSection = activeSection => this.setState({ activeSection });
 
-  handleLinkClick = (sectionIdx, _) => {
-    this.setActiveSection(sectionIdx);
-    // this.jumpToSection(href);
-  };
+  handleLinkClick = (sectionIdx, _) => this.setActiveSection(sectionIdx);
 
   onPortfolioFilterClick = (filterIdx: number) => this.setState({ currentPortfolioFilter: filterIdx });
-
-  jumpToSection = href => gsap.to(window, { duration: 1, scrollTo: `#${href}`, ease: "power2.inOut" });
 
   render() {
     return (
